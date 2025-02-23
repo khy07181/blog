@@ -1,11 +1,15 @@
 ---
-title: obsidian vault 에서 작성한 글
+title: TEST 글
 aliases: 
-classification: 
-tags: 
-created: 2025-02-23T02:02
-updated: 2025-02-23T09:23
-draft: false
+description: 
+permalink: 
+classification: blog
+tags:
+  - test
+draft: true
+date: 2025-02-23
+created: 2025-02-23T21:18
+updated: 2025-02-23T21:18
 ---
 
 ### 제목 제목
