@@ -12,7 +12,7 @@ tags:
 draft: false
 date: 2025-02-23
 created: 2025-02-23T20:51
-updated: 2025-02-23T21:26
+updated: 2025-02-24T06:24
 ---
 
 # 어떤 블로그를 만들고 싶을까
@@ -66,7 +66,7 @@ Obsidian vault 를 publish 할 수 있도록 해주는 static site generator
 
 블로그에 특화된 도구가 아니어서 아쉬운 점도 있지만, Obsidian을 폭넓게 지원하기도 하고 꾸준히 업데이트도 되고 있었다.
 
-Obsidian 에서의 노트 작성과 구분없이 사용할 수 있다는 점이 가장 컸고, 블로그를 오래 운영해서 글이 쌓이면 쌓일수록 그래프 뷰나 위키 링크를 통한 글들의 연결 관계가 의미 커질 것 같다.
+Obsidian 에서의 노트 작성과 구분없이 사용할 수 있다는 점이 가장 컸고, 블로그를 오래 운영해서 글이 쌓이면 쌓일수록 그래프 뷰나 위키 링크를 통한 글들의 연결 관계가 더욱 의미 있어질 것 같다.
 
 ---
 
@@ -156,13 +156,13 @@ Quartz 에서 기본적으로 글은 `/content` 경로 안에 두어야 한다.
 git submodule 을 사용해 하나의 공간에서 관리할 수도 있지만, vault 경로에 Quartz 설정 관련 파일들이 추가되는 것이 마음에 들지 않기도 했고 Obsidian + git 과 Quartz + git 을 함께 관리하기에는 복잡해 보였다.
 - git submodule 을 사용해 관리를 하고 싶다면 [Publishing your Obsidian Vault Online with Quartz](https://brandonkboswell.com/blog/Publishing-your-Obsidian-Vault-Online-with-Quartz) 참고
 
-Obsidian vault 와 blog content 를 분리해서 관리하고 싶지만 글은 한 곳에서만 작성하고 싶어서 심볼릭 링크를 사용해 quartz 의 content 경로를 vault 에 있는 blog/content 경로로 관리하도록 설정했다.
+Obsidian vault 와 blog content 를 분리해서 관리하고 싶지만 글은 한 곳에서만 작성하고 싶어서 심볼릭 링크를 사용해 quartz 의 content 경로를 vault 에 있는 blog/content 경로에서 관리하도록 설정했다.
 
 `ln -s ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/vault/blog/content ~/dev/personal/blog/content`
 
 글을 작성하고 `npx quartz build --serve` 명령어를 통해 온라인에 게시될 내용을 localhost:8080 에서 미리 확인할 수 있다.
 
-`npx quartz sync` 명령어로 작업 내역을 저장소에 반영하고 블로그에 글을 게시한다.
+`npx quartz sync` 명령어로 작업 내역을 저장소에 반영하고 블로그에 글을 게시할 수 있다.
 
 ![[Pasted image 20250223160343.png]]
 
@@ -214,7 +214,7 @@ const RecentNotesForIndex: QuartzComponent = ({ fileData, ...props }: QuartzComp
 export default RecentNotesForIndex
 ```
 
-```ts
+```ts {2,10}
 // quartz.layout.ts
 import RecentNotesForIndex from "./quartz/components/RecnetNotesForIndex"
 
@@ -224,7 +224,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
-    RecentNotesForIndex, // add custom component
+    RecentNotesForIndex,
   ],
   left: [
     Component.PageTitle(),
