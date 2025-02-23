@@ -12,7 +12,7 @@ tags:
 draft: false
 date: 2025-02-23
 created: 2025-02-23T20:51
-updated: 2025-02-23T20:51
+updated: 2025-02-23T21:26
 ---
 
 # 어떤 블로그를 만들고 싶을까
@@ -21,13 +21,13 @@ updated: 2025-02-23T20:51
 
 블로그를 만들게 된다면 wiki 형식으로 만들지 사람들과 공유하고 싶은 주제에 대한 형식으로 만들지 고민을 많이 했다.
 
-지식 관리 도구로 Obsidian 을 사용하고 있는데 고민 끝에 일반적인 내용은 [Obsidian vault](https://github.com/khy07181/vault) 에 기록하고 공유 하고 싶은 내용을 블로그로 포스팅 하도록 결정했다.
+지식 관리 도구로 Obsidian 을 사용하고 있는데 고민 끝에 일반적인 내용은 [Obsidian vault](https://github.com/khy07181/vault) 에 기록하고, 공유 하고 싶은 내용을 블로그로 포스팅 하도록 결정했다.
 
-아마 개발과 비개발 구분없이 글을 작성해서 올릴 예정이다.
+아마 개발과 비개발 구분하지 않고 글을 작성해서 올릴 예정이다.
 
 # 블로그 플랫폼 비교
 
-github 블로그를 만들어 보고 싶은 생각이 있어서 Tistory, Velog, Medium 등과 같이 자체 플랫폼이 있는 곳은 후보에서 제외했다.
+Github 블로그를 만들어 보고 싶은 생각이 있어서 Tistory, Velog, Medium 등과 같이 자체 플랫폼이 있는 곳은 후보에서 제외했다.
 
 (~~그래서 사실상 SSG 비교..~~)
 
@@ -35,7 +35,7 @@ github 블로그를 만들어 보고 싶은 생각이 있어서 Tistory, Velog, 
 
 사내 위키를 만들 곳으로 데모 정도까지 만들어보기도 했고, 개인적으로 팬(?)인 [haril](https://haril.dev/) 님이 만든 obsidian 플러그인 [o2](https://github.com/songkg7/o2)가 있기 때문에 사용하고 싶어서 가장 먼저 고려했다.
 
-그래서인지 Jekyll, Gatsby, Hugo 등은 굳이 선택지에 없었다.
+그래서인지 Jekyll, Gatsby, Hugo 등은 굳이 선택지에서 제외했다.
 - Hugo 는 꽤 괜찮은 것 같기도..?
 	- [Integerous](https://github.com/Integerous) 님의 [Hugo 로 Github 블로그 만들기](https://github.com/Integerous/Integerous.github.io)
 
@@ -60,11 +60,11 @@ Obsidian vault 를 publish 할 수 있도록 해주는 static site generator
 
 >Quartz was originally designed as a tool to publish Obsidian vaults as websites.
 
-지금은 범위가 많이 넓어진 것 같긴 하지만 Quartz는 원래 옵시디언을 publish 하기 위해 만들어졌기 때문에 [옵시디언 맛(?) markdown](https://help.obsidian.md/Editing+and+formatting/Obsidian+Flavored+Markdown) 문법을 지원한다.
+현재는 범위가 많이 확장되었지만, Quartz는 원래 Obsidian을 publish 하기 위해 만들어졌기 때문에 [옵시디언 맛(?) markdown](https://help.obsidian.md/Editing+and+formatting/Obsidian+Flavored+Markdown) 문법을 지원한다.
 - Backlinks, callouts, wikilinks 등 기본적인 obsidian의 기능도 제공하고 플러그인을 통해 추가 기능도 제공한다.
 - [Obsidian2023 Gems of the year winners](https://obsidian.md/blog/2023-goty-winners/)에 선정되기도 했다
 
-블로그를 위한 도구가 아니기 때문에 아쉬운 점도 많지만, 옵시디언을 많이 지원하기도 하고 꾸준히 업데이트도 되고 있었다.
+블로그에 특화된 도구가 아니어서 아쉬운 점도 있지만, Obsidian을 폭넓게 지원하기도 하고 꾸준히 업데이트도 되고 있었다.
 
 Obsidian 에서의 노트 작성과 구분없이 사용할 수 있다는 점이 가장 컸고, 블로그를 오래 운영해서 글이 쌓이면 쌓일수록 그래프 뷰나 위키 링크를 통한 글들의 연결 관계가 의미 커질 것 같다.
 
@@ -99,7 +99,7 @@ npx quartz create
 
 4. github pages hosting
 
-블로그 글을 작성해서 푸시하면 Github action 을 통해 자동으로 배포되도록 `quartz/.github/workflows` 경로에 다음과 같이 deploy.yml 파일을 작성한다.
+블로그 글을 작성해서 푸시하면 Github Actions 를 통해 자동으로 배포되도록 `quartz/.github/workflows` 경로에 다음과 같이 deploy.yml 파일을 작성한다.
 
 ```yaml
 name: Deploy Quartz site to GitHub Pages
@@ -151,9 +151,9 @@ jobs:
 
 ## 컨텐츠 경로 변경
 
-Quartz 에서 기본적으로 글들은 `/content` 경로 안에 있어야 한다.
+Quartz 에서 기본적으로 글은 `/content` 경로 안에 두어야 한다.
 
-git submodule 을 사용해 하나의 공간에서 관리해도 되지만 내 vault 경로에 quartz 설정 관련 파일들이 올라가는 것이 마음에 들지 않기도 했고 Obsidian + git 과 Quartz + git 을 함께 관리하기에는 너무 복잡해 보였다.
+git submodule 을 사용해 하나의 공간에서 관리할 수도 있지만, vault 경로에 Quartz 설정 관련 파일들이 추가되는 것이 마음에 들지 않기도 했고 Obsidian + git 과 Quartz + git 을 함께 관리하기에는 복잡해 보였다.
 - git submodule 을 사용해 관리를 하고 싶다면 [Publishing your Obsidian Vault Online with Quartz](https://brandonkboswell.com/blog/Publishing-your-Obsidian-Vault-Online-with-Quartz) 참고
 
 Obsidian vault 와 blog content 를 분리해서 관리하고 싶지만 글은 한 곳에서만 작성하고 싶어서 심볼릭 링크를 사용해 quartz 의 content 경로를 vault 에 있는 blog/content 경로로 관리하도록 설정했다.
