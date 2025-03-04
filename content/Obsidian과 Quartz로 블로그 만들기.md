@@ -1,5 +1,5 @@
 ---
-title: Obsidian + Quartz 로 블로그 만들기
+title: Obsidian과 Quartz로 블로그 만들기
 aliases: 
 description: 
 permalink: 
@@ -12,7 +12,7 @@ tags:
 draft: false
 date: 2025-02-23
 created: 2025-02-23T20:51
-updated: 2025-02-24T15:24
+updated: 2025-03-04T10:18
 ---
 
 # 어떤 블로그를 만들고 싶을까
