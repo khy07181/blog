@@ -54,6 +54,7 @@ const config: QuartzConfig = {
         },
       },
     },
+    extraHead: `<meta name="google-site-verification" content="J7M~~" />`,
   },
   plugins: {
     transformers: [
