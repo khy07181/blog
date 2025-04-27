@@ -13,14 +13,14 @@
     <pubDate>Sun, 16 Mar 2025 06:50:00 GMT</pubDate>
   </item><item>
     <title>시작하고, 완수하기</title>
-    <link>https://https://khy07181.github.io/blog/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B3%A0,-%EC%99%84%EC%88%98%ED%95%98%EA%B8%B0</link>
-    <guid>https://https://khy07181.github.io/blog/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B3%A0,-%EC%99%84%EC%88%98%ED%95%98%EA%B8%B0</guid>
+    <link>https://https://khy07181.github.io/blog/%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%A9,-%E1%84%8B%E1%85%AA%E1%86%AB%E1%84%89%E1%85%AE%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5</link>
+    <guid>https://https://khy07181.github.io/blog/%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%A9,-%E1%84%8B%E1%85%AA%E1%86%AB%E1%84%89%E1%85%AE%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5</guid>
     <description>게으른 완벽주의자 나는 아직 흔히 말하는 게으른 완벽주의자다. 후회하는 것을 극도로 싫어해서 어설프게 시도했다가 실패하면 시간 낭비라고 생각했고 볼펜 한 자루, 노트 한 권을 사더라도 한참을 알아보고 사는 편이다. 그래서 무엇인가를 시작할 때 준비가 되지 않았다고 느끼면 시작이 어렵다.</description>
     <pubDate>Sat, 08 Mar 2025 08:16:00 GMT</pubDate>
   </item><item>
     <title>Obsidian과 Quartz로 블로그 만들기</title>
-    <link>https://https://khy07181.github.io/blog/Obsidian%EA%B3%BC-Quartz%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0</link>
-    <guid>https://https://khy07181.github.io/blog/Obsidian%EA%B3%BC-Quartz%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0</guid>
+    <link>https://https://khy07181.github.io/blog/Obsidian%E1%84%80%E1%85%AA-Quartz%E1%84%85%E1%85%A9-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5</link>
+    <guid>https://https://khy07181.github.io/blog/Obsidian%E1%84%80%E1%85%AA-Quartz%E1%84%85%E1%85%A9-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5</guid>
     <description>어떤 블로그를 만들고 싶을까 만들어야지 만들어야지 생각만 하다 드디어 블로그를 만들었다. 블로그를 만들게 된다면 wiki 형식으로 만들지 사람들과 공유하고 싶은 주제에 대한 형식으로 만들지 고민을 많이 했다. 지식 관리 도구로 Obsidian 을 사용하고 있는데 고민 끝에 일반적인 내용은 Obsidian vault 에 기록하고, 공유 하고 싶은 내용을 블로그로 포스팅 하도록 결정했다.</description>
     <pubDate>Sun, 23 Feb 2025 11:51:00 GMT</pubDate>
   </item><item>
@@ -29,6 +29,12 @@
     <guid>https://https://khy07181.github.io/blog/</guid>
     <description></description>
     <pubDate>Sat, 22 Feb 2025 16:23:00 GMT</pubDate>
+  </item><item>
+    <title>나의 Mac 초기 설정</title>
+    <link>https://https://khy07181.github.io/blog/%EB%82%98%EC%9D%98-Mac-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95</link>
+    <guid>https://https://khy07181.github.io/blog/%EB%82%98%EC%9D%98-Mac-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95</guid>
+    <description></description>
+    <pubDate>Sun, 26 Mar 2023 13:27:15 GMT</pubDate>
   </item>
     </channel>
   </rss>
