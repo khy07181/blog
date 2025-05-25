@@ -6,10 +6,10 @@ permalink:
 classification: blog
 tags:
   - test
-draft: true
+draft: false
 date: 2025-02-23
 created: 2025-02-23T21:18
-updated: 2025-02-24T15:24
+updated: 2025-05-25T22:03
 ---
 
 ### 제목 제목
@@ -43,3 +43,7 @@ export function trimPathSuffix(fp: string): string {
   return cleanPath + anchor
 }
 ```
+
+mp4
+
+![[blog/content/img/ep03-righit-click.mp4]]

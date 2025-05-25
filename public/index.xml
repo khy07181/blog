@@ -6,6 +6,18 @@
       <description>Last 10 notes on 🪴 hayoung</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>우물 안 개구리의 메모어 회고 모임 참여 후기</title>
+    <link>https://https://khy07181.github.io/blog/%E1%84%8B%E1%85%AE%E1%84%86%E1%85%AE%E1%86%AF-%E1%84%8B%E1%85%A1%E1%86%AB-%E1%84%80%E1%85%A2%E1%84%80%E1%85%AE%E1%84%85%E1%85%B5%E1%84%8B%E1%85%B4-%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%E1%84%8B%E1%85%A5-%E1%84%92%E1%85%AC%E1%84%80%E1%85%A9-%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B5%E1%86%B7-%E1%84%8E%E1%85%A1%E1%86%B7%E1%84%8B%E1%85%A7-%E1%84%92%E1%85%AE%E1%84%80%E1%85%B5</link>
+    <guid>https://https://khy07181.github.io/blog/%E1%84%8B%E1%85%AE%E1%84%86%E1%85%AE%E1%86%AF-%E1%84%8B%E1%85%A1%E1%86%AB-%E1%84%80%E1%85%A2%E1%84%80%E1%85%AE%E1%84%85%E1%85%B5%E1%84%8B%E1%85%B4-%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%E1%84%8B%E1%85%A5-%E1%84%92%E1%85%AC%E1%84%80%E1%85%A9-%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B5%E1%86%B7-%E1%84%8E%E1%85%A1%E1%86%B7%E1%84%8B%E1%85%A7-%E1%84%92%E1%85%AE%E1%84%80%E1%85%B5</guid>
+    <description>반복되는 일상과 현실에 안주하고 있는 나 자신에 권태로움을 느끼기도 했고 아무 생각 없이 살다 보니 한 주가 어떻게 흘러갔는지도 모르는 경우가 많아 메모어 라는 회고 모임에 참여했다. 한 주에 있었던 경험과 생각을 회고를 통해 나의 것으로 만들고 다른 사람들과 공유하는 모임이다.</description>
+    <pubDate>Sun, 11 May 2025 14:10:00 GMT</pubDate>
+  </item><item>
+    <title>나의 Mac 초기 설정</title>
+    <link>https://https://khy07181.github.io/blog/%EB%82%98%EC%9D%98-Mac-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95</link>
+    <guid>https://https://khy07181.github.io/blog/%EB%82%98%EC%9D%98-Mac-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95</guid>
+    <description>...</description>
+    <pubDate>Sun, 27 Apr 2025 10:00:00 GMT</pubDate>
+  </item><item>
     <title>PARA Method</title>
     <link>https://https://khy07181.github.io/blog/PARA-Method</link>
     <guid>https://https://khy07181.github.io/blog/PARA-Method</guid>
@@ -18,6 +30,12 @@
     <description>게으른 완벽주의자 나는 아직 흔히 말하는 게으른 완벽주의자다. 후회하는 것을 극도로 싫어해서 어설프게 시도했다가 실패하면 시간 낭비라고 생각했고 볼펜 한 자루, 노트 한 권을 사더라도 한참을 알아보고 사는 편이다. 그래서 무엇인가를 시작할 때 준비가 되지 않았다고 느끼면 시작이 어렵다.</description>
     <pubDate>Sat, 08 Mar 2025 08:16:00 GMT</pubDate>
   </item><item>
+    <title>TEST 글</title>
+    <link>https://https://khy07181.github.io/blog/TEST-%E1%84%80%E1%85%B3%E1%86%AF</link>
+    <guid>https://https://khy07181.github.io/blog/TEST-%E1%84%80%E1%85%B3%E1%86%AF</guid>
+    <description>제목 제목 작성 작성 obsidian wiki link test 다른 글 Info callout test 이미지 테스트 local image imgur image code block export function trimPathSuffix(fp: string): string { fp = clientSideSlug(fp) let ...</description>
+    <pubDate>Sun, 23 Feb 2025 12:18:00 GMT</pubDate>
+  </item><item>
     <title>Obsidian과 Quartz로 블로그 만들기</title>
     <link>https://https://khy07181.github.io/blog/Obsidian%E1%84%80%E1%85%AA-Quartz%E1%84%85%E1%85%A9-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5</link>
     <guid>https://https://khy07181.github.io/blog/Obsidian%E1%84%80%E1%85%AA-Quartz%E1%84%85%E1%85%A9-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5</guid>
@@ -29,12 +47,6 @@
     <guid>https://https://khy07181.github.io/blog/</guid>
     <description></description>
     <pubDate>Sat, 22 Feb 2025 16:23:00 GMT</pubDate>
-  </item><item>
-    <title>나의 Mac 초기 설정</title>
-    <link>https://https://khy07181.github.io/blog/%EB%82%98%EC%9D%98-Mac-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95</link>
-    <guid>https://https://khy07181.github.io/blog/%EB%82%98%EC%9D%98-Mac-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95</guid>
-    <description></description>
-    <pubDate>Sun, 26 Mar 2023 13:27:15 GMT</pubDate>
   </item>
     </channel>
   </rss>
