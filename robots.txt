@@ -1,3 +1,1 @@
-User-agent: *
-Allow: /
-Sitemap: https://khy07181.github.io/blog/sitemap.xml
+/Users/hayoung/dev/personal/blog/public/static/robots.txt
