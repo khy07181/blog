@@ -1,5 +1,5 @@
 ---
-title: GRASP Parttern
+title: GRASP Pattern
 aliases:
   - GRASP 패턴
 description: 
@@ -142,3 +142,9 @@ Pure fabrication 패턴은 응집도나 결합도 측면에서 더 나은 설계
 이러한 객체는 현실 세계에서 직접 대응되는 개념이 없지만, 소프트웨어 내부적으로는 책임을 적절히 분산시키고, 관심사를 분리하는 데 매우 효과적이다.
 
 Pure fabrication 을 적절히 활용하면 시스템을 더 테스트하기 쉬운 구조로 만들 수 있고, 모듈화 수준도 높아진다.
+
+### Links
+
+- [오브젝트 - 조영호](https://product.kyobobook.co.kr/detail/S000001766367)
+- [GRASP (object-oriented design) - Wikipedia](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
+- [GRASP 패턴 - 한빛+](https://www.hanbit.co.kr/channel/view.html?cmscode=CMS8586826397)
