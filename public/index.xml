@@ -6,9 +6,15 @@
       <description>Last 10 notes on 🪴 hayoung</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>GRASP Parttern</title>
-    <link>https://khy07181.github.io/blog/GRASP-Parttern</link>
-    <guid>https://khy07181.github.io/blog/GRASP-Parttern</guid>
+    <title>회고 모임 &#039;메모어&#039; 마무리 후기</title>
+    <link>https://khy07181.github.io/blog/%ED%9A%8C%EA%B3%A0-%EB%AA%A8%EC%9E%84-'%EB%A9%94%EB%AA%A8%EC%96%B4'-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%9B%84%EA%B8%B0</link>
+    <guid>https://khy07181.github.io/blog/%ED%9A%8C%EA%B3%A0-%EB%AA%A8%EC%9E%84-'%EB%A9%94%EB%AA%A8%EC%96%B4'-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%9B%84%EA%B8%B0</guid>
+    <description>5월 1일부터 7월 6일까지 약 10주 동안 참여한 메모어 가 이번주를 마지막으로 종료됐다. 10개의 주간 회고를 쓰고 1번의 오프라인 모임을 했다. 원래는 오프라인 모임이 2번이지만 피치 못할 사정으로 2번째 오프라인 모임은 7월 20일로 연기됐다. 좋았던 점 10~12명으로 구성된 메인(?) 모임의 회고를 공유하며 이야기를 나눌수도 있지만, 전체 공유 회고도 있어 많은 사람들의 생각을 볼 수 있다는 점이 좋았다.</description>
+    <pubDate>Sun, 06 Jul 2025 14:27:00 GMT</pubDate>
+  </item><item>
+    <title>GRASP Pattern</title>
+    <link>https://khy07181.github.io/blog/GRASP-Pattern</link>
+    <guid>https://khy07181.github.io/blog/GRASP-Pattern</guid>
     <description>GRASP Pattern 객체지향 설계에서 우리는 항상 ‘이 책임은 누가 가져야 할까?’ 라는 질문에 직면하게 된다. GRASP(General Responsibility Assignment Software Patterns) 패턴은 Craig Larman이 제안한 책임 할당 기법으로, 총 9가지 패턴으로 구성되어 있으며, 각 패턴은 다음과 같다.</description>
     <pubDate>Sun, 22 Jun 2025 13:46:00 GMT</pubDate>
   </item><item>
