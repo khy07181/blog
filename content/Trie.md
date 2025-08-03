@@ -13,6 +13,7 @@ updated: 2025-08-03T19:35
 ---
 
 문자열을 효율적으로 저장하고 검색하는 데 사용되는 트리 기반의 자료구조
+
 사전과 같은 단어 검색, 자동 완성, 접두사 매칭 등에 유용하다.
 
 Pros
@@ -134,4 +135,5 @@ public class Trie {
 ### Links
 
 [Trie](https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%9D%BC%EC%9D%B4_(%EC%BB%B4%ED%93%A8%ED%8C%85))
+
 [트라이(Trie) 개념, 직접 구현하기](https://innovation123.tistory.com/116#%EC%82%AD%EC%A0%9C%EB%A9%94%EC%84%9C%EB%93%9C-1)
