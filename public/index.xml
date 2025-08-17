@@ -6,6 +6,12 @@
       <description>Last 10 notes on 🪴 hayoung</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>침묵의 나선</title>
+    <link>https://khy07181.github.io/blog/%EC%B9%A8%EB%AC%B5%EC%9D%98-%EB%82%98%EC%84%A0</link>
+    <guid>https://khy07181.github.io/blog/%EC%B9%A8%EB%AC%B5%EC%9D%98-%EB%82%98%EC%84%A0</guid>
+    <description> 1970년 독일의 사회과학자 엘리자베스 노엘레-노이만(Elisabeth Noelle-Neumann)이 발표한, 정치학과 매스 커뮤니케이션에 관한 이론이다. 주로 언론 분야에서 많이 활용되며 매체가 여론에 미치는 영향을 설명할 때 자주 등장한다. 하나의 특정한 의견이 다수의 사람들에게 인정되고 있는 상황이라면, 그와 반대되는 의견을 가진 소수의 사람들이 고립과 배척을 두려워해 침묵하는 경향을 보이게 된다.</description>
+    <pubDate>Tue, 15 Jul 2025 03:43:00 GMT</pubDate>
+  </item><item>
     <title>회고 모임 &#039;메모어&#039; 마무리 후기</title>
     <link>https://khy07181.github.io/blog/%ED%9A%8C%EA%B3%A0-%EB%AA%A8%EC%9E%84-'%EB%A9%94%EB%AA%A8%EC%96%B4'-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%9B%84%EA%B8%B0</link>
     <guid>https://khy07181.github.io/blog/%ED%9A%8C%EA%B3%A0-%EB%AA%A8%EC%9E%84-'%EB%A9%94%EB%AA%A8%EC%96%B4'-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%9B%84%EA%B8%B0</guid>
@@ -59,12 +65,6 @@
     <guid>https://khy07181.github.io/blog/Obsidian%E1%84%80%E1%85%AA-Quartz%E1%84%85%E1%85%A9-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5</guid>
     <description>어떤 블로그를 만들고 싶을까 만들어야지 만들어야지 생각만 하다 드디어 블로그를 만들었다. 블로그를 만들게 된다면 wiki 형식으로 만들지 사람들과 공유하고 싶은 주제에 대한 형식으로 만들지 고민을 많이 했다. 지식 관리 도구로 Obsidian 을 사용하고 있는데 고민 끝에 일반적인 내용은 Obsidian vault 에 기록하고, 공유 하고 싶은 내용을 블로그로 포스팅 하도록 결정했다.</description>
     <pubDate>Sun, 23 Feb 2025 11:51:00 GMT</pubDate>
-  </item><item>
-    <title>hayoung blog</title>
-    <link>https://khy07181.github.io/blog/</link>
-    <guid>https://khy07181.github.io/blog/</guid>
-    <description></description>
-    <pubDate>Sat, 22 Feb 2025 16:23:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
