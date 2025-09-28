@@ -6,6 +6,18 @@
       <description>Last 10 notes on 🪴 hayoung</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>브라우저 저장소의 종류와 특성</title>
+    <link>https://khy07181.github.io/blog/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%ED%8A%B9%EC%84%B1</link>
+    <guid>https://khy07181.github.io/blog/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%ED%8A%B9%EC%84%B1</guid>
+    <description> LocalStorage 도메인 단위로 데이터를 영구적으로 저장할 수 있는 API 사용자가 브라우저를 닫고 다시 열어도 데이터 는 유지되며, 페이지 새로고침이나 탭 변경에도 영향을 받지 않는다. 테마, 언어 설정, 비로그인 상태의 장바구니 등 장기적으로 유지되어야 하는 데이터를 저장하는 데 적합하다.</description>
+    <pubDate>Mon, 01 Sep 2025 07:33:00 GMT</pubDate>
+  </item><item>
+    <title>카메라 선택 비교</title>
+    <link>https://khy07181.github.io/blog/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%84%A0%ED%83%9D-%EB%B9%84%EA%B5%90</link>
+    <guid>https://khy07181.github.io/blog/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%84%A0%ED%83%9D-%EB%B9%84%EA%B5%90</guid>
+    <description>사진용 카메라 캐논 6D 30만원 대 2020만 화소 풀프레임 DSLR의 뷰파인더 감성 SD카드 사용, 오래가는 배터리 EF마운트 렌즈군 매우 다양하고 저렴함 추천 렌즈: 50mm F1.8 7만 원대 소니 알파7 II (A7M2) 60만 원대 2300만 화소 풀프레임, 손떨림 방지 뛰어난 자동 초점(비상차 AF) 서드파티 렌즈군과 중국산 저가 렌즈들도 ...</description>
+    <pubDate>Sat, 30 Aug 2025 23:54:00 GMT</pubDate>
+  </item><item>
     <title>침묵의 나선</title>
     <link>https://khy07181.github.io/blog/%EC%B9%A8%EB%AC%B5%EC%9D%98-%EB%82%98%EC%84%A0</link>
     <guid>https://khy07181.github.io/blog/%EC%B9%A8%EB%AC%B5%EC%9D%98-%EB%82%98%EC%84%A0</guid>
@@ -53,18 +65,6 @@
     <guid>https://khy07181.github.io/blog/PARA-Method</guid>
     <description>세상에는 지식, 노트, 파일 구조를 분류하고 정리하는 많은 방법이 있습니다. 일반적으로 우리는 계층적 폴더 구조를 활용해 자료를 분류하곤 합니다. 자연스럽게 주제를 중심으로 자료를 분류하게 되고 자료가 쌓일수록 분류학자처럼 ‘이 자료를 어디에 넣어야 할까?‘를 고민하게 됩니다.</description>
     <pubDate>Sun, 16 Mar 2025 06:50:00 GMT</pubDate>
-  </item><item>
-    <title>시작하고, 완수하기</title>
-    <link>https://khy07181.github.io/blog/%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%A9,-%E1%84%8B%E1%85%AA%E1%86%AB%E1%84%89%E1%85%AE%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5</link>
-    <guid>https://khy07181.github.io/blog/%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%A9,-%E1%84%8B%E1%85%AA%E1%86%AB%E1%84%89%E1%85%AE%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5</guid>
-    <description>게으른 완벽주의자 나는 아직 흔히 말하는 게으른 완벽주의자다. 후회하는 것을 극도로 싫어해서 어설프게 시도했다가 실패하면 시간 낭비라고 생각했고 볼펜 한 자루, 노트 한 권을 사더라도 한참을 알아보고 사는 편이다. 그래서 무엇인가를 시작할 때 준비가 되지 않았다고 느끼면 시작이 어렵다.</description>
-    <pubDate>Sat, 08 Mar 2025 08:16:00 GMT</pubDate>
-  </item><item>
-    <title>Obsidian과 Quartz로 블로그 만들기</title>
-    <link>https://khy07181.github.io/blog/Obsidian%E1%84%80%E1%85%AA-Quartz%E1%84%85%E1%85%A9-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5</link>
-    <guid>https://khy07181.github.io/blog/Obsidian%E1%84%80%E1%85%AA-Quartz%E1%84%85%E1%85%A9-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5</guid>
-    <description>어떤 블로그를 만들고 싶을까 만들어야지 만들어야지 생각만 하다 드디어 블로그를 만들었다. 블로그를 만들게 된다면 wiki 형식으로 만들지 사람들과 공유하고 싶은 주제에 대한 형식으로 만들지 고민을 많이 했다. 지식 관리 도구로 Obsidian 을 사용하고 있는데 고민 끝에 일반적인 내용은 Obsidian vault 에 기록하고, 공유 하고 싶은 내용을 블로그로 포스팅 하도록 결정했다.</description>
-    <pubDate>Sun, 23 Feb 2025 11:51:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
