@@ -9,7 +9,7 @@
     <title>브라우저 저장소의 종류와 특성</title>
     <link>https://khy07181.github.io/blog/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%ED%8A%B9%EC%84%B1</link>
     <guid>https://khy07181.github.io/blog/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%ED%8A%B9%EC%84%B1</guid>
-    <description> LocalStorage 도메인 단위로 데이터를 영구적으로 저장할 수 있는 API 사용자가 브라우저를 닫고 다시 열어도 데이터 는 유지되며, 페이지 새로고침이나 탭 변경에도 영향을 받지 않는다. 테마, 언어 설정, 비로그인 상태의 장바구니 등 장기적으로 유지되어야 하는 데이터를 저장하는 데 적합하다.</description>
+    <description>LocalStorage 도메인 단위로 데이터를 영구적으로 저장할 수 있는 API 사용자가 브라우저를 닫고 다시 열어도 데이터 는 유지되며, 페이지 새로고침이나 탭 변경에도 영향을 받지 않는다. 테마, 언어 설정, 비로그인 상태의 장바구니 등 장기적으로 유지되어야 하는 데이터를 저장하는 데 적합하다.</description>
     <pubDate>Mon, 01 Sep 2025 07:33:00 GMT</pubDate>
   </item><item>
     <title>카메라 선택 비교</title>
