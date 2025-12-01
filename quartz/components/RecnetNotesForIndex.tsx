@@ -8,6 +8,7 @@ const RecentNotesForIndex: QuartzComponent = (props: QuartzComponentProps) => {
       limit: 10,
       showTags: true,
       linkToMore: false,
+      filter: (f) => f.slug !== "index",
     })(props)
   }
   return null
