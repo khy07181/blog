@@ -32,7 +32,7 @@ jobs:
           # ensure robots.txt is at the public root for GitHub Pages
           cp -f public/static/robots.txt public/robots.txt || true
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: public
  
