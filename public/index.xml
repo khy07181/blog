@@ -7,62 +7,62 @@
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>PostgreSQL Function</title>
-    <link>https://khy07181.github.io/blog/PostgreSQL-Function</link>
-    <guid>https://khy07181.github.io/blog/PostgreSQL-Function</guid>
+    <link>https://khy07181.github.io/blog/2025/PostgreSQL-Function</link>
+    <guid>https://khy07181.github.io/blog/2025/PostgreSQL-Function</guid>
     <description>PostgreSQL 을 꽤 오래 써왔지만 함수를 만들어서 사용해 본적은 처음인 것 같다. PostgreSQL 에서 함수를 생성하여 사용하는 방법 CREATE [OR REPLACE] FUNCTION function_name ([parameter1 data_type [, parameter2 data_type, ...]]) [RETURNS return_type] [LANGUAGE language_name] AS $$ -- Function body goes here $$; CREATE 대신 CREATE OR REPLACE를 사용하면 이미 같은 이름의 함수가 있을 경우 대체된다.</description>
     <pubDate>Sun, 30 Nov 2025 12:21:00 GMT</pubDate>
   </item><item>
     <title>나만의 독서 환경 만들기</title>
-    <link>https://khy07181.github.io/blog/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%8F%85%EC%84%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0</link>
-    <guid>https://khy07181.github.io/blog/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%8F%85%EC%84%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0</guid>
+    <link>https://khy07181.github.io/blog/2025/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%8F%85%EC%84%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0</link>
+    <guid>https://khy07181.github.io/blog/2025/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%8F%85%EC%84%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0</guid>
     <description>세상에는 책보다 자극적이고 재미있는 것들이 너무 많아져, 예전처럼 자연스럽게 독서에 몰입하기가 점점 어려워지고 있다. 그래도 꾸준히 읽고 싶다는 마음은 늘 있었고, 나만의 지속 가능성 유지를 위한 방법을 계속 찾아왔다. 자연스럽게 ‘어떤 환경에서 읽어야 오래 이어갈 수 있을까’라는 고민이 생겼다.</description>
     <pubDate>Sun, 16 Nov 2025 12:30:00 GMT</pubDate>
   </item><item>
     <title>문체의 종류</title>
-    <link>https://khy07181.github.io/blog/%EB%AC%B8%EC%B2%B4%EC%9D%98-%EC%A2%85%EB%A5%98</link>
-    <guid>https://khy07181.github.io/blog/%EB%AC%B8%EC%B2%B4%EC%9D%98-%EC%A2%85%EB%A5%98</guid>
+    <link>https://khy07181.github.io/blog/2025/%EB%AC%B8%EC%B2%B4%EC%9D%98-%EC%A2%85%EB%A5%98</link>
+    <guid>https://khy07181.github.io/blog/2025/%EB%AC%B8%EC%B2%B4%EC%9D%98-%EC%A2%85%EB%A5%98</guid>
     <description>문체란 단순히 말투의 차이를 넘어서 글이나 말의 표현 방식 전반을 뜻한다. 문체는 글의 성격, 목적, 독자, 그리고 작가의 개성까지 반영한다. 따라서 문체를 이해하는 것은 곧 ‘글쓰기의 감각’을 기르는 일이다. 전달 방식에 따른 문체 문체는 먼저 전달 방식에 따라 크게 두 가지로 나뉜다.</description>
     <pubDate>Sun, 19 Oct 2025 11:45:00 GMT</pubDate>
   </item><item>
     <title>브라우저 저장소의 종류와 특성</title>
-    <link>https://khy07181.github.io/blog/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%ED%8A%B9%EC%84%B1</link>
-    <guid>https://khy07181.github.io/blog/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%ED%8A%B9%EC%84%B1</guid>
+    <link>https://khy07181.github.io/blog/2025/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%ED%8A%B9%EC%84%B1</link>
+    <guid>https://khy07181.github.io/blog/2025/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%ED%8A%B9%EC%84%B1</guid>
     <description>LocalStorage 도메인 단위로 데이터를 영구적으로 저장할 수 있는 API 사용자가 브라우저를 닫고 다시 열어도 데이터 는 유지되며, 페이지 새로고침이나 탭 변경에도 영향을 받지 않는다. 테마, 언어 설정, 비로그인 상태의 장바구니 등 장기적으로 유지되어야 하는 데이터를 저장하는 데 적합하다.</description>
     <pubDate>Mon, 01 Sep 2025 07:33:00 GMT</pubDate>
   </item><item>
     <title>카메라 선택 비교</title>
-    <link>https://khy07181.github.io/blog/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%84%A0%ED%83%9D-%EB%B9%84%EA%B5%90</link>
-    <guid>https://khy07181.github.io/blog/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%84%A0%ED%83%9D-%EB%B9%84%EA%B5%90</guid>
+    <link>https://khy07181.github.io/blog/2025/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%84%A0%ED%83%9D-%EB%B9%84%EA%B5%90</link>
+    <guid>https://khy07181.github.io/blog/2025/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%84%A0%ED%83%9D-%EB%B9%84%EA%B5%90</guid>
     <description>사진용 카메라 캐논 6D 30만원 대 2020만 화소 풀프레임 DSLR의 뷰파인더 감성 SD카드 사용, 오래가는 배터리 EF마운트 렌즈군 매우 다양하고 저렴함 추천 렌즈: 50mm F1.8 7만 원대 소니 알파7 II (A7M2) 60만 원대 2300만 화소 풀프레임, 손떨림 방지 뛰어난 자동 초점(비상차 AF) 서드파티 렌즈군과 중국산 저가 렌즈들도 ...</description>
     <pubDate>Sat, 30 Aug 2025 23:54:00 GMT</pubDate>
   </item><item>
     <title>침묵의 나선</title>
-    <link>https://khy07181.github.io/blog/%EC%B9%A8%EB%AC%B5%EC%9D%98-%EB%82%98%EC%84%A0</link>
-    <guid>https://khy07181.github.io/blog/%EC%B9%A8%EB%AC%B5%EC%9D%98-%EB%82%98%EC%84%A0</guid>
+    <link>https://khy07181.github.io/blog/2025/%EC%B9%A8%EB%AC%B5%EC%9D%98-%EB%82%98%EC%84%A0</link>
+    <guid>https://khy07181.github.io/blog/2025/%EC%B9%A8%EB%AC%B5%EC%9D%98-%EB%82%98%EC%84%A0</guid>
     <description> 1970년 독일의 사회과학자 엘리자베스 노엘레-노이만(Elisabeth Noelle-Neumann)이 발표한, 정치학과 매스 커뮤니케이션에 관한 이론이다. 주로 언론 분야에서 많이 활용되며 매체가 여론에 미치는 영향을 설명할 때 자주 등장한다. 하나의 특정한 의견이 다수의 사람들에게 인정되고 있는 상황이라면, 그와 반대되는 의견을 가진 소수의 사람들이 고립과 배척을 두려워해 침묵하는 경향을 보이게 된다.</description>
     <pubDate>Tue, 15 Jul 2025 03:43:00 GMT</pubDate>
   </item><item>
     <title>회고 모임 &#039;메모어&#039; 마무리 후기</title>
-    <link>https://khy07181.github.io/blog/%ED%9A%8C%EA%B3%A0-%EB%AA%A8%EC%9E%84-'%EB%A9%94%EB%AA%A8%EC%96%B4'-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%9B%84%EA%B8%B0</link>
-    <guid>https://khy07181.github.io/blog/%ED%9A%8C%EA%B3%A0-%EB%AA%A8%EC%9E%84-'%EB%A9%94%EB%AA%A8%EC%96%B4'-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%9B%84%EA%B8%B0</guid>
+    <link>https://khy07181.github.io/blog/2025/%ED%9A%8C%EA%B3%A0-%EB%AA%A8%EC%9E%84-'%EB%A9%94%EB%AA%A8%EC%96%B4'-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%9B%84%EA%B8%B0</link>
+    <guid>https://khy07181.github.io/blog/2025/%ED%9A%8C%EA%B3%A0-%EB%AA%A8%EC%9E%84-'%EB%A9%94%EB%AA%A8%EC%96%B4'-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%9B%84%EA%B8%B0</guid>
     <description>5월 1일부터 7월 6일까지 약 10주 동안 참여한 메모어 가 이번주를 마지막으로 종료됐다. 10개의 주간 회고를 쓰고 1번의 오프라인 모임을 했다. 원래는 오프라인 모임이 2번이지만 피치 못할 사정으로 2번째 오프라인 모임은 7월 20일로 연기됐다. 좋았던 점 10~12명으로 구성된 메인(?) 모임의 회고를 공유하며 이야기를 나눌수도 있지만, 전체 공유 회고도 있어 많은 사람들의 생각을 볼 수 있다는 점이 좋았다.</description>
     <pubDate>Sun, 06 Jul 2025 14:27:00 GMT</pubDate>
   </item><item>
     <title>GRASP Pattern</title>
-    <link>https://khy07181.github.io/blog/GRASP-Pattern</link>
-    <guid>https://khy07181.github.io/blog/GRASP-Pattern</guid>
+    <link>https://khy07181.github.io/blog/2025/GRASP-Pattern</link>
+    <guid>https://khy07181.github.io/blog/2025/GRASP-Pattern</guid>
     <description>GRASP Pattern 객체지향 설계에서 우리는 항상 ‘이 책임은 누가 가져야 할까?’ 라는 질문에 직면하게 된다. GRASP(General Responsibility Assignment Software Patterns) 패턴은 Craig Larman이 제안한 책임 할당 기법으로, 총 9가지 패턴으로 구성되어 있으며, 각 패턴은 다음과 같다.</description>
     <pubDate>Sun, 22 Jun 2025 13:46:00 GMT</pubDate>
   </item><item>
     <title>회고 방법론</title>
-    <link>https://khy07181.github.io/blog/%ED%9A%8C%EA%B3%A0-%EB%B0%A9%EB%B2%95%EB%A1%A0</link>
-    <guid>https://khy07181.github.io/blog/%ED%9A%8C%EA%B3%A0-%EB%B0%A9%EB%B2%95%EB%A1%A0</guid>
+    <link>https://khy07181.github.io/blog/2025/%ED%9A%8C%EA%B3%A0-%EB%B0%A9%EB%B2%95%EB%A1%A0</link>
+    <guid>https://khy07181.github.io/blog/2025/%ED%9A%8C%EA%B3%A0-%EB%B0%A9%EB%B2%95%EB%A1%A0</guid>
     <description>KPT Keep 잘 해온 점, 계속 유지하고 싶은 점. 좋은 흐름을 계속 가져가기 위한 근거를 만든다. Problem 어려웠던 점, 아쉬웠던 점. 단순한 사건 기록이 아니라 원인을 함께 탐색하는 것이 중요하다. Try Problem의 원인을 기반으로 시도할 수 있는 구체적인 액션.</description>
     <pubDate>Sun, 08 Jun 2025 11:38:00 GMT</pubDate>
   </item><item>
     <title>Time Tracking 도구 사용 여정기 - 1</title>
-    <link>https://khy07181.github.io/blog/Time-Tracking-%EB%8F%84%EA%B5%AC-%EC%82%AC%EC%9A%A9-%EC%97%AC%EC%A0%95%EA%B8%B0---1</link>
-    <guid>https://khy07181.github.io/blog/Time-Tracking-%EB%8F%84%EA%B5%AC-%EC%82%AC%EC%9A%A9-%EC%97%AC%EC%A0%95%EA%B8%B0---1</guid>
+    <link>https://khy07181.github.io/blog/2025/Time-Tracking-%EB%8F%84%EA%B5%AC-%EC%82%AC%EC%9A%A9-%EC%97%AC%EC%A0%95%EA%B8%B0---1</link>
+    <guid>https://khy07181.github.io/blog/2025/Time-Tracking-%EB%8F%84%EA%B5%AC-%EC%82%AC%EC%9A%A9-%EC%97%AC%EC%A0%95%EA%B8%B0---1</guid>
     <description>내가 원하는 Time Tracking 서비스는 무엇일까 최근 주간 회고를 작성하면서 느낀점은 내가 어떤 일에 얼마나 시간을 썼는지 파악하기 어렵다는 것이었습니다. 분명 열심히 일한 것 같은데 평소에 비해 얼마나 열심히 한건지, 퇴근 후 하루에 평균 얼마나 시간을 낼 수 있는지도 감이 오지 않았습니다.</description>
     <pubDate>Sun, 25 May 2025 13:31:00 GMT</pubDate>
   </item>
