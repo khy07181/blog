@@ -6,12 +6,12 @@ tags:
   - postgresql
   - sql
   - db
-created: 2025-11-30T21:21:00
-updated: 2025-12-01T16:33
 description:
 permalink:
 draft: false
-date: 2025-11-30
+published: 2025-11-30
+created: 2025-11-30T21:21:00
+updated: 2025-12-01T16:33
 ---
 
 PostgreSQL 을 꽤 오래 써왔지만 함수를 만들어서 사용해 본적은 처음인 것 같다.

@@ -9,7 +9,7 @@ tags:
   - time-tracking
   - productivity
 draft: false
-date: 2025-05-25
+published: 2025-05-25
 created: 2025-05-25T22:31
 updated: 2025-12-01T16:33
 ---

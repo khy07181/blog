@@ -9,7 +9,7 @@ tags:
   - second-brain
   - tiago-forte
 draft: false
-date: 2025-03-16
+published: 2025-03-16
 created: 2025-03-16T15:50
 updated: 2025-12-01T16:33
 ---

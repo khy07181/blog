@@ -7,7 +7,7 @@ classification: blog
 tags:
   - test
 draft: true
-date: 2025-02-23
+published: 2025-02-23
 created: 2025-02-23T21:18
 updated: 2025-12-01T16:33
 ---

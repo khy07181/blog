@@ -7,7 +7,7 @@ permalink:
 classification:
 tags:
 draft: false
-date: 2025-08-03
+published: 2025-08-03
 created: 2024-08-26T22:43
 updated: 2025-12-01T16:33
 ---

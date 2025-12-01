@@ -12,26 +12,48 @@ import { i18n } from "../i18n"
 const defaultOptions = {
   folderClickBehavior: "collapse",
   folderDefaultState: "collapsed",
-  useSavedState: true,
+  useSavedState: false,
   mapFn: (node) => {
     return node
   },
   sortFn: (a, b) => {
-    // Sort order: folders first, then files. Sort folders and files alphabetically
-    if ((!a.file && !b.file) || (a.file && b.file)) {
-      // numeric: true: Whether numeric collation should be used, such that "1" < "2" < "10"
-      // sensitivity: "base": Only strings that differ in base letters compare as unequal. Examples: a ≠ b, a = á, a = A
+    // Keep folders before files
+    const aIsFolder = !a.file
+    const bIsFolder = !b.file
+
+    if (aIsFolder && bIsFolder) {
+      // Folders: name DESC (reverse alphabetical). Use numeric collation.
+      return b.displayName.localeCompare(a.displayName, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      })
+    }
+
+    if (!aIsFolder && !bIsFolder) {
+      // Files: sort by date (published -> created -> modified) DESC, then title
+      const getPrimaryDate = (n: typeof a) =>
+        n.file?.dates?.published ?? n.file?.dates?.created ?? n.file?.dates?.modified
+
+      const da = getPrimaryDate(a)
+      const db = getPrimaryDate(b)
+
+      if (da && db) {
+        return db.getTime() - da.getTime()
+      } else if (da && !db) {
+        return -1
+      } else if (!da && db) {
+        return 1
+      }
+
+      // Fallback alphabetical by display name if no dates
       return a.displayName.localeCompare(b.displayName, undefined, {
         numeric: true,
         sensitivity: "base",
       })
     }
 
-    if (a.file && !b.file) {
-      return 1
-    } else {
-      return -1
-    }
+    // Mixed: folders before files
+    return aIsFolder ? -1 : 1
   },
   filterFn: (node) => node.name !== "tags",
   order: ["filter", "map", "sort"],
@@ -66,7 +88,7 @@ export default ((userOpts?: Partial<Options>) => {
       }
     }
 
-    // Get all folders of tree. Initialize with collapsed state
+    // Build initial folder states: collapse all, then open only the first top-level folder
     // Stringify to pass json tree as data attribute ([data-tree])
     const folders = fileTree.getFolderPaths(opts.folderDefaultState === "collapsed")
     jsonTree = JSON.stringify(folders)

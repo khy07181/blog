@@ -8,7 +8,7 @@ classification: blog
 tags:
   - OOP
 draft: false
-date: 2025-06-22
+published: 2025-06-22
 created: 2025-06-22T22:46
 updated: 2025-12-01T16:33
 ---

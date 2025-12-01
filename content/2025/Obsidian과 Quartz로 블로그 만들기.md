@@ -10,7 +10,7 @@ tags:
   - obsidian
   - quartz
 draft: false
-date: 2025-02-23
+published: 2025-02-23
 created: 2025-02-23T20:51
 updated: 2025-12-01T16:33
 ---
