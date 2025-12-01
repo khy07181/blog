@@ -1,18 +1,18 @@
 ---
 title: 나의 Mac 초기 설정
-aliases: 
-description: 
-permalink: 
-classification: 
+aliases:
+description:
+permalink:
+classification:
 tags:
   - mac
   - chezmoi
   - setting
   - env
 draft: false
-date: 
+date:
 created: 2025-04-27T19:00:00
-updated: 2025-04-27T19:32
+updated: 2025-12-01T16:33
 ---
 
 >[!info]

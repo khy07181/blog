@@ -2,15 +2,15 @@
 title: GRASP Pattern
 aliases:
   - GRASP 패턴
-description: 
-permalink: 
+description:
+permalink:
 classification: blog
 tags:
   - OOP
 draft: false
 date: 2025-06-22
 created: 2025-06-22T22:46
-updated: 2025-06-23T16:06
+updated: 2025-12-01T16:33
 ---
 
 ## GRASP Pattern

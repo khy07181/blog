@@ -2,14 +2,14 @@
 title: Trie
 aliases:
   - 트라이
-description: 
-permalink: 
-classification: 
-tags: 
+description:
+permalink:
+classification:
+tags:
 draft: false
 date: 2025-08-03
 created: 2024-08-26T22:43
-updated: 2025-08-03T19:35
+updated: 2025-12-01T16:33
 ---
 
 문자열을 효율적으로 저장하고 검색하는 데 사용되는 트리 기반의 자료구조

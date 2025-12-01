@@ -7,7 +7,7 @@ tags:
   - sql
   - db
 created: 2025-11-30T21:21:00
-updated: 2025-11-30T20:36
+updated: 2025-12-01T16:33
 description:
 permalink:
 draft: false

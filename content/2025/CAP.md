@@ -6,7 +6,7 @@ classification: resource
 tags:
   - cap
 created: 2024-02-20 10:25
-updated: 2025-08-18T08:53
+updated: 2025-12-01T16:33
 ---
 
 ### CAP 정리란?

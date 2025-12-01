@@ -1,9 +1,9 @@
 ---
 title: Time Tracking 도구 사용 여정기 - 1
-aliases: 
-description: 
-permalink: 
-classification: 
+aliases:
+description:
+permalink:
+classification:
 tags:
   - tool
   - time-tracking
@@ -11,7 +11,7 @@ tags:
 draft: false
 date: 2025-05-25
 created: 2025-05-25T22:31
-updated: 2025-05-25T23:04
+updated: 2025-12-01T16:33
 ---
 
 ## 내가 원하는 Time Tracking 서비스는 무엇일까
