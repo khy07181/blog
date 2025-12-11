@@ -11,7 +11,7 @@ permalink:
 draft: false
 published: 2025-11-30
 created: 2025-11-30T21:21:00
-updated: 2025-12-01T16:33
+updated: 2025-12-11T22:38
 ---
 
 PostgreSQL 을 꽤 오래 써왔지만 함수를 만들어서 사용해 본적은 처음인 것 같다.
@@ -27,7 +27,7 @@ AS $$ -- Function body goes here $$;
 
 CREATE 대신 CREATE OR REPLACE를 사용하면 이미 같은 이름의 함수가 있을 경우 대체된다.
 >[!warning]
->기존 함수가 사라지기 때문에 주의해서 사용해야 한다.
+>CREATE OR REPLACE 사용 시 기존 함수가 있다면 덮어씌워지기 때문에 주의해서 사용해야 한다.
 
 숫자 2개를 받아 합을 반환하는 간단한 함수
 

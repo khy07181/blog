@@ -9,7 +9,7 @@ tags:
 draft: true
 published: 2025-02-23
 created: 2025-02-23T21:18
-updated: 2025-12-01T16:33
+updated: 2025-12-10T11:09
 ---
 
 ### 제목 제목
@@ -17,8 +17,6 @@ updated: 2025-12-01T16:33
 작성 작성
 
 obsidian wiki link test
-
-[[다른 글|다른 글]]
 
 >[!info]
 >callout test
