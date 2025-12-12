@@ -87,6 +87,7 @@ const config: QuartzConfig = {
         enableRSS: true,
         includeEmptyFiles: false,
       }),
+      Plugin.Robots(),
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.NotFoundPage(),
