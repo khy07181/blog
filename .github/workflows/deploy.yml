@@ -31,8 +31,6 @@ jobs:
           npx quartz build
           # ensure robots.txt is at the public root for GitHub Pages
           cp -f public/static/robots.txt public/robots.txt || true
-      - name: Copy Sitemap
-        run: cp public/sitemap.xml sitemap.xml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
