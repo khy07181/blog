@@ -266,30 +266,50 @@ It's also worth mentioning, that the smaller the number set in `nameOrderMap`, t
 ```ts title="quartz.layout.ts"
 Component.Explorer({
   sortFn: (a, b) => {
-    const nameOrderMap: Record<string, number> = {
-      "poetry-folder": 100,
-      "essay-folder": 200,
-      "research-paper-file": 201,
-      "dinosaur-fossils-file": 300,
-      "other-folder": 400,
+    const aIsFile = !!a.file
+    const bIsFile = !!b.file
+
+    // 1. 폴더 우선, 그 다음 파일
+    if (!aIsFile && bIsFile) {
+      return -1 // a: folder, b: file → a가 위
+    }
+    if (aIsFile && !bIsFile) {
+      return 1 // a: file, b: folder → b가 위
     }
 
-    let orderA = 0
-    let orderB = 0
-
-    if (a.file && a.file.slug) {
-      orderA = nameOrderMap[a.file.slug] || 0
-    } else if (a.name) {
-      orderA = nameOrderMap[a.name] || 0
+    // 2. 둘 다 폴더일 때: 이름 역순(Z → A)
+    if (!aIsFile && !bIsFile) {
+      // displayName 기준, Z → A로 정렬
+      return b.displayName.localeCompare(a.displayName, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      })
     }
 
-    if (b.file && b.file.slug) {
-      orderB = nameOrderMap[b.file.slug] || 0
-    } else if (b.name) {
-      orderB = nameOrderMap[b.name] || 0
+    // 3. 둘 다 파일일 때: 날짜 역순(최신이 위로)
+    // 날짜가 없을 수도 있으니 fallback 포함
+    const getDate = (node: FileNode) => {
+      const d = node.file?.dates?.modified ?? node.file?.dates?.created
+      return d ? new Date(d) : null
     }
 
-    return orderA - orderB
+    const dateA = getDate(a)
+    const dateB = getDate(b)
+
+    // 둘 다 날짜가 없으면 이름 역순으로라도 정렬
+    if (!dateA && !dateB) {
+      return b.displayName.localeCompare(a.displayName, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      })
+    }
+
+    // A에만 날짜 없는 경우 → 날짜 있는 B를 더 위로
+    if (!dateA) return 1
+    if (!dateB) return -1
+
+    // 최신순: dateB - dateA (B가 더 최근이면 양수 → B 위)
+    return dateB.getTime() - dateA.getTime()
   },
 })
 ```

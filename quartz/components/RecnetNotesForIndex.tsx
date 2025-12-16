@@ -5,12 +5,16 @@ const RecentNotesForIndex: QuartzComponent = (props: QuartzComponentProps) => {
   if (props.fileData.slug === "index") {
     return RecentNotes({
       title: "Recent Posts",
-      limit: 5,
+      limit: 10,
       showTags: true,
-      linkToMore: "/all-posts",
+      linkToMore: false,
+      filter: (f) => f.slug !== "index",
     })(props)
   }
   return null
 }
+
+// Ensure styles from the inner RecentNotes component are included
+RecentNotesForIndex.css = RecentNotes({}).css
 
 export default RecentNotesForIndex

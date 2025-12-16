@@ -15,15 +15,22 @@ export function getDate(cfg: GlobalConfiguration, data: QuartzPluginData): Date 
       `Field 'defaultDateType' was not set in the configuration object of quartz.config.ts. See https://quartz.jzhao.xyz/configuration#general-configuration for more details.`,
     )
   }
-  return data.dates?.[cfg.defaultDateType]
+  const dates = data.dates
+  if (!dates) return undefined
+  const primary = dates[cfg.defaultDateType]
+  if (primary) return primary
+  const fallbackOrder: ValidDateType[] = ["published", "created", "modified"]
+  for (const t of fallbackOrder) {
+    if (t !== cfg.defaultDateType && dates[t]) return dates[t]
+  }
+  return undefined
 }
 
-export function formatDate(d: Date, locale: ValidLocale = "en-US"): string {
-  return d.toLocaleDateString(locale, {
-    year: "numeric",
-    month: "short",
-    day: "2-digit",
-  })
+export function formatDate(d: Date, _locale: ValidLocale = "en-US"): string {
+  const year = d.getFullYear()
+  const month = String(d.getMonth() + 1).padStart(2, "0")
+  const day = String(d.getDate()).padStart(2, "0")
+  return `${year}-${month}-${day}`
 }
 
 export function Date({ date, locale }: Props) {
