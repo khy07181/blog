@@ -154,6 +154,15 @@ button#desktop-explorer {
       opacity: 0.75;
       pointer-events: all;
     }
+
+    & li > a.is-active {
+      opacity: 1;
+      color: var(--secondary);
+      font-weight: 600;
+      background: var(--highlight);
+      border-radius: 6px;
+      padding: 2px 6px;
+    }
   }
 
   > #explorer-ul {

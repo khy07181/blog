@@ -1,15 +1,15 @@
 ---
 title: TEST 글
-aliases: 
-description: 
-permalink: 
+aliases:
+description:
+permalink:
 classification: blog
 tags:
   - test
 draft: true
-date: 2025-02-23
+published: 2025-02-23
 created: 2025-02-23T21:18
-updated: 2025-05-25T22:03
+updated: 2025-12-10T11:09
 ---
 
 ### 제목 제목
@@ -17,8 +17,6 @@ updated: 2025-05-25T22:03
 작성 작성
 
 obsidian wiki link test
-
-[[다른 글|다른 글]]
 
 >[!info]
 >callout test
