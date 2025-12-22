@@ -14,7 +14,6 @@
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
-    "copy-robots": "cp -f public/static/robots.txt public/robots.txt || true",
     "postquartz": "npm run copy-robots",
     "postbuild": "npm run copy-robots",
     "check": "tsc --noEmit && npx prettier . --check",
