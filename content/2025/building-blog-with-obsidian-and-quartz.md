@@ -12,7 +12,7 @@ tags:
 draft: false
 published: 2025-02-23
 created: 2025-02-23T20:51
-updated: 2025-12-22T13:15
+updated: 2025-12-26T13:32
 ---
 
 # 어떤 블로그를 만들고 싶을까

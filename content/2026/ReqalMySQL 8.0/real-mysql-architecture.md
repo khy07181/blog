@@ -12,7 +12,7 @@ tags:
 draft: false
 published: 2025-12-14
 created: 2025-12-09T21:01
-updated: 2025-12-14T21:52
+updated: 2025-12-26T13:32
 ---
 
 MySQL 서버
