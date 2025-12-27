@@ -192,6 +192,26 @@ document.addEventListener("nav", () => {
   hiddenUntilDoneLoading?.classList.remove("hide-until-loaded")
 
   toggleExplorerFolders()
+
+  // Highlight current file link in explorer
+  const slug = (document.body?.dataset.slug ?? "").replace(/\/$/, "")
+  // Clear previous active states
+  document
+    .querySelectorAll('#explorer-content a.is-active')
+    .forEach((el) => el.classList.remove('is-active'))
+
+  // Try exact match first
+  let active = document.querySelector(`#explorer-content a[data-for='${CSS.escape(slug)}']`) as HTMLElement | null
+  // If not found, try matching without trailing /index
+  if (!active && slug.endsWith('index')) {
+    const base = slug.replace(/\/index$/, '')
+    active = document.querySelector(`#explorer-content a[data-for='${CSS.escape(base)}']`) as HTMLElement | null
+  }
+  if (active) {
+    active.classList.add('is-active')
+    // Ensure visible in viewport on mobile explorer
+    active.scrollIntoView({ block: 'nearest' })
+  }
 })
 
 /**
