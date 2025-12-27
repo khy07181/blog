@@ -13,7 +13,7 @@ permalink:
 draft: false
 published: 2025-10-19
 created: 2025-10-19T20:45
-updated: 2025-12-01T16:33
+updated: 2025-12-26T13:32
 ---
 문체란 단순히 말투의 차이를 넘어서 글이나 말의 표현 방식 전반을 뜻한다.
 

@@ -12,7 +12,7 @@ tags:
 draft: false
 published: 2025-02-23
 created: 2025-02-23T20:51
-updated: 2025-12-11T22:20
+updated: 2025-12-26T13:32
 ---
 
 # 어떤 블로그를 만들고 싶을까
@@ -178,7 +178,7 @@ afterBody: [
   Component.Comments({
     provider: 'giscus',
     options: {
-      repo: 'khy07181/blog',
+      repo: 'khy07181/khy07181.github.io',
       repoId: 'R_kgDON9-dEA',
       category: 'Announcements',
       categoryId: 'DIC_kwDON9-dEM4CnOik',
