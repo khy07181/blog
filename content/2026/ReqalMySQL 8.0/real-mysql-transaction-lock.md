@@ -1,5 +1,5 @@
 ---
-title: real-mysql-transaction-lock
+title: RealMySQL 트랜잭션과 잠금
 aliases:
   - RealMySQL 8.0 5장
 classification: blog

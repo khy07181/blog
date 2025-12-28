@@ -1,5 +1,5 @@
 ---
-title: real-mysql-data-compression
+title: RealMySQL 데이터 압축
 aliases:
   - RealMySQL 8.0 6장
 classification: resource
