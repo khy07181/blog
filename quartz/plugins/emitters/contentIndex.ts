@@ -45,8 +45,14 @@ function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndex): string {
   const urls = Array.from(idx)
     .map(([slug, content]) => createURLEntry(simplifySlug(slug), content))
     .join("")
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>`
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>`
   
+}
+
+// XML 1.0에서는 \x09, \x0A, \x0D, 그리고 \x20-\xD7FF만 허용됨. 그 외 제어문자는 제거해야 함.
+function sanitizeXmlText(text?: string): string {
+  if (!text) return ""
+  return text.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, "")
 }
 
 function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndex, limit?: number): string {
@@ -56,7 +62,7 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndex, limit?: nu
     <title>${escapeHTML(content.title)}</title>
     <link>https://${joinSegments(base, encodeURI(slug))}</link>
     <guid>https://${joinSegments(base, encodeURI(slug))}</guid>
-    <description>${content.richContent ?? content.description}</description>
+    <description>${escapeHTML(sanitizeXmlText(content.richContent ?? content.description ?? ""))}</description>
     <pubDate>${content.date?.toUTCString()}</pubDate>
   </item>`
 
