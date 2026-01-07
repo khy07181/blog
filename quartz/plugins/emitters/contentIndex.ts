@@ -38,15 +38,22 @@ const defaultOptions: Options = {
 
 function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndex): string {
   const base = cfg.baseUrl ?? ""
-  const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => `<url>
-    <loc>https://${joinSegments(base, encodeURI(slug))}</loc>
-    ${content.date && `<lastmod>${content.date.toISOString()}</lastmod>`}
+  const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => {
+    const loc = `https://${joinSegments(base, encodeURI(slug))}`
+    const lastmod = content.date ? `\n    <lastmod>${content.date.toISOString()}</lastmod>` : ""
+    return `  <url>
+    <loc>${loc}</loc>${lastmod}
   </url>`
+  }
+
   const urls = Array.from(idx)
     .map(([slug, content]) => createURLEntry(simplifySlug(slug), content))
-    .join("")
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>`
-  
+    .join("\n")
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>`
 }
 
 // XML 1.0에서는 \x09, \x0A, \x0D, 그리고 \x20-\xD7FF만 허용됨. 그 외 제어문자는 제거해야 함.

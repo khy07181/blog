@@ -6,6 +6,12 @@
       <description>Last 10 notes on 🪴 hayoung</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>hayoung blog</title>
+    <link>https://khy07181.github.io/</link>
+    <guid>https://khy07181.github.io/</guid>
+    <description>Welcome to my blog.</description>
+    <pubDate>Wed, 07 Jan 2026 08:00:16 GMT</pubDate>
+  </item><item>
     <title>RealMySQL 데이터 압축</title>
     <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-data-compression</link>
     <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-data-compression</guid>
@@ -59,12 +65,6 @@
     <guid>https://khy07181.github.io/2025/Trie</guid>
     <description>문자열을 효율적으로 저장하고 검색하는 데 사용되는 트리 기반의 자료구조 사전과 같은 단어 검색, 자동 완성, 접두사 매칭 등에 유용하다. Pros 불완전한 해시 함수를 사용하는 해시테이블과 비교할 때, 자료에 접근할 때 최악의 경우 더 더 유리한 시간복잡도를 갖는다. m이 탐색할 문자열의 길이일 때 시간복잡도는 O(m)이다.</description>
     <pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>침묵의 나선</title>
-    <link>https://khy07181.github.io/2025/spiral-of-silence</link>
-    <guid>https://khy07181.github.io/2025/spiral-of-silence</guid>
-    <description> 1970년 독일의 사회과학자 엘리자베스 노엘레-노이만(Elisabeth Noelle-Neumann)이 발표한, 정치학과 매스 커뮤니케이션에 관한 이론이다. 주로 언론 분야에서 많이 활용되며 매체가 여론에 미치는 영향을 설명할 때 자주 등장한다. 하나의 특정한 의견이 다수의 사람들에게 인정되고 있는 상황이라면, 그와 반대되는 의견을 가진 소수의 사람들이 고립과 배척을 두려워해 침묵하는 경향을 보이게 된다.</description>
-    <pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
