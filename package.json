@@ -14,7 +14,7 @@
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
-    "postquartz": "cp quartz/static/robots.txt public/robots.txt",
+    "postquartz": "cp quartz/static/robots.txt public/robots.txt && touch public/.nojekyll",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
