@@ -44,6 +44,17 @@ jobs:
             mv public/sitemap.formatted.xml public/sitemap.xml
             echo "Sitemap formatted successfully"
           fi
+      - name: Verify .nojekyll
+        run: |
+          # Verify .nojekyll exists
+          if [ -f public/.nojekyll ]; then
+            echo ".nojekyll file exists"
+            ls -la public/.nojekyll
+          else
+            echo ".nojekyll file not found, creating it"
+            touch public/.nojekyll
+            ls -la public/.nojekyll
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
