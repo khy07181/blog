@@ -150,11 +150,12 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
       }
 
       if (opts?.enableSiteMap) {
+        const sitemapContent = generateSiteMap(cfg, linkIndex)
         emitted.push(
           await write({
             ctx,
-            content: generateSiteMap(cfg, linkIndex),
-            slug: "sitemap-index" as FullSlug,
+            content: sitemapContent,
+            slug: "sitemap" as FullSlug,
             ext: ".xml",
           }),
         )
