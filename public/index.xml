@@ -6,6 +6,30 @@
       <description>Last 10 notes on 🪴 hayoung</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>hayoung blog</title>
+    <link>https://khy07181.github.io/</link>
+    <guid>https://khy07181.github.io/</guid>
+    <description>Welcome to my blog.</description>
+    <pubDate>Sun, 11 Jan 2026 13:42:28 GMT</pubDate>
+  </item><item>
+    <title>RealMySQL 옵티마이저와 힌트</title>
+    <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-optimizer-hint</link>
+    <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-optimizer-hint</guid>
+    <description>개요 쿼리 실행 절차 SQL 문장을 쪼개서 MySQL 서버가 이해할 수 있는 수준으로 분리한다. SQL 파스 트리가 만들어진다. SQL의 파싱 정보를 확인하면서 어떤 테이블부터 읽고 어떤 인덱스를 이용해 테이블을 읽을지 선택한다. 불필요한 조건 제거 및 복잡한 연산 단순화 여러 테이블의 조인이 있는 경우 순서 결정 각 테이블에 사용된 조건과 인덱스 통계 정보를 이용해 사용할 인덱스 결정 가져온 레코드들을 임시 테이블에 넣고 다시 한번 가공해야 하는지 결정 결정된 테이블 순서나 인덱스를 이용해 스토리지 엔진으로부터 데이터를 가져온다.</description>
+    <pubDate>Sun, 11 Jan 2026 13:42:00 GMT</pubDate>
+  </item><item>
+    <title>RealMySQL 데이터 압축</title>
+    <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-data-compression</link>
+    <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-data-compression</guid>
+    <description>페이지 압축 MySQL의 InnoDB 스토리지 엔진은 특정 테이블에 속한 모든 데이터 페이지를 반드시 동일한 크기로 관리해야 한다. 일반적으로 16KB MySQL에서는 펀치홀 기능을 활용해 페이지를 압축한다. 파일의 특정 영역의 논리적으로 유지하고, 물리적으로는 디스크 공간을 해제하는 방식 ex) 16KB의 페이지를 압축해 7KB가 되었다면 9KB의 공간이 펀치홀 펀치홀 기능은 운영체제, 하드웨어 자체, 파일 시스템에서 지원해야하기 때문에 많이 사용되진 않는다.</description>
+    <pubDate>Sun, 28 Dec 2025 05:38:00 GMT</pubDate>
+  </item><item>
+    <title>RealMySQL 트랜잭션과 잠금</title>
+    <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-transaction-lock</link>
+    <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-transaction-lock</guid>
+    <description>MySQL 엔진의 잠금 스토리지 엔진 레벨과 MySQL 엔진 레벨로 나뉜다. Global Lock 영햠 범위 : MySQL 서버 전체 Table Lock 개별 테이블 단위로 설정되는 잠금 명시적 테이블 락 특별한 상황이 아니면 어플리케이션에서 사용할 필요가 없다. 묵시적 테이블 락 MyISAM이나 MEMORY 테이블의 데이터를 변경하는 쿼리를 실행하면 발생한다.</description>
+    <pubDate>Sun, 28 Dec 2025 05:37:00 GMT</pubDate>
+  </item><item>
     <title>RealMySQL 아키텍처</title>
     <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-architecture</link>
     <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-architecture</guid>
@@ -41,30 +65,6 @@
     <guid>https://khy07181.github.io/2025/camera-selection-comparison</guid>
     <description>사진용 카메라 캐논 6D 30만원 대 2020만 화소 풀프레임 DSLR의 뷰파인더 감성 SD카드 사용, 오래가는 배터리 EF마운트 렌즈군 매우 다양하고 저렴함 추천 렌즈: 50mm F1.8 7만 원대 소니 알파7 II (A7M2) 60만 원대 2300만 화소 풀프레임, 손떨림 방지 뛰어난 자동 초점(비상차 AF) 서드파티 렌즈군과 중국산 저가 렌즈들도 ...</description>
     <pubDate>Sun, 31 Aug 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Trie</title>
-    <link>https://khy07181.github.io/2025/Trie</link>
-    <guid>https://khy07181.github.io/2025/Trie</guid>
-    <description>문자열을 효율적으로 저장하고 검색하는 데 사용되는 트리 기반의 자료구조 사전과 같은 단어 검색, 자동 완성, 접두사 매칭 등에 유용하다. Pros 불완전한 해시 함수를 사용하는 해시테이블과 비교할 때, 자료에 접근할 때 최악의 경우 더 더 유리한 시간복잡도를 갖는다. m이 탐색할 문자열의 길이일 때 시간복잡도는 O(m)이다.</description>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>침묵의 나선</title>
-    <link>https://khy07181.github.io/2025/spiral-of-silence</link>
-    <guid>https://khy07181.github.io/2025/spiral-of-silence</guid>
-    <description> 1970년 독일의 사회과학자 엘리자베스 노엘레-노이만(Elisabeth Noelle-Neumann)이 발표한, 정치학과 매스 커뮤니케이션에 관한 이론이다. 주로 언론 분야에서 많이 활용되며 매체가 여론에 미치는 영향을 설명할 때 자주 등장한다. 하나의 특정한 의견이 다수의 사람들에게 인정되고 있는 상황이라면, 그와 반대되는 의견을 가진 소수의 사람들이 고립과 배척을 두려워해 침묵하는 경향을 보이게 된다.</description>
-    <pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>회고 모임 &#039;메모어&#039; 마무리 후기</title>
-    <link>https://khy07181.github.io/2025/memoer-retrospective-meetup-closing-review</link>
-    <guid>https://khy07181.github.io/2025/memoer-retrospective-meetup-closing-review</guid>
-    <description>5월 1일부터 7월 6일까지 약 10주 동안 참여한 메모어 가 이번주를 마지막으로 종료됐다. 10개의 주간 회고를 쓰고 1번의 오프라인 모임을 했다. 원래는 오프라인 모임이 2번이지만 피치 못할 사정으로 2번째 오프라인 모임은 7월 20일로 연기됐다. 좋았던 점 10~12명으로 구성된 메인(?) 모임의 회고를 공유하며 이야기를 나눌수도 있지만, 전체 공유 회고도 있어 많은 사람들의 생각을 볼 수 있다는 점이 좋았다.</description>
-    <pubDate>Sun, 06 Jul 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>회고 모임 &#039;메모어&#039; 마무리 후기</title>
-    <link>https://khy07181.github.io/2025/memoer-ending-retrospect</link>
-    <guid>https://khy07181.github.io/2025/memoer-ending-retrospect</guid>
-    <description>5월 1일부터 7월 6일까지 약 10주 동안 참여한 메모어 가 이번주를 마지막으로 종료됐다. 10개의 주간 회고를 쓰고 1번의 오프라인 모임을 했다. 원래는 오프라인 모임이 2번이지만 피치 못할 사정으로 2번째 오프라인 모임은 7월 20일로 연기됐다. 좋았던 점 10~12명으로 구성된 메인(?) 모임의 회고를 공유하며 이야기를 나눌수도 있지만, 전체 공유 회고도 있어 많은 사람들의 생각을 볼 수 있다는 점이 좋았다.</description>
-    <pubDate>Sun, 06 Jul 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
