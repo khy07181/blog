@@ -31,6 +31,30 @@ jobs:
           npx quartz build
           # ensure robots.txt is at the public root for GitHub Pages
           cp -f public/static/robots.txt public/robots.txt || true
+          # Add .nojekyll to prevent GitHub Pages from using Jekyll
+          touch public/.nojekyll
+      - name: Format sitemap.xml
+        run: |
+          # Format sitemap.xml for better compatibility with Google Search Console
+          if [ -f public/sitemap.xml ]; then
+            # Install xmllint if not available
+            sudo apt-get update && sudo apt-get install -y libxml2-utils
+            # Format and prettify the sitemap
+            xmllint --format public/sitemap.xml > public/sitemap.formatted.xml
+            mv public/sitemap.formatted.xml public/sitemap.xml
+            echo "Sitemap formatted successfully"
+          fi
+      - name: Verify .nojekyll
+        run: |
+          # Verify .nojekyll exists
+          if [ -f public/.nojekyll ]; then
+            echo ".nojekyll file exists"
+            ls -la public/.nojekyll
+          else
+            echo ".nojekyll file not found, creating it"
+            touch public/.nojekyll
+            ls -la public/.nojekyll
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
