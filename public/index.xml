@@ -33,7 +33,7 @@
     <title>RealMySQL 트랜잭션과 잠금</title>
     <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-transaction-lock</link>
     <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-transaction-lock</guid>
-    <description>MySQL 엔진의 잠금 스토리지 엔진 레벨과 MySQL 엔진 레벨로 나뉜다. Global Lock 영햠 범위 : MySQL 서버 전체 Table Lock 개별 테이블 단위로 설정되는 잠금 명시적 테이블 락 특별한 상황이 아니면 어플리케이션에서 사용할 필요가 없다. 묵시적 테이블 락 MyISAM이나 MEMORY 테이블의 데이터를 변경하는 쿼리를 실행하면 발생한다.</description>
+    <description>MySQL 엔진의 잠금 스토리지 엔진 레벨과 MySQL 엔진 레벨로 나뉜다. Global Lock 영햠 범위 : MySQL 서버 전체 Table Lock 개별 테이블 단위로 설정되는 잠금 명시적 테이블 락 특별한 상황이 아니면 어플리케이션에서 사용할 필요가 없다. 묵시적 테이블 락 MyISAM이나 MEMORY 테이블의 데이터를 변경하는 쿼리를 실행하면 발생한다.</description>
     <pubDate>Sun, 28 Dec 2025 05:37:00 GMT</pubDate>
   </item><item>
     <title>RealMySQL 아키텍처</title>
