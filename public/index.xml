@@ -10,7 +10,19 @@
     <link>https://khy07181.github.io/</link>
     <guid>https://khy07181.github.io/</guid>
     <description>Welcome to my blog.</description>
-    <pubDate>Fri, 09 Jan 2026 04:52:59 GMT</pubDate>
+    <pubDate>Sun, 25 Jan 2026 13:19:40 GMT</pubDate>
+  </item><item>
+    <title>RealMySQL 실행계획</title>
+    <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-explain-plan</link>
+    <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-explain-plan</guid>
+    <description>통계 정보 MySQL 서버의 통계 정보 MySQL 5.6부터는 InnoDB 스토리지 엔진을 사용하는 테이블에 대한 통계 정보를 영구적으로 관리할 수 있게 개선되었다. 이전에는 메모리에만 저장되어 MySQL 서버가 재시작되면 통계 정보가 초기화됐다. 히스토그램 히스토그램의 정보 수집 및 삭제 Singleton Histogram 컬럼값 개별로 레코드 건수를 관리하는 히스토그램 Equi-Height Histogram 컬럼값의 범위를 균등한 개수로 구분해서 관리하는 히스토그램 히스토그램의 용도 히스토그램 정보가 없으면 옵티마이저는 데이터가 균등하게 분포돼 있을 것으로 예측한다.</description>
+    <pubDate>Sun, 25 Jan 2026 13:19:00 GMT</pubDate>
+  </item><item>
+    <title>RealMySQL 옵티마이저와 힌트</title>
+    <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-optimizer-hint</link>
+    <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-optimizer-hint</guid>
+    <description>개요 쿼리 실행 절차 SQL 문장을 쪼개서 MySQL 서버가 이해할 수 있는 수준으로 분리한다. SQL 파스 트리가 만들어진다. SQL의 파싱 정보를 확인하면서 어떤 테이블부터 읽고 어떤 인덱스를 이용해 테이블을 읽을지 선택한다. 불필요한 조건 제거 및 복잡한 연산 단순화 여러 테이블의 조인이 있는 경우 순서 결정 각 테이블에 사용된 조건과 인덱스 통계 정보를 이용해 사용할 인덱스 결정 가져온 레코드들을 임시 테이블에 넣고 다시 한번 가공해야 하는지 결정 결정된 테이블 순서나 인덱스를 이용해 스토리지 엔진으로부터 데이터를 가져온다.</description>
+    <pubDate>Sun, 11 Jan 2026 13:42:00 GMT</pubDate>
   </item><item>
     <title>RealMySQL 데이터 압축</title>
     <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-data-compression</link>
@@ -53,18 +65,6 @@
     <guid>https://khy07181.github.io/2025/types-and-characteristics-of-browser-storage</guid>
     <description>LocalStorage 도메인 단위로 데이터를 영구적으로 저장할 수 있는 API 사용자가 브라우저를 닫고 다시 열어도 데이터 는 유지되며, 페이지 새로고침이나 탭 변경에도 영향을 받지 않는다. 테마, 언어 설정, 비로그인 상태의 장바구니 등 장기적으로 유지되어야 하는 데이터를 저장하는 데 적합하다.</description>
     <pubDate>Mon, 01 Sep 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>카메라 선택 비교</title>
-    <link>https://khy07181.github.io/2025/camera-selection-comparison</link>
-    <guid>https://khy07181.github.io/2025/camera-selection-comparison</guid>
-    <description>사진용 카메라 캐논 6D 30만원 대 2020만 화소 풀프레임 DSLR의 뷰파인더 감성 SD카드 사용, 오래가는 배터리 EF마운트 렌즈군 매우 다양하고 저렴함 추천 렌즈: 50mm F1.8 7만 원대 소니 알파7 II (A7M2) 60만 원대 2300만 화소 풀프레임, 손떨림 방지 뛰어난 자동 초점(비상차 AF) 서드파티 렌즈군과 중국산 저가 렌즈들도 ...</description>
-    <pubDate>Sun, 31 Aug 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Trie</title>
-    <link>https://khy07181.github.io/2025/Trie</link>
-    <guid>https://khy07181.github.io/2025/Trie</guid>
-    <description>문자열을 효율적으로 저장하고 검색하는 데 사용되는 트리 기반의 자료구조 사전과 같은 단어 검색, 자동 완성, 접두사 매칭 등에 유용하다. Pros 불완전한 해시 함수를 사용하는 해시테이블과 비교할 때, 자료에 접근할 때 최악의 경우 더 더 유리한 시간복잡도를 갖는다. m이 탐색할 문자열의 길이일 때 시간복잡도는 O(m)이다.</description>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
