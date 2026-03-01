@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko"><head><title>RealMySQL 실행계획</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"/><meta name="google-site-verification" content="J7M_TUQSjWBrqZt2V9LjuqwJzG5K17jb93vmWqmE2tM"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="🪴 hayoung"/><meta property="og:title" content="RealMySQL 실행계획"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="RealMySQL 실행계획"/><meta name="twitter:description" content="통계 정보 MySQL 서버의 통계 정보 MySQL 5.6부터는 InnoDB 스토리지 엔진을 사용하는 테이블에 대한 통계 정보를 영구적으로 관리할 수 있게 개선되었다. 이전에는 메모리에만 저장되어 MySQL 서버가 재시작되면 통계 정보가 초기화됐다. 히스토그램 히스토그램의 정보 수집 및 삭제 Singleton Histogram 컬럼값 개별로 레코드 건수를 관리하는 히스토그램 Equi-Height Histogram 컬럼값의 범위를 균등한 개수로 구분해서 관리하는 히스토그램 히스토그램의 용도 히스토그램 정보가 없으면 옵티마이저는 데이터가 균등하게 분포돼 있을 것으로 예측한다."/><meta property="og:description" content="통계 정보 MySQL 서버의 통계 정보 MySQL 5.6부터는 InnoDB 스토리지 엔진을 사용하는 테이블에 대한 통계 정보를 영구적으로 관리할 수 있게 개선되었다. 이전에는 메모리에만 저장되어 MySQL 서버가 재시작되면 통계 정보가 초기화됐다. 히스토그램 히스토그램의 정보 수집 및 삭제 Singleton Histogram 컬럼값 개별로 레코드 건수를 관리하는 히스토그램 Equi-Height Histogram 컬럼값의 범위를 균등한 개수로 구분해서 관리하는 히스토그램 히스토그램의 용도 히스토그램 정보가 없으면 옵티마이저는 데이터가 균등하게 분포돼 있을 것으로 예측한다."/><meta property="og:image:type" content="image/webp"/><meta property="og:image:alt" content="통계 정보 MySQL 서버의 통계 정보 MySQL 5.6부터는 InnoDB 스토리지 엔진을 사용하는 테이블에 대한 통계 정보를 영구적으로 관리할 수 있게 개선되었다. 이전에는 메모리에만 저장되어 MySQL 서버가 재시작되면 통계 정보가 초기화됐다. 히스토그램 히스토그램의 정보 수집 및 삭제 Singleton Histogram 컬럼값 개별로 레코드 건수를 관리하는 히스토그램 Equi-Height Histogram 컬럼값의 범위를 균등한 개수로 구분해서 관리하는 히스토그램 히스토그램의 용도 히스토그램 정보가 없으면 옵티마이저는 데이터가 균등하게 분포돼 있을 것으로 예측한다."/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:url" content="https://khy07181.github.io/static/og-image.png"/><meta name="twitter:image" content="https://khy07181.github.io/static/og-image.png"/><meta property="og:image" content="https://khy07181.github.io/static/og-image.png"/><meta property="twitter:domain" content="khy07181.github.io"/><meta property="og:url" content="https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-explain-plan"/><meta property="twitter:url" content="https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-explain-plan"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="통계 정보 MySQL 서버의 통계 정보 MySQL 5.6부터는 InnoDB 스토리지 엔진을 사용하는 테이블에 대한 통계 정보를 영구적으로 관리할 수 있게 개선되었다. 이전에는 메모리에만 저장되어 MySQL 서버가 재시작되면 통계 정보가 초기화됐다. 히스토그램 히스토그램의 정보 수집 및 삭제 Singleton Histogram 컬럼값 개별로 레코드 건수를 관리하는 히스토그램 Equi-Height Histogram 컬럼값의 범위를 균등한 개수로 구분해서 관리하는 히스토그램 히스토그램의 용도 히스토그램 정보가 없으면 옵티마이저는 데이터가 균등하게 분포돼 있을 것으로 예측한다."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="2026/ReqalMySQL-8.0/real-mysql-explain-plan"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">🪴 hayoung</a></h2><div class="social-icons"><a class="social-link" href="https://khy07181.github.io/index.xml" aria-label="RSS" rel="me noopener noreferrer" target="_blank"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.5 4A1.5 1.5 0 0 0 3 5.5V7A1.5 1.5 0 0 0 4.5 8.5C12.04 8.5 17.5 13.96 17.5 21.5A1.5 1.5 0 0 0 19 23h1.5A1.5 1.5 0 0 0 22 21.5C22 11.835 14.165 4 4.5 4zm0 7A1.5 1.5 0 0 0 3 12.5V14A1.5 1.5 0 0 0 4.5 15.5 5.5 5.5 0 0 1 10 21a1.5 1.5 0 0 0 1.5 1.5H13A1.5 1.5 0 0 0 14.5 21C14.5 15.701 10.299 11.5 5 11.5zM5 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></span></a><a class="social-link" href="mailto:khy07181@gmail.com" aria-label="Email" rel="me noopener noreferrer"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg></span></a><a class="social-link" href="https://github.com/khy07181" aria-label="GitHub" rel="me noopener noreferrer" target="_blank"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.95 5.28.95 11.55c0 4.86 3.15 8.98 7.52 10.43.55.1.75-.24.75-.53 0-.26-.01-1.14-.02-2.06-3.06.66-3.71-1.29-3.71-1.29-.5-1.27-1.22-1.61-1.22-1.61-.99-.67.07-.66.07-.66 1.1.08 1.67 1.13 1.67 1.13.98 1.67 2.58 1.19 3.21.9.1-.72.38-1.19.69-1.46-2.44-.28-5-1.22-5-5.44 0-1.2.43-2.19 1.13-2.96-.11-.28-.49-1.41.11-2.94 0 0 .92-.29 3.02 1.13.87-.24 1.81-.36 2.74-.36.93 0 1.87.12 2.74.36 2.1-1.42 3.02-1.13 3.02-1.13.6 1.53.22 2.66.11 2.94.7.77 1.13 1.76 1.13 2.96 0 4.23-2.56 5.16-5.01 5.43.39.34.74 1.01.74 2.05 0 1.48-.01 2.67-.01 3.03 0 .29.2.64.76.53 4.36-1.45 7.51-5.57 7.51-10.43C23.05 5.28 18.27.5 12 .5z"/></svg></span></a></div><div class="spacer mobile-only"></div><div class="search"><button class="search-button" id="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><button class="darkmode" id="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button><div class="explorer"><button type="button" id="mobile-explorer" class="collapsed hide-until-loaded" data-behavior="collapse" data-collapsed="collapsed" data-savestate="false" data-tree="[{&quot;path&quot;:&quot;2026&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;2026/ReqalMySQL-8.0&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;2025&quot;,&quot;collapsed&quot;:true}]" data-mobile="true" aria-controls="explorer-content" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" id="desktop-explorer" class="title-button" data-behavior="collapse" data-collapsed="collapsed" data-savestate="false" data-tree="[{&quot;path&quot;:&quot;2026&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;2026/ReqalMySQL-8.0&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;2025&quot;,&quot;collapsed&quot;:true}]" data-mobile="false" aria-controls="explorer-content" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-outer "><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="2026"><button class="folder-button"><span class="folder-title">2026</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="2026"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="2026/ReqalMySQL-8.0"><button class="folder-button"><span class="folder-title">ReqalMySQL 8.0</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="2026/ReqalMySQL-8.0"><li><a href="../../2026/ReqalMySQL-8.0/real-mysql-explain-plan" data-for="2026/ReqalMySQL-8.0/real-mysql-explain-plan">RealMySQL 실행계획</a></li><li><a href="../../2026/ReqalMySQL-8.0/real-mysql-optimizer-hint" data-for="2026/ReqalMySQL-8.0/real-mysql-optimizer-hint">RealMySQL 옵티마이저와 힌트</a></li><li><a href="../../2026/ReqalMySQL-8.0/real-mysql-data-compression" data-for="2026/ReqalMySQL-8.0/real-mysql-data-compression">RealMySQL 데이터 압축</a></li><li><a href="../../2026/ReqalMySQL-8.0/real-mysql-transaction-lock" data-for="2026/ReqalMySQL-8.0/real-mysql-transaction-lock">RealMySQL 트랜잭션과 잠금</a></li><li><a href="../../2026/ReqalMySQL-8.0/real-mysql-architecture" data-for="2026/ReqalMySQL-8.0/real-mysql-architecture">RealMySQL 아키텍처</a></li></ul></div></li><li><a href="../../2026/NoSQL-Database" data-for="2026/NoSQL-Database">NoSQL Database</a></li><li><a href="../../2026/Spring-Data-JPA에서-새로운-Entity를-판단하는-방법" data-for="2026/Spring-Data-JPA에서-새로운-Entity를-판단하는-방법">Spring Data JPA에서 새로운 Entity를 판단하는 방법</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="2025"><button class="folder-button"><span class="folder-title">2025</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="2025"><li><a href="../../2025/PostgreSQL-Function" data-for="2025/PostgreSQL-Function">PostgreSQL Function</a></li><li><a href="../../2025/building-my-reading-environment" data-for="2025/building-my-reading-environment">나만의 독서 환경 만들기</a></li><li><a href="../../2025/types-of-writing-style" data-for="2025/types-of-writing-style">문체의 종류</a></li><li><a href="../../2025/types-and-characteristics-of-browser-storage" data-for="2025/types-and-characteristics-of-browser-storage">브라우저 저장소의 종류와 특성</a></li><li><a href="../../2025/camera-selection-comparison" data-for="2025/camera-selection-comparison">카메라 선택 비교</a></li><li><a href="../../2025/CAP" data-for="2025/CAP">CAP</a></li><li><a href="../../2025/Trie" data-for="2025/Trie">Trie</a></li><li><a href="../../2025/spiral-of-silence" data-for="2025/spiral-of-silence">침묵의 나선</a></li><li><a href="../../2025/memoer-ending-retrospect" data-for="2025/memoer-ending-retrospect">회고 모임 '메모어' 마무리 후기</a></li><li><a href="../../2025/GRASP-Pattern" data-for="2025/GRASP-Pattern">GRASP Pattern</a></li><li><a href="../../2025/retrospective-methodology" data-for="2025/retrospective-methodology">회고 방법론</a></li><li><a href="../../2025/time-tracking-tool-journey-1" data-for="2025/time-tracking-tool-journey-1">Time Tracking 도구 사용 여정기 - 1</a></li><li><a href="../../2025/memoir-retrospect" data-for="2025/memoir-retrospect">우물 안 개구리의 메모어 회고 모임 참여 후기</a></li><li><a href="../../2025/my-mac-initial-setup" data-for="2025/my-mac-initial-setup">나의 Mac 초기 설정</a></li><li><a href="../../2025/PARA-Method" data-for="2025/PARA-Method">PARA Method</a></li><li><a href="../../2025/starting-and-completing" data-for="2025/starting-and-completing">시작하고, 완수하기</a></li><li><a href="../../2025/building-blog-with-obsidian-and-quartz" data-for="2025/building-blog-with-obsidian-and-quartz">Obsidian과 Quartz로 블로그 만들기</a></li></ul></div></li></ul></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../2026/">2026</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../2026/ReqalMySQL-8.0/">ReqalMySQL 8.0</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>RealMySQL 실행계획</a></div></nav><h1 class="article-title">RealMySQL 실행계획</h1><p show-comma="true" class="content-meta"><time datetime="2026-01-25T13:19:00.000Z">2026-01-25</time><span>15 min read</span></p><ul class="tags"><li><a href="../../tags/db" class="internal tag-link">db</a></li><li><a href="../../tags/MySQL" class="internal tag-link">MySQL</a></li><li><a href="../../tags/RealMySQL" class="internal tag-link">RealMySQL</a></li></ul></div></div><article class="popover-hint"><h2 id="통계-정보">통계 정보<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#통계-정보" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>MySQL 서버의 통계 정보</p>
+<ul>
+<li>MySQL 5.6부터는 InnoDB 스토리지 엔진을 사용하는 테이블에 대한 통계 정보를 영구적으로 관리할 수 있게 개선되었다.
+<ul>
+<li>이전에는 메모리에만 저장되어 MySQL 서버가 재시작되면 통계 정보가 초기화됐다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="히스토그램">히스토그램<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#히스토그램" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>히스토그램의 정보 수집 및 삭제</p>
+<ul>
+<li>Singleton Histogram
+<ul>
+<li>컬럼값 개별로 레코드 건수를 관리하는 히스토그램</li>
+</ul>
+</li>
+<li>Equi-Height Histogram
+<ul>
+<li>컬럼값의 범위를 균등한 개수로 구분해서 관리하는 히스토그램</li>
+</ul>
+</li>
+</ul>
+<p>히스토그램의 용도</p>
+<ul>
+<li>히스토그램 정보가 없으면 옵티마이저는 데이터가 균등하게 분포돼 있을 것으로 예측한다. 하지만 히스토그램이 있으면 특정 범위의 데이터가 많고 적음을 식별할 수 있다.</li>
+</ul>
+<p>히스토그램과 인덱스</p>
+<ul>
+<li>인덱스 다이브 (Index Dive)
+<ul>
+<li>옵티마이저는 실행 계획 수립 시 실제 인덱스 B-Tree를 샘플링하여 조건절에 일치하는 레코드 건수를 예측한다.</li>
+</ul>
+</li>
+<li>인덱스와 히스토그램의 관계
+<ul>
+<li>MySQL 8.0에서는 인덱스가 있는 컬럼은 히스토그램보다 실제 인덱스 다이브를 통해 수집한 정보를 우선하여 사용한다.</li>
+<li>히스토그램은 주로 인덱스가 없는 컬럼의 데이터 분포를 참조하는 용도로 사용된다.</li>
+</ul>
+</li>
+</ul>
+<p>코스트 모델(Cost Model)</p>
+<ul>
+<li>코스트 모델의 역할
+<ul>
+<li>전체 쿼리 비용을 계산하는 단위 작업들의 비용을 관리한다.</li>
+<li>MySQL 5.7부터 mysql의 <code>server_cost</code>와 <code>engine_cost</code> 테이블을 통해 관리자가 비용 상수를 조정할 수 있게 되었다.</li>
+</ul>
+</li>
+<li>주요 비용 상수
+<ul>
+<li><code>io_block_read_cost</code>
+<ul>
+<li>디스크 데이터 페이지 읽기 비용.</li>
+</ul>
+</li>
+<li><code>row_evaluate_cost</code>
+<ul>
+<li>레코드 비교 비용.</li>
+<li>이 값이 증가하면 풀 스캔 비용이 높아져 인덱스 레인지 스캔 가능성이 높아진다,.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="실행-계획-확인">실행 계획 확인<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#실행-계획-확인" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="실행-계획-출력-포맷">실행 계획 출력 포맷<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#실행-계획-출력-포맷" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>FORMAT 옵션을 통해 실행 계획의 표시 방법을 JSON이나 TREE, 단순 테이블 형태로 선택할 수 있다.
+<ul>
+<li><code>EXPLAIN FORMAT=TREE</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="쿼리의-실행-시간-확인">쿼리의 실행 시간 확인<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#쿼리의-실행-시간-확인" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>EXPLAIN ANALYZE
+<ul>
+<li>실제 쿼리를 실행하고 단계별 소요 시간, 처리한 레코드 건수, 반복 횟수(loops)를 TREE 포맷으로 보여준다,.</li>
+</ul>
+</li>
+</ul>
+<h2 id="실행-계획-분석">실행 계획 분석<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#실행-계획-분석" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="id-칼럼">id 칼럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#id-칼럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>단위(SELECT) 쿼리 식별자</p>
+<ul>
+<li><code>SELECT</code> 키워드 단위로 부여되는 식별자 값이다.</li>
+<li>조인 시에는 id가 증가하지 않고 같지만, 서브쿼리나 UNION 사용 시 id가 증가한다,.</li>
+</ul>
+<h3 id="select_type-칼럼">select_type 칼럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#select_type-칼럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>각 단위 SELECT 쿼리가 어떤 타입의 쿼리인지 표시되는 컬럼</p>
+<ul>
+<li>SIMPLE
+<ul>
+<li>UNION이나 서브쿼리가 없는 단순 SELECT</li>
+</ul>
+</li>
+<li>PRIMARY
+<ul>
+<li>UNION이나 서브쿼리를 가진 쿼리의 가장 바깥쪽(Outer) 단위 쿼리</li>
+</ul>
+</li>
+<li>UNION
+<ul>
+<li>UNION으로 결합하는 단위 SELECT 쿼리 중 첫 번째를 제외한 두 번째 이후 단위 SELECT 쿼리</li>
+</ul>
+</li>
+<li>DEPENDENT UNION
+<ul>
+<li>UNION이나 UNION ALL로 집합을 결합하는 쿼리</li>
+<li>DEPENDENT는 UNION이나 UNION ALL로 결합된 단위 쿼리가 외부 쿼리에 의해 영향을 받는 것을 의미</li>
+</ul>
+</li>
+<li>UNION RESULT
+<ul>
+<li>UNION 결과를 담아두는 테이블을 의미</li>
+</ul>
+</li>
+<li>SUBQUERY
+<ul>
+<li>FROM 절 이외에서 사용되는 서브쿼리만을 의미</li>
+</ul>
+</li>
+<li>DEPENDENT SUBQUERY
+<ul>
+<li>서브쿼리가 Outer SELECT 쿼리에서 정의된 컬럼을 사용하는 경우 표시</li>
+</ul>
+</li>
+<li>DERIVED
+<ul>
+<li>단위 SELECT 쿼리의 실행 결과로 메모리나 디스크에 임시 테이블을 생성하는 것을 의미</li>
+</ul>
+</li>
+<li>DEPENDENT DERIVED
+<ul>
+<li>해당 테이블이 LATERAL JOIN이 사용된 것을 의미</li>
+</ul>
+</li>
+<li>UNCACHEABLE SUBQUERY
+<ul>
+<li>서브쿼리 결과 캐시가 불가능할 때 표시</li>
+</ul>
+</li>
+<li>MATERIALIZED
+<ul>
+<li>FROM 절이나 IN(Subquery) 형태의 쿼리에 용된 서브쿼리의 최적화를 위해 사용</li>
+</ul>
+</li>
+</ul>
+<h3 id="table-컬럼">table 컬럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#table-컬럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>실행 대상 테이블</p>
+<ul>
+<li>실행 계획은 테이블 기준으로 표시된다.</li>
+<li><code>&lt;derived N></code>은 id N번 쿼리의 파생 테이블을 의미한다.</li>
+</ul>
+<h3 id="partitions-컬럼">partitions 컬럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#partitions-컬럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>파티션 테이블에 대한 실행 계획 정보 제공
+Partition Pruning</li>
+<li>파티션 테이블에서 쿼리 처리에 필요한 파티션만 골라내는 과정이며, 접근한 파티션 목록이 이 칼럼에 표시된다.</li>
+</ul>
+<h3 id="type-컬럼-접근-방법">type 컬럼 (접근 방법)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#type-컬럼-접근-방법" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>성능이 빠른 순서</p>
+<ul>
+<li>system
+<ul>
+<li>레코드가 0~1건인 테이블을 참조하는 형태의 접근 방법</li>
+<li>MyISAM, Memory 테이블에서만 사용</li>
+</ul>
+</li>
+<li>const
+<ul>
+<li>PK나 유니크 키로 1건만 조회 (매우 빠름).</li>
+</ul>
+</li>
+<li>eq_ref
+<ul>
+<li>여러 테이블 조인 시 테이블의 PK나 유니크 키로 검색 조건에 사용할 때 사용됨</li>
+</ul>
+</li>
+<li>ref
+<ul>
+<li>인덱스 종류와 관계없이 동등(Equal) 조건 검색</li>
+<li>eq_ref와 달리 조인의 순서와 관겡벗고, PK나 유니크 키 등의 제약조건도 없다.</li>
+</ul>
+</li>
+<li>fulltext
+<ul>
+<li>전문 검색(Full-text Search) 인덱스를 사용해 레코드를 읽는 접근 방법</li>
+</ul>
+</li>
+<li>ref_or_null
+<ul>
+<li>ref 방식 또는 NULL 비교 접근 방법</li>
+</ul>
+</li>
+<li>unique_subquery
+<ul>
+<li>WHERE 조건절에서 사용될 수 있는 IN 형태의 쿼리를 위한 접근 방법</li>
+</ul>
+</li>
+<li>index_subquery
+<ul>
+<li>서브쿼리 결과의 중복된 값을 인덱스를 이용해서 제거할 수 있을 때 사용</li>
+</ul>
+</li>
+<li>range
+<ul>
+<li>인덱스 레인지 스캔 (<code>&lt;</code>, <code>></code>, <code>BETWEEN</code>, <code>IN</code>, <code>LIKE</code> 등)</li>
+</ul>
+</li>
+<li>index_merge
+<ul>
+<li>2개 이상의 인덱스를 이용해 검색 결과를 병합해서 처리하는 방식</li>
+</ul>
+</li>
+<li>index
+<ul>
+<li>인덱스 풀 스캔</li>
+<li>커버링 인덱스나 정렬 최적화 시 사용됨.</li>
+</ul>
+</li>
+<li>ALL
+<ul>
+<li>풀 테이블 스캔 (가장 비효율적)</li>
+</ul>
+</li>
+</ul>
+<h3 id="possible_keys-컬럼">possible_keys 컬럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#possible_keys-컬럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>사용 후보였던 인덱스 목록 (무시해도 됨).</li>
+</ul>
+<h3 id="key-컬럼">key 컬럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#key-컬럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>실제 실행 계획에서 선택된 인덱스.</li>
+</ul>
+<h3 id="key_len-컬럼">key_len 컬럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#key_len-컬럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>인덱스의 각 레코드에서 몇 바이트를 사용했는지 표시</li>
+<li>다중 칼럼 인덱스에서 몇 번째 칼럼까지 사용했는지 파악 가능하다.</li>
+</ul>
+<h3 id="ref-컬럼">ref 컬럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ref-컬럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>접근 방법이 <code>ref</code>일 때 비교 조건으로 어떤 값(상수, 컬럼 등)이 제공되었는지 보여준다.</li>
+<li><code>func</code>라고 나오면 값이 변환/가공된 것이다,.</li>
+</ul>
+<h3 id="rows-컬럼">rows 컬럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rows-컬럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>쿼리 처리를 위해 읽고 체크해야 할 것으로 예측되는 레코드 건수.</li>
+</ul>
+<h3 id="filtered-컬럼">filtered 컬럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#filtered-컬럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>필터링되고 남은 레코드의 비율(%)</li>
+<li>이 값이 정확할수록 조인 성능 예측이 정확해진다.</li>
+</ul>
+<h3 id="extra-컬럼">Extra 컬럼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#extra-컬럼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>const row not found</li>
+<li>Deleting all rows</li>
+<li>Distinct</li>
+<li>FirstMatch</li>
+<li>Full scan on NULL key</li>
+<li>impossible HAVING</li>
+<li>impossible WHERE</li>
+<li>LosseScan</li>
+<li>No matching min/max rows</li>
+<li>no matching row in const table</li>
+<li>No matching rows after partition pruning</li>
+<li>No tables used</li>
+<li>Not exists</li>
+<li>Plan isn’t ready yet</li>
+<li>Range checked for each record (index map:N)</li>
+<li>Recursive</li>
+<li>Rematerialize</li>
+<li>Select tables optimized away</li>
+<li>Start temporary, End temporary</li>
+<li>Unique row not found</li>
+<li>Using filesort</li>
+<li>Using index(커버링 인덱스)</li>
+<li>Using index condition</li>
+<li>Using index for group-by</li>
+<li>Using index for skip scan</li>
+<li>Using join buffer(Block Nested Loop), Using join buffer (Batched Key Access), Using join buffer(hash join)</li>
+<li>Using MRR</li>
+<li>Using sort_union, Using union, Using intersect</li>
+<li>Using temporary</li>
+<li>Using where</li>
+<li>Zero limit</li>
+</ul>
+<h3 id="extra">Extra<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#extra" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>실행 계획에서 성능과 관련된 중요한 내부 처리 알고리즘이나 메시지를 표시하는 컬럼입니다.</p>
+<ul>
+<li>const row not found
+<ul>
+<li><code>const</code> 접근 방법으로 테이블을 읽었으나, 실제로 해당 테이블에 레코드가 1건도 존재하지 않는 경우</li>
+</ul>
+</li>
+<li>Deleting all rows
+<ul>
+<li>MyISAM 엔진 등에서 WHERE 절 없는 DELETE 문 실행 시, 핸들러 기능을 이용해 모든 레코드를 한 번에 삭제했음을 의미</li>
+</ul>
+</li>
+<li>Distinct
+<ul>
+<li>조인 시 필요한 레코드만 읽고 중복된 값은 무시하며 조회하는 최적화를 수행</li>
+</ul>
+</li>
+<li>FirstMatch
+<ul>
+<li>세미 조인 최적화 중 FirstMatch 전략을 사용하여, 기준 테이블의 레코드에 대해 일치하는 첫 번째 건만 검색하고 멈춤</li>
+</ul>
+</li>
+<li>Full scan on NULL key
+<ul>
+<li>IN 서브쿼리 연산 중 왼쪽 피연산자가 NULL인 경우, 차선책으로 서브쿼리 테이블에 대해 풀 스캔을 수행</li>
+</ul>
+</li>
+<li>Impossible HAVING
+<ul>
+<li>쿼리에 사용된 HAVING 절의 조건을 만족하는 레코드가 없을 때(불가능한 조건일 때) 표시</li>
+</ul>
+</li>
+<li>Impossible WHERE
+<ul>
+<li>WHERE 조건절이 항상 FALSE가 되어 쿼리 조건을 만족하는 레코드가 하나도 없을 때 표시</li>
+</ul>
+</li>
+<li>LooseScan
+<ul>
+<li>세미 조인 최적화 중 LooseScan 전략(인덱스를 듬성듬성 읽는 방식)이 사용됨</li>
+</ul>
+</li>
+<li>No matching min/max row
+<ul>
+<li>MIN()이나 MAX()와 같은 집합 함수가 있는 쿼리의 WHERE 조건절을 만족하는 레코드가 한 건도 없을 때 표시</li>
+</ul>
+</li>
+<li>no matching row in const table
+<ul>
+<li>조인에 사용된 테이블에서 const 방법으로 접근했으나 일치하는 레코드가 없음</li>
+</ul>
+</li>
+<li>No matching rows after partition pruning
+  - 파티션 테이블에서 파티션 프루닝을 수행했으나, 대상 파티션에 삭제/수정할 레코드가 없음</li>
+<li>No tables used
+    - FROM 절이 없거나 <code>FROM DUAL</code> 형태의 쿼리로, 실제 테이블을 사용하지 않음</li>
+<li>Not exists
+<ul>
+<li>아우터 조인을 이용해 안티-조인(Anti-JOIN)을 수행할 때, 일치하는 레코드가 존재하면 더 이상 검색하지 않고 종료하는 최적화를 수행</li>
+</ul>
+</li>
+<li>Plan isn’t ready yet
+<ul>
+<li><code>EXPLAIN FOR CONNECTION</code> 명령 실행 시, 대상 커넥션에서 아직 쿼리 실행 계획을 수립하지 못한 상태</li>
+</ul>
+</li>
+<li>Range checked for each record (index map: N)
+<ul>
+<li>매 레코드마다 인덱스 사용 여부(레인지 스캔 vs 풀 스캔)를 다시 검토하여 처리,</li>
+</ul>
+</li>
+<li>Recursive
+<ul>
+<li>WITH 구문을 이용한 재귀 CTE(Common Table Expression)가 사용됨,</li>
+</ul>
+</li>
+<li>Rematerialize
+<ul>
+<li>래터럴 조인 시 선행 테이블의 레코드별로 서브쿼리를 실행해 결과를 임시 테이블에 새로 저장(구체화)함,</li>
+</ul>
+</li>
+<li>Select tables optimized away
+<ul>
+<li>MIN() 또는 MAX()만 조회하거나 GROUP BY 없이 COUNT(*)를 조회하는(MyISAM) 쿼리가 인덱스나 메타데이터만으로 최적화되어 처리됨</li>
+</ul>
+</li>
+<li>Start temporary, End temporary
+<ul>
+<li>세미 조인의 Duplicate Weed-out 최적화 전략 사용 시 중복 제거를 위해 내부 임시 테이블 사용의 시작과 끝을 의미</li>
+</ul>
+</li>
+<li>unique row not found
+<ul>
+<li>두 테이블이 각각 유니크(PK 포함) 칼럼으로 아우터 조인을 수행하나, 아우터 테이블에 일치하는 레코드가 없음</li>
+</ul>
+</li>
+<li>Using filesort
+<ul>
+<li>인덱스를 이용한 정렬이 불가능하여, 조회된 레코드를 소트 버퍼에 복사해 별도로 정렬 작업을 수행</li>
+</ul>
+</li>
+<li>Using index (커버링 인덱스)
+<ul>
+<li>데이터 파일을 읽지 않고 인덱스만 읽어서 쿼리를 모두 처리할 수 있음,</li>
+</ul>
+</li>
+<li>Using index condition
+<ul>
+<li>MySQL 옵티마이저가 인덱스 컨디션 푸시 다운(ICP) 최적화를 사용</li>
+</ul>
+</li>
+<li>Using index for group-by
+<ul>
+<li>GROUP BY 처리를 위해 별도의 정렬 없이 인덱스를 순서대로 읽거나 듬성듬성 읽는 루스 인덱스 스캔을 사용</li>
+</ul>
+</li>
+<li>Using index for skip scan
+<ul>
+<li>인덱스 스킵 스캔 최적화를 사용하여 인덱스의 선행 칼럼을 건너뛰고 검색</li>
+</ul>
+</li>
+<li>Using join buffer (Block Nested Loop / Batched Key Access / hash join)
+<ul>
+<li>드리븐 테이블에 적절한 인덱스가 없어 조인 버퍼를 사용하며, 뒤에 표시된 알고리즘(해시 조인 등)으로 처리됨,</li>
+</ul>
+</li>
+<li>Using MRR
+<ul>
+<li>여러 개의 키 값을 한 번에 스토리지 엔진으로 전달하고 정렬하여 최소한의 디스크 접근으로 읽는 MRR(Multi Range Read) 최적화를 사용</li>
+</ul>
+</li>
+<li>Using sort_union, Using union, Using intersect
+<ul>
+<li><code>index_merge</code> 접근 방법 사용 시 두 개 이상의 인덱스 결과를 병합(합집합, 교집합 등)하는 상세 방식,</li>
+</ul>
+</li>
+<li>Using temporary
+<ul>
+<li>쿼리 처리 중 중간 결과를 담아 두기 위해 임시 테이블(메모리 또는 디스크)을 사용</li>
+</ul>
+</li>
+<li>Using where
+<ul>
+<li>스토리지 엔진에서 읽어온 레코드를 MySQL 엔진 레이어에서 별도로 필터링(체크 조건 처리)함,</li>
+</ul>
+</li>
+<li>Zero limit
+<ul>
+<li>쿼리 마지막에 <code>LIMIT 0</code>이 사용되어, 데이터 값은 읽지 않고 결과값의 메타데이터만 반환</li>
+</ul>
+</li>
+</ul></article><hr/><div class="page-footer"><div class="giscus" data-repo="khy07181/khy07181.github.io" data-repo-id="R_kgDON9-dEA" data-category="Announcements" data-category-id="DIC_kwDON9-dEM4CnOik" data-mapping="url" data-strict="1" data-reactions-enabled="1" data-input-position="bottom" data-light-theme="light" data-dark-theme="dark" data-theme-url="https://khy07181.github.io/static/giscus"></div></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button id="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" id="toc" class aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content" class><ul class="overflow"><li class="depth-0"><a href="#통계-정보" data-for="통계-정보">통계 정보</a></li><li class="depth-1"><a href="#히스토그램" data-for="히스토그램">히스토그램</a></li><li class="depth-0"><a href="#실행-계획-확인" data-for="실행-계획-확인">실행 계획 확인</a></li><li class="depth-1"><a href="#실행-계획-출력-포맷" data-for="실행-계획-출력-포맷">실행 계획 출력 포맷</a></li><li class="depth-1"><a href="#쿼리의-실행-시간-확인" data-for="쿼리의-실행-시간-확인">쿼리의 실행 시간 확인</a></li><li class="depth-0"><a href="#실행-계획-분석" data-for="실행-계획-분석">실행 계획 분석</a></li><li class="depth-1"><a href="#id-칼럼" data-for="id-칼럼">id 칼럼</a></li><li class="depth-1"><a href="#select_type-칼럼" data-for="select_type-칼럼">select_type 칼럼</a></li><li class="depth-1"><a href="#table-컬럼" data-for="table-컬럼">table 컬럼</a></li><li class="depth-1"><a href="#partitions-컬럼" data-for="partitions-컬럼">partitions 컬럼</a></li><li class="depth-1"><a href="#type-컬럼-접근-방법" data-for="type-컬럼-접근-방법">type 컬럼 (접근 방법)</a></li><li class="depth-1"><a href="#possible_keys-컬럼" data-for="possible_keys-컬럼">possible_keys 컬럼</a></li><li class="depth-1"><a href="#key-컬럼" data-for="key-컬럼">key 컬럼</a></li><li class="depth-1"><a href="#key_len-컬럼" data-for="key_len-컬럼">key_len 컬럼</a></li><li class="depth-1"><a href="#ref-컬럼" data-for="ref-컬럼">ref 컬럼</a></li><li class="depth-1"><a href="#rows-컬럼" data-for="rows-컬럼">rows 컬럼</a></li><li class="depth-1"><a href="#filtered-컬럼" data-for="filtered-컬럼">filtered 컬럼</a></li><li class="depth-1"><a href="#extra-컬럼" data-for="extra-컬럼">Extra 컬럼</a></li><li class="depth-1"><a href="#extra" data-for="extra">Extra</a></li></ul></div></div></div><footer class><p>Created with <a href="https://github.com/khy07181">hayoung</a> © 2026</p><ul></ul></footer></div></div></body><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="../../postscript.js" type="module"></script></html>

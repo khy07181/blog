@@ -6,11 +6,29 @@
       <description>Last 10 notes on 🪴 hayoung</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>NoSQL Database</title>
+    <link>https://khy07181.github.io/2026/NoSQL-Database</link>
+    <guid>https://khy07181.github.io/2026/NoSQL-Database</guid>
+    <description>NoSQL Database NoSQL(Not Only SQL)은 일반적으로 모든 비관계형 데이터베이스를 지칭할 때 사용되며 관계형 데이터 베이스의 테이블과는 다른 방식으로 다양한 유형의 데이터를 저장한다. 대표적으로 다음과 같은 환경에서 많이 사용된다. 대규모 트래픽 처리 분산 시스템 비정형 데이터 저장 빠른 읽기/쓰기 성능 요구 ACID 원칙을 추구하는 RDB와 달리 NoSQL 데이터베이스는 BASE 원칙을 따른다.</description>
+    <pubDate>Sun, 01 Mar 2026 13:40:00 GMT</pubDate>
+  </item><item>
     <title>hayoung blog</title>
     <link>https://khy07181.github.io/</link>
     <guid>https://khy07181.github.io/</guid>
     <description>Welcome to my blog.</description>
-    <pubDate>Sun, 11 Jan 2026 13:42:28 GMT</pubDate>
+    <pubDate>Sun, 01 Mar 2026 13:27:26 GMT</pubDate>
+  </item><item>
+    <title>Spring Data JPA에서 새로운 Entity를 판단하는 방법</title>
+    <link>https://khy07181.github.io/2026/Spring-Data-JPA%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5-%E1%84%89%E1%85%A2%E1%84%85%E1%85%A9%E1%84%8B%E1%85%AE%E1%86%AB-Entity%E1%84%85%E1%85%B3%E1%86%AF-%E1%84%91%E1%85%A1%E1%86%AB%E1%84%83%E1%85%A1%E1%86%AB%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8</link>
+    <guid>https://khy07181.github.io/2026/Spring-Data-JPA%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5-%E1%84%89%E1%85%A2%E1%84%85%E1%85%A9%E1%84%8B%E1%85%AE%E1%86%AB-Entity%E1%84%85%E1%85%B3%E1%86%AF-%E1%84%91%E1%85%A1%E1%86%AB%E1%84%83%E1%85%A1%E1%86%AB%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8</guid>
+    <description> Spring Data JPA의 save 메서드는 엔티티의 신규 여부(isNew)에 따라 persist 또는 merge를 선택적으로 실행한다. 이 내부 동작을 정확히 이해하지 못하면 직접 ID를 할당하는 환경에서 merge가 호출되어 불필요한 SELECT 쿼리가 발생하는 성능 저하를 겪을 수 있다.</description>
+    <pubDate>Sun, 08 Feb 2026 12:40:00 GMT</pubDate>
+  </item><item>
+    <title>RealMySQL 실행계획</title>
+    <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-explain-plan</link>
+    <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-explain-plan</guid>
+    <description>통계 정보 MySQL 서버의 통계 정보 MySQL 5.6부터는 InnoDB 스토리지 엔진을 사용하는 테이블에 대한 통계 정보를 영구적으로 관리할 수 있게 개선되었다. 이전에는 메모리에만 저장되어 MySQL 서버가 재시작되면 통계 정보가 초기화됐다. 히스토그램 히스토그램의 정보 수집 및 삭제 Singleton Histogram 컬럼값 개별로 레코드 건수를 관리하는 히스토그램 Equi-Height Histogram 컬럼값의 범위를 균등한 개수로 구분해서 관리하는 히스토그램 히스토그램의 용도 히스토그램 정보가 없으면 옵티마이저는 데이터가 균등하게 분포돼 있을 것으로 예측한다.</description>
+    <pubDate>Sun, 25 Jan 2026 13:19:00 GMT</pubDate>
   </item><item>
     <title>RealMySQL 옵티마이저와 힌트</title>
     <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-optimizer-hint</link>
@@ -27,7 +45,7 @@
     <title>RealMySQL 트랜잭션과 잠금</title>
     <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-transaction-lock</link>
     <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-transaction-lock</guid>
-    <description>MySQL 엔진의 잠금 스토리지 엔진 레벨과 MySQL 엔진 레벨로 나뉜다. Global Lock 영햠 범위 : MySQL 서버 전체 Table Lock 개별 테이블 단위로 설정되는 잠금 명시적 테이블 락 특별한 상황이 아니면 어플리케이션에서 사용할 필요가 없다. 묵시적 테이블 락 MyISAM이나 MEMORY 테이블의 데이터를 변경하는 쿼리를 실행하면 발생한다.</description>
+    <description>MySQL 엔진의 잠금 스토리지 엔진 레벨과 MySQL 엔진 레벨로 나뉜다. Global Lock 영햠 범위 : MySQL 서버 전체 Table Lock 개별 테이블 단위로 설정되는 잠금 명시적 테이블 락 특별한 상황이 아니면 어플리케이션에서 사용할 필요가 없다. 묵시적 테이블 락 MyISAM이나 MEMORY 테이블의 데이터를 변경하는 쿼리를 실행하면 발생한다.</description>
     <pubDate>Sun, 28 Dec 2025 05:37:00 GMT</pubDate>
   </item><item>
     <title>RealMySQL 아키텍처</title>
@@ -47,24 +65,6 @@
     <guid>https://khy07181.github.io/2025/building-my-reading-environment</guid>
     <description>세상에는 책보다 자극적이고 재미있는 것들이 너무 많아져, 예전처럼 자연스럽게 독서에 몰입하기가 점점 어려워지고 있다. 그래도 꾸준히 읽고 싶다는 마음은 늘 있었고, 나만의 지속 가능성 유지를 위한 방법을 계속 찾아왔다. 자연스럽게 ‘어떤 환경에서 읽어야 오래 이어갈 수 있을까’라는 고민이 생겼다.</description>
     <pubDate>Sun, 16 Nov 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>문체의 종류</title>
-    <link>https://khy07181.github.io/2025/types-of-writing-style</link>
-    <guid>https://khy07181.github.io/2025/types-of-writing-style</guid>
-    <description>문체란 단순히 말투의 차이를 넘어서 글이나 말의 표현 방식 전반을 뜻한다. 문체는 글의 성격, 목적, 독자, 그리고 작가의 개성까지 반영한다. 따라서 문체를 이해하는 것은 곧 ‘글쓰기의 감각’을 기르는 일이다. 전달 방식에 따른 문체 문체는 먼저 전달 방식에 따라 크게 두 가지로 나뉜다.</description>
-    <pubDate>Sun, 19 Oct 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>브라우저 저장소의 종류와 특성</title>
-    <link>https://khy07181.github.io/2025/types-and-characteristics-of-browser-storage</link>
-    <guid>https://khy07181.github.io/2025/types-and-characteristics-of-browser-storage</guid>
-    <description>LocalStorage 도메인 단위로 데이터를 영구적으로 저장할 수 있는 API 사용자가 브라우저를 닫고 다시 열어도 데이터 는 유지되며, 페이지 새로고침이나 탭 변경에도 영향을 받지 않는다. 테마, 언어 설정, 비로그인 상태의 장바구니 등 장기적으로 유지되어야 하는 데이터를 저장하는 데 적합하다.</description>
-    <pubDate>Mon, 01 Sep 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>카메라 선택 비교</title>
-    <link>https://khy07181.github.io/2025/camera-selection-comparison</link>
-    <guid>https://khy07181.github.io/2025/camera-selection-comparison</guid>
-    <description>사진용 카메라 캐논 6D 30만원 대 2020만 화소 풀프레임 DSLR의 뷰파인더 감성 SD카드 사용, 오래가는 배터리 EF마운트 렌즈군 매우 다양하고 저렴함 추천 렌즈: 50mm F1.8 7만 원대 소니 알파7 II (A7M2) 60만 원대 2300만 화소 풀프레임, 손떨림 방지 뛰어난 자동 초점(비상차 AF) 서드파티 렌즈군과 중국산 저가 렌즈들도 ...</description>
-    <pubDate>Sun, 31 Aug 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

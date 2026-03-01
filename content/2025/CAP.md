@@ -7,10 +7,10 @@ tags:
   - cap
 description:
 permalink:
-draft: true
+draft: false
 published: 2025-08-17
 created: 2024-09-19T17:45
-updated: 2025-12-01T16:33
+updated: 2026-02-11T22:01
 ---
 
 ### CAP 정리란?
