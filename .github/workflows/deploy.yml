@@ -1,19 +1,19 @@
 name: Deploy Quartz site to GitHub Pages
- 
+
 on:
   push:
     branches:
       - v4
- 
+
 permissions:
   contents: read
   pages: write
   id-token: write
- 
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
- 
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -31,6 +31,8 @@ jobs:
           npx quartz build
           # ensure robots.txt is at the public root for GitHub Pages
           cp -f public/static/robots.txt public/robots.txt || true
+          # ensure sitemap-debug.xml is at the public root for GSC testing
+          cp -f public/static/sitemap-debug.xml public/sitemap-debug.xml || true
           # Add .nojekyll to prevent GitHub Pages from using Jekyll
           touch public/.nojekyll
       - name: Format sitemap.xml
@@ -59,7 +61,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: public
- 
+
   deploy:
     needs: build
     environment:
