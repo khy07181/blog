@@ -11,8 +11,9 @@ tags:
   - note-taking
   - pkm
   - tool
+  - second-brain
 draft: false
-published: 2026-03-15T22:00:00
+published: 2026-03-15T23:35:00
 lang: ko
 created: 2026-03-15T00:00
 updated: 2026-03-15T23:30
