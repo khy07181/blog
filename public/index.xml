@@ -6,6 +6,12 @@
       <description>Last 10 notes on 🪴 hayoung</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>NoSQL Database</title>
+    <link>https://khy07181.github.io/2026/NoSQL-Database</link>
+    <guid>https://khy07181.github.io/2026/NoSQL-Database</guid>
+    <description>NoSQL Database NoSQL(Not Only SQL)은 일반적으로 모든 비관계형 데이터베이스를 지칭할 때 사용되며 관계형 데이터 베이스의 테이블과는 다른 방식으로 다양한 유형의 데이터를 저장한다. 대표적으로 다음과 같은 환경에서 많이 사용된다. 대규모 트래픽 처리 분산 시스템 비정형 데이터 저장 빠른 읽기/쓰기 성능 요구 ACID 원칙을 추구하는 RDB와 달리 NoSQL 데이터베이스는 BASE 원칙을 따른다.</description>
+    <pubDate>Sun, 01 Mar 2026 13:40:00 GMT</pubDate>
+  </item><item>
     <title>hayoung blog</title>
     <link>https://khy07181.github.io/</link>
     <guid>https://khy07181.github.io/</guid>
