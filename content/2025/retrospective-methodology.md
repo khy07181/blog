@@ -4,13 +4,15 @@ aliases:
 description:
 permalink:
 classification: blog
+category:
+  - essay
 tags:
   - retrospect
   - template
 draft: false
 published: 2025-06-08
 created: 2025-06-08T20:38
-updated: 2025-12-26T13:32
+updated: 2026-03-29T16:24
 ---
 
 ## KPT

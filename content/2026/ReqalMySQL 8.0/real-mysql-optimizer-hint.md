@@ -6,6 +6,8 @@ cover_image: ""
 description:
 permalink:
 classification:
+category:
+  - dev
 tags:
   - MySQL
   - RealMySQL
@@ -13,7 +15,7 @@ draft: false
 published: 2026-01-11T22:42:00
 lang: ko
 created: 2026-01-11T22:41
-updated: 2026-01-11T22:41
+updated: 2026-03-29T16:25
 ---
 
 ## 개요

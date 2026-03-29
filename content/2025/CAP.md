@@ -3,6 +3,8 @@ title: CAP
 aliases:
   - CAP 정리
 classification: blog
+category:
+  - dev
 tags:
   - cap
 description:
@@ -10,7 +12,7 @@ permalink:
 draft: false
 published: 2025-08-17
 created: 2024-09-19T17:45
-updated: 2026-02-11T22:01
+updated: 2026-03-29T16:24
 ---
 
 ### CAP 정리란?

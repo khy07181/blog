@@ -4,6 +4,9 @@ import { FolderState } from "../ExplorerNode"
 type MaybeHTMLElement = HTMLElement | undefined
 let currentExplorerState: FolderState[]
 
+// Track active view ("year" | "tag")
+let activeView: "year" | "tag" = "year"
+
 const observer = new IntersectionObserver((entries) => {
   // If last element is observed, remove gradient of "overflow" class so element is visible
   const explorerUl = document.getElementById("explorer-ul")
@@ -78,7 +81,45 @@ function toggleFolder(evt: MouseEvent) {
   localStorage.setItem("fileTree", stringifiedFileTree)
 }
 
+function toggleTagCategory(evt: MouseEvent) {
+  evt.stopPropagation()
+  const header = evt.currentTarget as HTMLElement
+  const body = header.nextElementSibling as MaybeHTMLElement
+  if (body) {
+    body.classList.toggle("open")
+  }
+}
+
+function switchExplorerView(view: "year" | "tag") {
+  activeView = view
+  localStorage.setItem("explorer-active-view", view)
+
+  // Update tab button active states
+  document.querySelectorAll(".explorer-tab").forEach((tab) => {
+    const tabEl = tab as HTMLElement
+    if (tabEl.dataset.view === view) {
+      tabEl.classList.add("active")
+    } else {
+      tabEl.classList.remove("active")
+    }
+  })
+
+  // Show/hide view containers
+  const yearView = document.querySelector("[data-explorer-view='year']") as MaybeHTMLElement
+  const tagView = document.querySelector("[data-explorer-view='tag']") as MaybeHTMLElement
+  if (yearView) yearView.style.display = view === "year" ? "" : "none"
+  if (tagView) tagView.style.display = view === "tag" ? "" : "none"
+}
+
 function setupExplorer() {
+  // Restore active view from localStorage
+  const savedView = localStorage.getItem("explorer-active-view") as "year" | "tag" | null
+  if (savedView === "tag") {
+    activeView = "tag"
+  } else {
+    activeView = "year"
+  }
+
   // Set click handler for collapsing entire explorer
   const allExplorers = document.querySelectorAll(".explorer > button") as NodeListOf<HTMLElement>
 
@@ -98,7 +139,7 @@ function setupExplorer() {
         for (const item of document.getElementsByClassName(
           "folder-button",
         ) as HTMLCollectionOf<HTMLElement>) {
-          window.addCleanup(() => explorer.removeEventListener("click", toggleExplorer))
+          window.addCleanup(() => item.removeEventListener("click", toggleFolder))
           item.addEventListener("click", toggleFolder)
         }
       }
@@ -142,6 +183,39 @@ function setupExplorer() {
       }
     })
   }
+
+  // Apply saved view (must happen after folder states are set up)
+  const yearView = document.querySelector("[data-explorer-view='year']") as MaybeHTMLElement
+  const tagView = document.querySelector("[data-explorer-view='tag']") as MaybeHTMLElement
+  if (yearView && tagView) {
+    yearView.style.display = activeView === "year" ? "" : "none"
+    tagView.style.display = activeView === "tag" ? "" : "none"
+
+    // Update tab button active states
+    document.querySelectorAll(".explorer-tab").forEach((tab) => {
+      const tabEl = tab as HTMLElement
+      if (tabEl.dataset.view === activeView) {
+        tabEl.classList.add("active")
+      } else {
+        tabEl.classList.remove("active")
+      }
+    })
+  }
+
+  // Set up tab click handlers
+  document.querySelectorAll(".explorer-tab").forEach((tab) => {
+    const tabEl = tab as HTMLElement
+    const handler = () => switchExplorerView(tabEl.dataset.view as "year" | "tag")
+    tabEl.addEventListener("click", handler)
+    window.addCleanup(() => tabEl.removeEventListener("click", handler))
+  })
+
+  // Set up tag category toggle handlers
+  document.querySelectorAll(".tag-category-header").forEach((header) => {
+    const el = header as HTMLElement
+    el.addEventListener("click", toggleTagCategory)
+    window.addCleanup(() => el.removeEventListener("click", toggleTagCategory))
+  })
 }
 
 function toggleExplorerFolders() {
@@ -149,7 +223,7 @@ function toggleExplorerFolders() {
     /\/index$/g,
     "",
   )
-  const allFolders = document.querySelectorAll(".folder-outer")
+  const allFolders = document.querySelectorAll("[data-explorer-view='year'] .folder-outer")
 
   allFolders.forEach((element) => {
     const folderUl = Array.from(element.children).find((child) =>
@@ -197,20 +271,24 @@ document.addEventListener("nav", () => {
   const slug = (document.body?.dataset.slug ?? "").replace(/\/$/, "")
   // Clear previous active states
   document
-    .querySelectorAll('#explorer-content a.is-active')
-    .forEach((el) => el.classList.remove('is-active'))
+    .querySelectorAll("#explorer-content a.is-active")
+    .forEach((el) => el.classList.remove("is-active"))
 
   // Try exact match first
-  let active = document.querySelector(`#explorer-content a[data-for='${CSS.escape(slug)}']`) as HTMLElement | null
+  let active = document.querySelector(
+    `#explorer-content a[data-for='${CSS.escape(slug)}']`,
+  ) as HTMLElement | null
   // If not found, try matching without trailing /index
-  if (!active && slug.endsWith('index')) {
-    const base = slug.replace(/\/index$/, '')
-    active = document.querySelector(`#explorer-content a[data-for='${CSS.escape(base)}']`) as HTMLElement | null
+  if (!active && slug.endsWith("index")) {
+    const base = slug.replace(/\/index$/, "")
+    active = document.querySelector(
+      `#explorer-content a[data-for='${CSS.escape(base)}']`,
+    ) as HTMLElement | null
   }
   if (active) {
-    active.classList.add('is-active')
+    active.classList.add("is-active")
     // Ensure visible in viewport on mobile explorer
-    active.scrollIntoView({ block: 'nearest' })
+    active.scrollIntoView({ block: "nearest" })
   }
 })
 

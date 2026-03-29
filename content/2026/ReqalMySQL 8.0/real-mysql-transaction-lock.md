@@ -3,6 +3,8 @@ title: RealMySQL 트랜잭션과 잠금
 aliases:
   - RealMySQL 8.0 5장
 classification: blog
+category:
+  - dev
 tags:
   - MySQL
   - transaction
@@ -13,7 +15,7 @@ permalink:
 draft: false
 published: 2025-12-28T14:37:00
 created: 2025-12-17T13:19
-updated: 2025-12-28T14:37
+updated: 2026-03-29T16:25
 ---
 
 ### MySQL 엔진의 잠금

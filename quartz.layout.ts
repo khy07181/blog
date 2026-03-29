@@ -8,18 +8,17 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.Comments({
-      provider: 'giscus',
+      provider: "giscus",
       options: {
-        repo: 'khy07181/khy07181.github.io',
-        repoId: 'R_kgDON9-dEA',
-        category: 'Announcements',
-        categoryId: 'DIC_kwDON9-dEM4CnOik',
-      }
+        repo: "khy07181/khy07181.github.io",
+        repoId: "R_kgDON9-dEA",
+        category: "Announcements",
+        categoryId: "DIC_kwDON9-dEM4CnOik",
+      },
     }),
   ],
   footer: Component.Footer({
-    links: {
-    },
+    links: {},
   }),
 }
 
@@ -38,7 +37,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.Explorer(),
+    Component.Explorer({ enableTagView: true }),
   ],
   right: [
     Component.Graph(),
@@ -56,7 +55,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.Explorer(),
+    Component.Explorer({ enableTagView: true }),
   ],
   right: [],
 }

@@ -5,6 +5,7 @@ import {
   resolveRelative,
   clone,
   simplifySlug,
+  slugTag,
   SimpleSlug,
   FilePath,
 } from "../util/path"
@@ -20,6 +21,18 @@ export interface Options {
   filterFn: (node: FileNode) => boolean
   mapFn: (node: FileNode) => void
   order: OrderEntries[]
+  enableTagView?: boolean
+}
+
+export type TagInfo = {
+  name: string
+  slug: string
+  count: number
+}
+
+export type TagCategoryData = {
+  category: string
+  tags: TagInfo[]
 }
 
 type DataWrapper = {
@@ -153,6 +166,61 @@ export class FileNode {
     this.children = this.children.sort(sortFn)
     this.children.forEach((e) => e.sort(sortFn))
   }
+}
+
+// Canonical category order for display
+const CATEGORY_ORDER = [
+  "dev",
+  "productivity",
+  "knowledge-management",
+  "essay",
+  "writing",
+  "science",
+  "others",
+]
+
+export function buildTagCategoryData(allFiles: QuartzPluginData[]): TagCategoryData[] {
+  // Map: category -> (tag -> count)
+  const categoryTagCounts = new Map<string, Map<string, number>>()
+
+  for (const file of allFiles) {
+    const tags = file.frontmatter?.tags ?? []
+    if (tags.length === 0) continue
+    const rawCategory = file.frontmatter?.category
+    const categories: string[] = Array.isArray(rawCategory)
+      ? rawCategory
+      : rawCategory
+        ? [rawCategory as string]
+        : ["others"]
+
+    for (const category of categories) {
+      if (!categoryTagCounts.has(category)) {
+        categoryTagCounts.set(category, new Map())
+      }
+      const tagCounts = categoryTagCounts.get(category)!
+      for (const tag of tags) {
+        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
+      }
+    }
+  }
+
+  // Sort categories by canonical order, unknown categories appended at end
+  const sortedCategories = [...categoryTagCounts.keys()].sort((a, b) => {
+    const ai = CATEGORY_ORDER.indexOf(a)
+    const bi = CATEGORY_ORDER.indexOf(b)
+    if (ai === -1 && bi === -1) return a.localeCompare(b)
+    if (ai === -1) return 1
+    if (bi === -1) return -1
+    return ai - bi
+  })
+
+  return sortedCategories.map((category) => {
+    const tagCounts = categoryTagCounts.get(category)!
+    const tags: TagInfo[] = [...tagCounts.entries()]
+      .map(([name, count]) => ({ name, slug: slugTag(name), count }))
+      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+    return { category, tags }
+  })
 }
 
 type ExplorerNodeProps = {

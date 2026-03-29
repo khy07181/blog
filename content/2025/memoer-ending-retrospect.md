@@ -4,6 +4,8 @@ aliases:
 description:
 permalink:
 classification:
+category:
+  - essay
 tags:
   - retrospect
   - memoir
@@ -11,7 +13,7 @@ tags:
 draft: false
 published: 2025-07-06
 created: 2025-07-06T23:27
-updated: 2025-12-27T11:13
+updated: 2026-03-29T16:24
 ---
 
 5월 1일부터 7월 6일까지 약 10주 동안 참여한 [[memoir-retrospect|메모어 참여]] 가 이번주를 마지막으로 종료됐다.

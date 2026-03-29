@@ -5,13 +5,15 @@ aliases:
 description:
 permalink:
 classification:
+category:
+  - science
 tags:
   - sociology
   - psychology
 draft: false
 published: 2025-07-20
 created: 2025-07-15T12:43
-updated: 2025-12-26T13:32
+updated: 2026-03-29T16:24
 ---
 
 ![](https://i.imgur.com/cya6MJ9.png)
