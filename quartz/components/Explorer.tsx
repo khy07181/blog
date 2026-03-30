@@ -3,16 +3,24 @@ import style from "./styles/explorer.scss"
 
 // @ts-ignore
 import script from "./scripts/explorer.inline"
-import { ExplorerNode, FileNode, Options } from "./ExplorerNode"
+import {
+  ExplorerNode,
+  FileNode,
+  Options,
+  TagCategoryData,
+  buildTagCategoryData,
+} from "./ExplorerNode"
 import { QuartzPluginData } from "../plugins/vfile"
 import { classNames } from "../util/lang"
 import { i18n } from "../i18n"
+import { pathToRoot } from "../util/path"
 
 // Options interface defined in `ExplorerNode` to avoid circular dependency
 const defaultOptions = {
   folderClickBehavior: "collapse",
   folderDefaultState: "collapsed",
   useSavedState: false,
+  enableTagView: false,
   mapFn: (node) => {
     return node
   },
@@ -66,6 +74,7 @@ export default ((userOpts?: Partial<Options>) => {
   // memoized
   let fileTree: FileNode
   let jsonTree: string
+  let tagCategories: TagCategoryData[]
   let lastBuildId: string = ""
 
   function constructFileTree(allFiles: QuartzPluginData[]) {
@@ -91,7 +100,19 @@ export default ((userOpts?: Partial<Options>) => {
     // Build initial folder states: collapse all, then open only the first top-level folder
     // Stringify to pass json tree as data attribute ([data-tree])
     const folders = fileTree.getFolderPaths(opts.folderDefaultState === "collapsed")
+    // Always expand the current year folder
+    const currentYear = new Date().getFullYear().toString()
+    for (const folder of folders) {
+      if (folder.path === currentYear) {
+        folder.collapsed = false
+      }
+    }
     jsonTree = JSON.stringify(folders)
+
+    // Build tag category data if enabled
+    if (opts.enableTagView) {
+      tagCategories = buildTagCategoryData(allFiles)
+    }
   }
 
   const Explorer: QuartzComponent = ({
@@ -105,6 +126,9 @@ export default ((userOpts?: Partial<Options>) => {
       lastBuildId = ctx.buildId
       constructFileTree(allFiles)
     }
+
+    const baseDir = pathToRoot(fileData.slug!)
+
     return (
       <div class={classNames(displayClass, "explorer")}>
         <button
@@ -163,10 +187,61 @@ export default ((userOpts?: Partial<Options>) => {
           </svg>
         </button>
         <div id="explorer-content">
-          <ul class="overflow" id="explorer-ul">
-            <ExplorerNode node={fileTree} opts={opts} fileData={fileData} />
-            <li id="explorer-end" />
-          </ul>
+          {opts.enableTagView && (
+            <div class="explorer-tabs">
+              <button class="explorer-tab active" data-view="year">
+                연도
+              </button>
+              <button class="explorer-tab" data-view="tag">
+                태그
+              </button>
+            </div>
+          )}
+          <div data-explorer-view="year">
+            <ul class="overflow" id="explorer-ul">
+              <ExplorerNode node={fileTree} opts={opts} fileData={fileData} />
+              <li id="explorer-end" />
+            </ul>
+          </div>
+          {opts.enableTagView && (
+            <div data-explorer-view="tag" style="display:none">
+              <div class="tag-explorer">
+                {tagCategories.map((cat) => (
+                  <div class="tag-category">
+                    <button class="tag-category-header" type="button">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="10"
+                        viewBox="5 8 14 8"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="tag-category-icon"
+                      >
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                      <span>{cat.category}</span>
+                    </button>
+                    <div class="tag-category-body">
+                      <ul class="tag-pill-list">
+                        {cat.tags.map((t) => (
+                          <li>
+                            <a href={`${baseDir}/tags/${t.slug}`} class="internal tag-link">
+                              {t.name}
+                              <span class="tag-count">{t.count}</span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     )
