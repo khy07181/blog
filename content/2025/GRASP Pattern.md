@@ -5,12 +5,14 @@ aliases:
 description:
 permalink:
 classification: blog
+category:
+  - dev
 tags:
   - OOP
 draft: false
 published: 2025-06-22
 created: 2025-06-22T22:46
-updated: 2025-12-01T16:33
+updated: 2026-03-29T16:24
 ---
 
 ## GRASP Pattern

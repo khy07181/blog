@@ -6,6 +6,8 @@ cover_image: ""
 description:
 permalink:
 classification:
+category:
+  - dev
 tags:
   - db
   - MySQL
@@ -14,7 +16,7 @@ draft: false
 published: 2026-01-25T22:19:00
 lang: ko
 created: 2026-01-24T22:52
-updated: 2026-01-25T22:19
+updated: 2026-03-29T16:25
 ---
 
 ## 통계 정보

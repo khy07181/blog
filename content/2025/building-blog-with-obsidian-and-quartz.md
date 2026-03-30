@@ -4,6 +4,8 @@ aliases:
 description:
 permalink:
 classification: blog
+category:
+  - dev
 tags:
   - blog
   - ssg
@@ -12,7 +14,7 @@ tags:
 draft: false
 published: 2025-02-23
 created: 2025-02-23T20:51
-updated: 2026-01-07T16:18
+updated: 2026-03-29T16:24
 ---
 
 # 어떤 블로그를 만들고 싶을까

@@ -3,6 +3,8 @@ title: RealMySQL 데이터 압축
 aliases:
   - RealMySQL 8.0 6장
 classification: resource
+category:
+  - dev
 tags:
   - MySQL
 url:
@@ -11,7 +13,7 @@ permalink:
 draft: false
 published: 2025-12-28T14:38:00
 created: 2025-12-17T13:21
-updated: 2025-12-28T14:38
+updated: 2026-03-29T16:25
 ---
 
 ### 페이지 압축

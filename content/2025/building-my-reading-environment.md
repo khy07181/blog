@@ -4,13 +4,15 @@ aliases:
 description:
 permalink:
 classification: blog
+category:
+  - productivity
 tags:
   - ebook
   - drm
 draft: false
 published: 2025-11-16
 created: 2025-11-16T21:30
-updated: 2025-12-26T13:32
+updated: 2026-03-29T16:24
 ---
 
 세상에는 책보다 자극적이고 재미있는 것들이 너무 많아져, 예전처럼 자연스럽게 독서에 몰입하기가 점점 어려워지고 있다.

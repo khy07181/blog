@@ -5,6 +5,8 @@ cover_image: ""
 description:
 permalink:
 classification: blog
+category:
+  - dev
 tags:
   - java
   - JPA
@@ -12,7 +14,7 @@ draft: false
 published: 2026-02-08T21:40:00
 lang: ko
 created: 2026-02-08T21:18
-updated: 2026-02-08T21:50
+updated: 2026-03-29T16:25
 ---
 
 - Spring Data JPA의 save 메서드는 엔티티의 신규 여부(`isNew`)에 따라 persist 또는 merge를 선택적으로 실행한다.

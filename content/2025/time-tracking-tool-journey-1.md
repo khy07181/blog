@@ -4,6 +4,8 @@ aliases:
 description:
 permalink:
 classification:
+category:
+  - productivity
 tags:
   - tool
   - time-tracking
@@ -11,7 +13,7 @@ tags:
 draft: false
 published: 2025-05-25
 created: 2025-05-25T22:31
-updated: 2025-12-26T13:32
+updated: 2026-03-29T16:24
 ---
 
 ## 내가 원하는 Time Tracking 서비스는 무엇일까

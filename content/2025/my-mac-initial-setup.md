@@ -4,6 +4,8 @@ aliases:
 description:
 permalink:
 classification: blog
+category:
+  - productivity
 tags:
   - mac
   - chezmoi
@@ -12,7 +14,7 @@ tags:
 draft: false
 published: 2025-04-27
 created: 2025-04-27T19:00:00
-updated: 2025-12-26T13:32
+updated: 2026-03-29T16:24
 ---
 
 >[!info]

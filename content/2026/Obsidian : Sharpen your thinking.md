@@ -5,6 +5,8 @@ cover_image: ""
 description: Obsidian 소개
 permalink:
 classification: blog
+category:
+  - knowledge-management
 tags:
   - obsidian
   - productivity
@@ -16,7 +18,7 @@ draft: false
 published: 2026-03-15T23:35:00
 lang: ko
 created: 2026-03-15T00:00
-updated: 2026-03-15T23:30
+updated: 2026-03-29T16:25
 ---
 
 [Obsidian](https://obsidian.md/)은 로컬 기반의 마크다운 노트 앱이자, 지식 관리 도구다.

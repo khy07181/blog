@@ -5,6 +5,8 @@ aliases:
 description:
 permalink: /real-my-sql-architecture
 classification: blog
+category:
+  - dev
 tags:
   - db
   - MySQL
@@ -12,7 +14,7 @@ tags:
 draft: false
 published: 2025-12-14
 created: 2025-12-09T21:01
-updated: 2025-12-26T13:32
+updated: 2026-03-29T16:25
 ---
 
 MySQL 서버

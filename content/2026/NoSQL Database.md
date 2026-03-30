@@ -6,6 +6,8 @@ cover_image: ""
 description:
 permalink:
 classification:
+category:
+  - dev
 tags:
   - db
   - NoSQL
@@ -13,7 +15,7 @@ draft: false
 published: 2026-03-01T22:40:00
 lang: ko
 created: 2026-03-01T21:46
-updated: 2026-03-02T12:29
+updated: 2026-03-29T16:25
 ---
 
 ## NoSQL Database

@@ -2,6 +2,8 @@
 title: 브라우저 저장소의 종류와 특성
 aliases:
 classification: blog
+category:
+  - dev
 tags:
   - browser_storage
   - web
@@ -11,7 +13,7 @@ permalink:
 draft: false
 published: 2025-09-01
 created: 2025-09-01T16:33
-updated: 2025-12-26T13:32
+updated: 2026-03-29T16:24
 ---
 
 ### LocalStorage
