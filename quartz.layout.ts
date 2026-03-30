@@ -8,18 +8,17 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.Comments({
-      provider: 'giscus',
+      provider: "giscus",
       options: {
-        repo: 'khy07181/khy07181.github.io',
-        repoId: 'R_kgDON9-dEA',
-        category: 'Announcements',
-        categoryId: 'DIC_kwDON9-dEM4CnOik',
-      }
+        repo: "khy07181/khy07181.github.io",
+        repoId: "R_kgDON9-dEA",
+        category: "Announcements",
+        categoryId: "DIC_kwDON9-dEM4CnOik",
+      },
     }),
   ],
   footer: Component.Footer({
-    links: {
-    },
+    links: {},
   }),
 }
 
