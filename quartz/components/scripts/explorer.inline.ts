@@ -81,6 +81,18 @@ function toggleFolder(evt: MouseEvent) {
   localStorage.setItem("fileTree", stringifiedFileTree)
 }
 
+function saveTagCategoryState() {
+  const openCategories: string[] = []
+  document.querySelectorAll(".tag-category").forEach((cat) => {
+    const body = cat.querySelector(".tag-category-body")
+    const name = cat.querySelector(".tag-category-header span")?.textContent ?? ""
+    if (body?.classList.contains("open") && name) {
+      openCategories.push(name)
+    }
+  })
+  localStorage.setItem("tag-categories-open", JSON.stringify(openCategories))
+}
+
 function toggleTagCategory(evt: MouseEvent) {
   evt.stopPropagation()
   const header = evt.currentTarget as HTMLElement
@@ -88,6 +100,7 @@ function toggleTagCategory(evt: MouseEvent) {
   if (body) {
     body.classList.toggle("open")
   }
+  saveTagCategoryState()
 }
 
 function switchExplorerView(view: "year" | "tag") {
@@ -216,6 +229,20 @@ function setupExplorer() {
     el.addEventListener("click", toggleTagCategory)
     window.addCleanup(() => el.removeEventListener("click", toggleTagCategory))
   })
+
+  // Restore saved tag category open states
+  const savedCategories: string[] = JSON.parse(
+    localStorage.getItem("tag-categories-open") ?? "[]",
+  )
+  if (savedCategories.length > 0) {
+    document.querySelectorAll(".tag-category").forEach((cat) => {
+      const name = cat.querySelector(".tag-category-header span")?.textContent ?? ""
+      const body = cat.querySelector(".tag-category-body")
+      if (body && savedCategories.includes(name)) {
+        body.classList.add("open")
+      }
+    })
+  }
 }
 
 function toggleExplorerFolders() {
@@ -289,6 +316,17 @@ document.addEventListener("nav", () => {
     active.classList.add("is-active")
     // Ensure visible in viewport on mobile explorer
     active.scrollIntoView({ block: "nearest" })
+  }
+
+  // Highlight active tag in tag explorer
+  const tagMatch = slug.match(/^tags\/(.+)$/)
+  if (tagMatch) {
+    const activeTag = document.querySelector(
+      `[data-explorer-view='tag'] a.tag-link[href$='/tags/${CSS.escape(tagMatch[1])}']`,
+    ) as HTMLElement | null
+    if (activeTag) {
+      activeTag.classList.add("is-active")
+    }
   }
 })
 

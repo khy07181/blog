@@ -234,6 +234,7 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
   // Get options
   const folderBehavior = opts.folderClickBehavior
   const isDefaultOpen = opts.folderDefaultState === "open"
+  const isCurrentYear = node.name === new Date().getFullYear().toString()
 
   // Calculate current folderPath
   const folderPath = node.name !== "" ? joinSegments(fullPath ?? "", node.name) : ""
@@ -283,7 +284,7 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
             </div>
           )}
           {/* Recursively render children of folder */}
-          <div class={`folder-outer ${node.depth === 0 || isDefaultOpen ? "open" : ""}`}>
+          <div class={`folder-outer ${node.depth === 0 || isDefaultOpen || isCurrentYear ? "open" : ""}`}>
             <ul
               // Inline style for left folder paddings
               style={{

@@ -100,6 +100,13 @@ export default ((userOpts?: Partial<Options>) => {
     // Build initial folder states: collapse all, then open only the first top-level folder
     // Stringify to pass json tree as data attribute ([data-tree])
     const folders = fileTree.getFolderPaths(opts.folderDefaultState === "collapsed")
+    // Always expand the current year folder
+    const currentYear = new Date().getFullYear().toString()
+    for (const folder of folders) {
+      if (folder.path === currentYear) {
+        folder.collapsed = false
+      }
+    }
     jsonTree = JSON.stringify(folders)
 
     // Build tag category data if enabled
@@ -218,7 +225,7 @@ export default ((userOpts?: Partial<Options>) => {
                       </svg>
                       <span>{cat.category}</span>
                     </button>
-                    <div class="tag-category-body open">
+                    <div class="tag-category-body">
                       <ul class="tag-pill-list">
                         {cat.tags.map((t) => (
                           <li>
