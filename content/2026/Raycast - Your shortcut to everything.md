@@ -11,14 +11,14 @@ category:
 tags:
   - raycast
   - productivity
-  - mac
   - launcher
   - automation
+  - tool
 draft: false
-published: 2026-04-12T17:45:00
+published: 2026-04-12T23:30:00
 lang: ko
 created: 2026-04-12T17:45
-updated: 2026-04-12T23:23
+updated: 2026-04-12T23:28
 ---
 [Raycast](https://www.raycast.com/)는 키보드만으로 앱 실행, 파일 검색, 명령 실행, 반복 작업 자동화까지 이어서 처리할 수 있게 해주는 생산성 도구다.
 
