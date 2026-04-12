@@ -1,6 +1,7 @@
 ---
 title: Raycast - Your shortcut to everything
 aliases:
+  - Raycast 소개글
 cover_image: ""
 description: Raycast의 주요 기능 소개
 permalink: raycast-your-shortcut-to-everything
