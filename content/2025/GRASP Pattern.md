@@ -12,7 +12,7 @@ tags:
 draft: false
 published: 2025-06-22
 created: 2025-06-22T22:46
-updated: 2026-03-29T16:24
+updated: 2026-04-12T22:42
 ---
 
 ## GRASP Pattern

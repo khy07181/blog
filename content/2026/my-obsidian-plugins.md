@@ -20,9 +20,9 @@ draft: false
 published: 2026-03-29T18:15:00
 lang: ko
 created: 2026-03-29T00:00
-updated: 2026-03-29T17:59
+updated: 2026-04-12T22:42
 ---
-
+09:43
 이전 글 [[Obsidian : Sharpen your thinking|Obsidian : Sharpen your thinking]]에서는 Obsidian이 어떤 도구인지 간단히 정리했다.
 
 이번에는 실제로 사용하고 있는 커뮤니티 플러그인들을 소개하려고 한다.
@@ -110,6 +110,7 @@ Obsidian의 기본 템플릿 기능을 대폭 확장한 플러그인이다. Java
 ### [Omnisearch](obsidian://show-plugin?id=omnisearch)
 
 Obsidian의 기본 검색보다 훨씬 빠르고 정확한 전체 텍스트 검색을 제공한다. 인덱싱 기반이라 vault가 커져도 검색 속도가 빠르고, 퍼지 매칭도 지원한다.
+
 ![[omnisearch.gif]]
 
 ### [Switcher++](obsidian://show-plugin?id=darlal-switcher-plus)

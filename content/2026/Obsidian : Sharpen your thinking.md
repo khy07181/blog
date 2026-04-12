@@ -18,7 +18,7 @@ draft: false
 published: 2026-03-15T23:35:00
 lang: ko
 created: 2026-03-15T00:00
-updated: 2026-03-29T16:25
+updated: 2026-04-12T22:42
 ---
 
 [Obsidian](https://obsidian.md/)은 로컬 기반의 마크다운 노트 앱이자, 지식 관리 도구다.

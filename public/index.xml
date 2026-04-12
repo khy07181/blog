@@ -6,17 +6,23 @@
       <description>Last 10 notes on 🪴 hayoung</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>hayoung blog</title>
+    <link>https://khy07181.github.io/</link>
+    <guid>https://khy07181.github.io/</guid>
+    <description>Welcome to my blog.</description>
+    <pubDate>Sun, 12 Apr 2026 14:17:32 GMT</pubDate>
+  </item><item>
+    <title>Raycast - Your shortcut to everything</title>
+    <link>https://khy07181.github.io/2026/Raycast---Your-shortcut-to-everything</link>
+    <guid>https://khy07181.github.io/2026/Raycast---Your-shortcut-to-everything</guid>
+    <description>Raycast의 주요 기능 소개.</description>
+    <pubDate>Sun, 12 Apr 2026 08:45:00 GMT</pubDate>
+  </item><item>
     <title>내가 사용하고 있는 obsidian 플러그인</title>
     <link>https://khy07181.github.io/2026/my-obsidian-plugins</link>
     <guid>https://khy07181.github.io/2026/my-obsidian-plugins</guid>
     <description>실제 사용 중인 Obsidian 커뮤니티 플러그인 소개.</description>
     <pubDate>Sun, 29 Mar 2026 09:15:00 GMT</pubDate>
-  </item><item>
-    <title>hayoung blog</title>
-    <link>https://khy07181.github.io/</link>
-    <guid>https://khy07181.github.io/</guid>
-    <description>Welcome to my blog.</description>
-    <pubDate>Sun, 29 Mar 2026 08:12:23 GMT</pubDate>
   </item><item>
     <title>Obsidian : Sharpen your thinking</title>
     <link>https://khy07181.github.io/2026/Obsidian-:-Sharpen-your-thinking</link>
@@ -59,12 +65,6 @@
     <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-transaction-lock</guid>
     <description>MySQL 엔진의 잠금 스토리지 엔진 레벨과 MySQL 엔진 레벨로 나뉜다. Global Lock 영햠 범위 : MySQL 서버 전체 Table Lock 개별 테이블 단위로 설정되는 잠금 명시적 테이블 락 특별한 상황이 아니면 어플리케이션에서 사용할 필요가 없다. 묵시적 테이블 락 MyISAM이나 MEMORY 테이블의 데이터를 변경하는 쿼리를 실행하면 발생한다.</description>
     <pubDate>Sun, 28 Dec 2025 05:37:00 GMT</pubDate>
-  </item><item>
-    <title>RealMySQL 아키텍처</title>
-    <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-architecture</link>
-    <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-architecture</guid>
-    <description>MySQL 서버 MySQL 엔진과 스토리지 엔진으로 구분 프로세스 기반이 아니라 스레드 기반으로 작동 Foreground Thread MySQL에 연결된 클라이언트 수만큼 생성되며 각 클라이언트의 쿼리를 처리한다. 클라이언트가 연결을 종료하면 스레드는 스레드 캐시로 돌아가며, 캐시 크기는 thread_cache_size 로 제한된다.</description>
-    <pubDate>Sun, 14 Dec 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

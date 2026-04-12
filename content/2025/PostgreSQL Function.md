@@ -13,7 +13,7 @@ permalink:
 draft: false
 published: 2025-11-30
 created: 2025-11-30T21:21:00
-updated: 2026-03-29T16:24
+updated: 2026-04-12T22:42
 ---
 
 PostgreSQL 을 꽤 오래 써왔지만 함수를 만들어서 사용해 본적은 처음인 것 같다.
