@@ -14,7 +14,7 @@ tags:
 draft: false
 published: 2025-02-23
 created: 2025-02-23T20:51
-updated: 2026-04-12T22:42
+updated: 2026-04-20T16:39
 ---
 
 # 어떤 블로그를 만들고 싶을까

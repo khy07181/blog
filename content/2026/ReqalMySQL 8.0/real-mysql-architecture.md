@@ -14,7 +14,7 @@ tags:
 draft: false
 published: 2025-12-14
 created: 2025-12-09T21:01
-updated: 2026-04-12T22:42
+updated: 2026-04-20T16:39
 ---
 
 MySQL 서버

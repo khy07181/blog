@@ -992,7 +992,7 @@ fn mainFragment(
                         '${f}',
                         ${t.glProgram._uniformBlockData[f].index}
                     );
-                `)}else if(c instanceof zt){let f=t._uniformBindMap[l][u],d=a.uniformData[f];d&&(n||(n=!0,i.push(`
+                `)}else if(c instanceof Ht){let f=t._uniformBindMap[l][u],d=a.uniformData[f];d&&(n||(n=!0,i.push(`
                         var tS = r.texture;
                         `)),e._gl.uniform1i(d.location,s),r.push(`
                         tS.bind(resources[${u}], ${s});

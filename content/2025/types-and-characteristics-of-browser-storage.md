@@ -13,7 +13,7 @@ permalink:
 draft: false
 published: 2025-09-01
 created: 2025-09-01T16:33
-updated: 2026-04-12T22:42
+updated: 2026-04-20T16:39
 ---
 
 ### LocalStorage

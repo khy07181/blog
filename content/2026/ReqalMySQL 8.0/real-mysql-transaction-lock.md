@@ -15,7 +15,7 @@ permalink:
 draft: false
 published: 2025-12-28T14:37:00
 created: 2025-12-17T13:19
-updated: 2026-04-12T22:42
+updated: 2026-04-20T16:39
 ---
 
 ### MySQL 엔진의 잠금

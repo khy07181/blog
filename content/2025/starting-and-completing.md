@@ -10,7 +10,7 @@ tags:
 draft: false
 published: 2025-03-09
 created: 2025-03-08T17:16
-updated: 2026-04-12T22:42
+updated: 2026-04-20T16:39
 ---
 
 ## 게으른 완벽주의자

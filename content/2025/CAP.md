@@ -12,7 +12,7 @@ permalink:
 draft: false
 published: 2025-08-17
 created: 2024-09-19T17:45
-updated: 2026-04-12T22:42
+updated: 2026-04-20T16:39
 ---
 
 ### CAP 정리란?

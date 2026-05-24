@@ -20,7 +20,7 @@ draft: false
 published: 2026-03-29T18:15:00
 lang: ko
 created: 2026-03-29T00:00
-updated: 2026-04-12T22:42
+updated: 2026-04-20T16:39
 ---
 09:43
 이전 글 [[Obsidian : Sharpen your thinking|Obsidian : Sharpen your thinking]]에서는 Obsidian이 어떤 도구인지 간단히 정리했다.

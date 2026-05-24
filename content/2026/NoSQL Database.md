@@ -15,7 +15,7 @@ draft: false
 published: 2026-03-01T22:40:00
 lang: ko
 created: 2026-03-01T21:46
-updated: 2026-04-12T22:42
+updated: 2026-04-20T16:39
 ---
 
 ## NoSQL Database
