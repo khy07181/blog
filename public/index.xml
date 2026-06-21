@@ -10,7 +10,13 @@
     <link>https://khy07181.github.io/</link>
     <guid>https://khy07181.github.io/</guid>
     <description>Welcome to my blog.</description>
-    <pubDate>Sun, 24 May 2026 12:21:38 GMT</pubDate>
+    <pubDate>Sun, 21 Jun 2026 14:36:02 GMT</pubDate>
+  </item><item>
+    <title>Obsidian plugin - Templater</title>
+    <link>https://khy07181.github.io/2026/Obsidian-plugin---Templater</link>
+    <guid>https://khy07181.github.io/2026/Obsidian-plugin---Templater</guid>
+    <description>Obsidian Templater 플러그인 소개.</description>
+    <pubDate>Sun, 21 Jun 2026 14:30:00 GMT</pubDate>
   </item><item>
     <title>Obsidian plugin - quick switcher++</title>
     <link>https://khy07181.github.io/2026/Obsidian-plugin---quick-switcher++</link>
@@ -59,12 +65,6 @@
     <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-optimizer-hint</guid>
     <description>개요 쿼리 실행 절차 SQL 문장을 쪼개서 MySQL 서버가 이해할 수 있는 수준으로 분리한다. SQL 파스 트리가 만들어진다. SQL의 파싱 정보를 확인하면서 어떤 테이블부터 읽고 어떤 인덱스를 이용해 테이블을 읽을지 선택한다. 불필요한 조건 제거 및 복잡한 연산 단순화 여러 테이블의 조인이 있는 경우 순서 결정 각 테이블에 사용된 조건과 인덱스 통계 정보를 이용해 사용할 인덱스 결정 가져온 레코드들을 임시 테이블에 넣고 다시 한번 가공해야 하는지 결정 결정된 테이블 순서나 인덱스를 이용해 스토리지 엔진으로부터 데이터를 가져온다.</description>
     <pubDate>Sun, 11 Jan 2026 13:42:00 GMT</pubDate>
-  </item><item>
-    <title>RealMySQL 데이터 압축</title>
-    <link>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-data-compression</link>
-    <guid>https://khy07181.github.io/2026/ReqalMySQL-8.0/real-mysql-data-compression</guid>
-    <description>페이지 압축 MySQL의 InnoDB 스토리지 엔진은 특정 테이블에 속한 모든 데이터 페이지를 반드시 동일한 크기로 관리해야 한다. 일반적으로 16KB MySQL에서는 펀치홀 기능을 활용해 페이지를 압축한다. 파일의 특정 영역의 논리적으로 유지하고, 물리적으로는 디스크 공간을 해제하는 방식 ex) 16KB의 페이지를 압축해 7KB가 되었다면 9KB의 공간이 펀치홀 펀치홀 기능은 운영체제, 하드웨어 자체, 파일 시스템에서 지원해야하기 때문에 많이 사용되진 않는다.</description>
-    <pubDate>Sun, 28 Dec 2025 05:38:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
