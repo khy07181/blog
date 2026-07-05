@@ -15,9 +15,9 @@ tags:
   - obsidian
   - upgrade
 draft: false
-published: 2026-07-06T00:15:00
+published: 2026-07-05T23:52:00
 lang: ko
-created: 2026-07-06T00:15
+created: 2026-07-06T22:28:00
 updated: 2026-07-06T00:15
 ---
 
