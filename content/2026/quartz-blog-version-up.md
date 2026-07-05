@@ -98,7 +98,7 @@ plugins:
 
 ## Obsidian Bases 와 Canvas 지원
 
-v5는 Obsidian의 [Bases](https://help.obsidian.md/bases) 와 Canvas 파일까지 페이지로 렌더링해준다. Obsidian을 그대로 publish 한다는 Quartz의 방향성이 한 발 더 나아간 셈이다.
+v5는 Obsidian의 [Bases](https://help.obsidian.md/bases) 와 Canvas 파일까지 페이지로 렌더링해준다. Obsidian을 그대로 publish 한다는 Quartz의 방향성이 더 알맞아졌다.
 
 ## 모든 URL 이 소문자로...
 
@@ -131,7 +131,7 @@ v4는 파일명의 대소문자와 공백을 URL에 그대로 유지했다. v5�
 
 ## 1. 격리된 사본에서 먼저 세워보기
 
-라이브 블로그(v4)는 그대로 두고, upstream의 v5 브랜치를 **별도 폴더에 따로 클론**해서 시범 구축했다.
+라이브 블로그(v4)는 그대로 두고, upstream의 v5 브랜치를 **별도 폴더에 따로 클론**해서 업그레이드했다.
 
 ```shell
 git clone --depth 1 -b v5 https://github.com/jackyzha0/quartz.git blog-v5
@@ -151,9 +151,6 @@ npx quartz build --serve    # localhost:8080 에서 미리보기
 ## 2. 내가 커스텀했던 부분 적용하기
 
 문제는 여기서부터였다. 그동안 블로그를 운영하면서 이것저것 커스텀을 많이 해뒀는데, v5는 구조가 달라서 그대로 옮겨지지 않았다.
-
-git 커밋 이력을 작성자 기준으로 뒤져서 내가 실제로 손댄 것들을 전부 추려냈다.
-
 - 연도/태그 탭이 있는 **커스텀 Explorer**
 - 사이드바 **SocialIcons** (RSS / Email / GitHub)
 - 링크 **포인트 컬러**
@@ -225,7 +222,7 @@ due to environment protection rules.
 
 # 마무리
 
-메이저 버전 업이라 각오는 했지만, 커스텀을 많이 해둔 탓에 생각보다 손이 많이 갔다. 그래도 격리된 사본에서 충분히 검증하고 넘어온 덕분에 라이브는 무중단으로 넘어왔다.
+메이저 버전 업이라 각오는 했지만, 커스텀을 많이 해서 그런지 생각보다 손이 많이 갔다. 그래도 격리된 사본에서 충분히 검증하고 넘어온 덕분에 라이브는 무중단으로 넘어왔다.
 
 v5의 커뮤니티 플러그인 생태계는 방향성이 마음에 든다. 코어가 얇아지니 업데이트 부담이 줄고, 필요한 기능만 골라 쓰거나 직접 만들어 붙이기도 수월해졌다. 반대로 커스텀이 많으면 마이그레이션 비용이 그만큼 커진다는 것도 확실히 체감했다.
 
