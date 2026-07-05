@@ -1,0 +1,42 @@
+{
+  "name": "@local/social-icons",
+  "version": "1.0.0",
+  "description": "Sidebar social links (RSS, Email, GitHub) for this blog (ported from v4 SocialIcons component)",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "import": "./dist/components/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "quartz": {
+    "name": "social-icons",
+    "displayName": "Social Icons",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "components": {
+      "SocialIcons": {
+        "displayName": "Social Icons",
+        "defaultPosition": "left",
+        "defaultPriority": 15
+      }
+    }
+  }
+}

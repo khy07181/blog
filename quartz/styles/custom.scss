@@ -1,3 +1,36 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+// ported from v4 custom.scss — purple link/point color
+a {
+  color: #8a5cf5 !important;
+}
+
+// ported from v4 RecentNotes: display order title -> tags -> date, item separators, wrapping tags
+.recent-notes .recent-li .section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.recent-notes .recent-li .desc {
+  order: 1;
+}
+.recent-notes .recent-li .tags {
+  order: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.recent-notes .recent-li .meta {
+  order: 3;
+  margin: 0;
+}
+.recent-notes .recent-li:not(:last-child) {
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}

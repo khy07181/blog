@@ -1,0 +1,32 @@
+{
+  "name": "@local/head-meta",
+  "version": "1.0.0",
+  "description": "Injects custom <head> meta tags (google-site-verification) — ported from v4 Head.tsx",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "quartz": {
+    "name": "head-meta",
+    "displayName": "Head Meta",
+    "category": "transformer",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 1,
+    "defaultEnabled": true,
+    "defaultOptions": {}
+  }
+}

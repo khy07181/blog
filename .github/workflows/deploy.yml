@@ -1,0 +1,72 @@
+# v5-adapted deploy workflow — copy to .github/workflows/deploy.yml in the real repo.
+# Changes vs v4: trigger branch v4 -> v5, added "Install Quartz plugins" step,
+# robots.txt written inline (v5 has no robots plugin), plugin cache for speed.
+name: Deploy Quartz site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - v5
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for git info
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Dependencies
+        run: npm ci
+      - name: Cache Quartz community plugins
+        uses: actions/cache@v4
+        with:
+          path: .quartz/plugins
+          key: ${{ runner.os }}-quartz-plugins-${{ hashFiles('quartz.lock.json') }}
+      - name: Install Quartz plugins
+        run: npx quartz plugin install
+      - name: Build Quartz
+        run: |
+          npx quartz build
+          # robots.txt at public root for GitHub Pages
+          cat > public/robots.txt <<'EOF'
+          User-agent: *
+          Allow: /
+          Sitemap: https://khy07181.github.io/sitemap.xml
+          EOF
+          # .nojekyll so GitHub Pages serves _-prefixed paths
+          touch public/.nojekyll
+      - name: Format sitemap.xml
+        run: |
+          if [ -f public/sitemap.xml ]; then
+            sudo apt-get update && sudo apt-get install -y libxml2-utils
+            xmllint --format public/sitemap.xml > public/sitemap.formatted.xml
+            mv public/sitemap.formatted.xml public/sitemap.xml
+            echo "Sitemap formatted successfully"
+          fi
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

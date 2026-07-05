@@ -1,0 +1,79 @@
+{
+  "name": "@local/explorer",
+  "version": "1.0.0",
+  "description": "Tabbed year/tag Explorer for this blog (ported from the v4 customized Explorer component).",
+  "type": "module",
+  "license": "MIT",
+  "author": "hayoung",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "peerDependenciesMeta": {
+    "preact": {
+      "optional": false
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "quartz": {
+    "name": "explorer",
+    "displayName": "Explorer",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "folderDefaultState": "collapsed",
+      "folderClickBehavior": "collapse",
+      "useSavedState": false,
+      "enableTagView": false
+    },
+    "components": {
+      "Explorer": {
+        "displayName": "Explorer",
+        "defaultPosition": "left",
+        "defaultPriority": 40
+      }
+    },
+    "optionSchema": {
+      "title": {
+        "type": "string"
+      },
+      "folderDefaultState": {
+        "type": "enum",
+        "values": ["collapsed", "open"]
+      },
+      "folderClickBehavior": {
+        "type": "enum",
+        "values": ["collapse", "link"]
+      },
+      "useSavedState": {
+        "type": "boolean"
+      },
+      "enableTagView": {
+        "type": "boolean"
+      }
+    }
+  }
+}
