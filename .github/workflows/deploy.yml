@@ -1,9 +1,9 @@
 name: Deploy Quartz site to GitHub Pages
 
 on:
-  push:
-    branches:
-      - v4
+  # 자동 배포 비활성화 (2026-07-07): 블로그는 v5 브랜치에서 배포됩니다. v4는 레거시 브랜치.
+  # v4 push가 라이브 사이트를 v4로 덮어쓰지 않도록 트리거를 수동 실행으로 변경.
+  workflow_dispatch:
 
 permissions:
   contents: read
