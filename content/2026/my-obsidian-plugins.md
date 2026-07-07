@@ -20,9 +20,8 @@ draft: false
 published: 2026-03-29T18:15:00
 lang: ko
 created: 2026-03-29T00:00
-updated: 2026-04-20T16:39
+updated: 2026-07-07T15:48
 ---
-09:43
 이전 글 [[Obsidian : Sharpen your thinking|Obsidian : Sharpen your thinking]]에서는 Obsidian이 어떤 도구인지 간단히 정리했다.
 
 이번에는 실제로 사용하고 있는 커뮤니티 플러그인들을 소개하려고 한다.

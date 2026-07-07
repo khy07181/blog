@@ -15,27 +15,31 @@ tags:
   - obsidian
   - upgrade
 draft: false
-published: 2026-07-06T00:15:00
+published: 2026-07-05T23:52:00
 lang: ko
-created: 2026-07-06T00:15
-updated: 2026-07-06T00:15
+created: 2026-07-06T22:28:00
+updated: 2026-07-06T00:49
 ---
 
 # 오랜만에 블로그를 손봤다
 
-[[building-blog-with-obsidian-and-quartz|Obsidian과 Quartz로 블로그 만들기]] 에서 Quartz로 블로그를 만든 이야기를 했었다.
+[[building-blog-with-obsidian-and-quartz|Obsidian과 Quartz로 블로그 만들기]]에서 Quartz로 블로그를 만든 이야기를 했었다.
 
 그게 벌써 작년 초의 일인데, 얼마 전 Quartz가 **4.0에서 5.0으로 메이저 버전 업그레이드**가 되었다는 걸 알게 됐다.
 
-메이저 버전이 올라간 만큼 바뀐 게 꽤 많았고, 마침 블로그를 한 번 정리하고 싶던 참이라 이참에 v5로 올려보기로 했다.
+메이저 버전이 올라간 만큼 바뀐 게 꽤 많았고, 이참에 v5로 올려보기로 했다.
 
-결론부터 말하면 잘 넘어왔고, 지금 이 글을 보고 있는 블로그가 바로 v5로 배포된 결과물이다. ~~안 보이면 배포에 실패한 것~~
+결론부터 말하면 잘 넘어왔고, 지금 이 글을 보고 있는 블로그가 바로 v5로 배포된 결과물이다.
+- ~~물론 배포 한번 실패해서 재시도했다.~~
+
+이 블로그를 처음 만들 때는 GPT한테 질문해가면서 한땀 한땀 만들었는데
+이번 버전 업은 Claude가 다했다.
 
 ---
 
 # Quartz 5.0
 
-[Quartz](https://quartz.jzhao.xyz/) 는 Obsidian vault 를 publish 할 수 있게 해주는 static site generator 다. 이 블로그도 Quartz로 만들었다.
+[Quartz](https://quartz.jzhao.xyz/) 는 Obsidian vault를 publish 할 수 있게 해주는 static site generator 다. 이 블로그도 Quartz로 만들었다.
 
 v5의 방향을 한 줄로 요약하면 **"코어를 가볍게, 플러그인을 생태계로"** 다.
 
@@ -53,14 +57,14 @@ npm이나 VS Code 확장 같은 생태계를 떠올리면 이해가 쉽다.
 
 바뀐 게 많지만, 실제로 마이그레이션하면서 체감한 것들 위주로 정리했다.
 
-| 항목 | v4 | v5 |
-| --- | --- | --- |
-| 플러그인 | 코어 내장 | 독립 커뮤니티 플러그인 (`quartz-community`) |
-| 설정 | `quartz.config.ts` + `quartz.layout.ts` (TypeScript) | `quartz.config.yaml` (YAML) |
-| 레이아웃 | 별도 `layout.ts` 파일 | 각 플러그인의 속성으로 통합 |
-| Obsidian 지원 | wikilink, callout 등 | + **Bases**, **Canvas** 페이지까지 |
-| URL | 대소문자·공백 유지 | 전부 **소문자 + 하이픈** |
-| Node | 20 | **22 이상** (npm 10.9.2+) |
+| 항목          | v4                                                   | v5                                |
+| ----------- | ---------------------------------------------------- | --------------------------------- |
+| 플러그인        | 코어 내장                                                | 독립 커뮤니티 플러그인 (`quartz-community`) |
+| 설정          | `quartz.config.ts` + `quartz.layout.ts` (TypeScript) | `quartz.config.yaml` (YAML)       |
+| 레이아웃        | 별도 `layout.ts` 파일                                    | 각 플러그인의 속성으로 통합                   |
+| Obsidian 지원 | wikilink, callout 등                                  | + **Bases**, **Canvas** 페이지까지     |
+| URL         | 대소문자·공백 유지                                           | 전부 **소문자 + 하이픈**                  |
+| Node        | 20                                                   | **22 이상** (npm 10.9.2+)           |
 
 ## 설정이 TypeScript 에서 YAML 로
 
@@ -94,7 +98,7 @@ plugins:
 
 ## Obsidian Bases 와 Canvas 지원
 
-v5는 Obsidian의 [Bases](https://help.obsidian.md/bases) 와 Canvas 파일까지 페이지로 렌더링해준다. Obsidian을 그대로 publish 한다는 Quartz의 방향성이 한 발 더 나아간 셈이다.
+v5는 Obsidian의 [Bases](https://help.obsidian.md/bases) 와 Canvas 파일까지 페이지로 렌더링해준다. Obsidian을 그대로 publish 한다는 Quartz의 방향성이 더 알맞아졌다.
 
 ## 모든 URL 이 소문자로...
 
@@ -117,7 +121,7 @@ v4는 파일명의 대소문자와 공백을 URL에 그대로 유지했다. v5�
 - 기존에 공유된 링크나 검색엔진에 색인된 주소가 깨질 수 있고
 - 페이지 경로 기준으로 매핑되는 [giscus](https://giscus.app/ko) 댓글도 새 URL에서는 새 스레드로 시작된다
 
-나는 개인 블로그라 유입 영향이 크지 않다고 판단해서 그냥 새 URL 체계를 받아들였다. sitemap이 새 주소로 갱신되니 검색엔진이 다시 색인하기를 기다리면 된다.
+내 블로그를 딱히 보러 오는 사람도 적고 큰 영향이 없을 것 같아서 그냥 새 URL 형식으로 변경했다.
 
 ---
 
@@ -144,9 +148,7 @@ npx quartz plugin install   # 커뮤니티 플러그인 설치
 npx quartz build --serve    # localhost:8080 에서 미리보기
 ```
 
-문제가 생겨도 라이브에는 영향이 없으니 마음 편하게 이것저것 시도해볼 수 있었다.
-
-## 2. 내가 커스텀했던 것들 이식하기
+## 2. 내가 커스텀했던 부분 적용하기
 
 문제는 여기서부터였다. 그동안 블로그를 운영하면서 이것저것 커스텀을 많이 해뒀는데, v5는 구조가 달라서 그대로 옮겨지지 않았다.
 
@@ -164,6 +166,7 @@ v5에서는 이런 커스텀 컴포넌트들을 **로컬 플러그인**으로 �
 ## 3. 마주친 함정들
 
 여기서부터가 진짜 삽질의 영역이었다. ~~그리고 이 글의 존재 이유~~
+- 물론 나의 삽질이 아닌 claude의 삽질
 
 **① `note-properties` 플러그인이 사실 프론트매터 파서였다**
 
@@ -195,7 +198,7 @@ componentRegistry.setOptionOverrides("recent-notes", {
 
 커스텀 Explorer가 "현재 연도 폴더를 자동으로 펼치는" 기능을 `new Date().getFullYear()` 로 구현했었는데, v5 빌드는 재현성을 위해 `new Date()` / `Date.now()` 를 막아뒀다. 그래서 **트리에서 가장 큰 연도 폴더를 펼치는** 방식으로 바꿨다. 어차피 결과(최신 연도가 열림)는 같으니 오히려 더 깔끔해졌다.
 
-## 4. 배포에서 한 번 막히다
+## 4. 배포 실패 수정
 
 로컬에서 다 확인하고 v5 브랜치를 push했더니, 빌드는 성공했는데 **배포 단계에서 막혔다.**
 
@@ -229,8 +232,8 @@ v5의 커뮤니티 플러그인 생태계는 방향성이 마음에 든다. 코�
 정리하자면,
 
 - 커스텀이 거의 없다면 v5 업그레이드는 어렵지 않다
-- 커스텀이 많다면 **격리된 사본에서 충분히 검증한 뒤** 넘어오는 걸 추천한다
-- URL이 전부 바뀌는 건 미리 감안하자
+- 커스텀이 많다면 **격리된 사본에서 충분히 검증한 뒤** 넘어오는 걸 추천
+- URL이 대문자를 포함한다면 소문자로 변경해야한다.
 - Claude 짱
 
 # Links
