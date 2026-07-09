@@ -18,7 +18,7 @@ draft: false
 published: 2026-07-05T23:52:00
 lang: ko
 created: 2026-07-06T22:28:00
-updated: 2026-07-06T00:49
+updated: 2026-07-09T10:02
 ---
 
 # 오랜만에 블로그를 손봤다
@@ -33,7 +33,7 @@ updated: 2026-07-06T00:49
 - ~~물론 배포 한번 실패해서 재시도했다.~~
 
 이 블로그를 처음 만들 때는 GPT한테 질문해가면서 한땀 한땀 만들었는데
-이번 버전 업은 Claude가 다했다.
+이번 버전 업은 Claude가 다 했다.
 
 ---
 
@@ -98,7 +98,7 @@ plugins:
 
 ## Obsidian Bases 와 Canvas 지원
 
-v5는 Obsidian의 [Bases](https://help.obsidian.md/bases) 와 Canvas 파일까지 페이지로 렌더링해준다. Obsidian을 그대로 publish 한다는 Quartz의 방향성이 더 알맞아졌다.
+v5는 Obsidian의 [Bases](https://help.obsidian.md/bases) 와 Canvas 파일까지 페이지로 렌더링해준다. Obsidian을 그대로 publish 한다는 Quartz의 방향성이 더 잘 실현되었다.
 
 ## 모든 URL 이 소문자로...
 
@@ -166,7 +166,7 @@ v5에서는 이런 커스텀 컴포넌트들을 **로컬 플러그인**으로 �
 ## 3. 마주친 함정들
 
 여기서부터가 진짜 삽질의 영역이었다. ~~그리고 이 글의 존재 이유~~
-- 물론 나의 삽질이 아닌 claude의 삽질
+- 물론 나의 삽질이 아닌 Claude의 삽질
 
 **① `note-properties` 플러그인이 사실 프론트매터 파서였다**
 
@@ -233,7 +233,7 @@ v5의 커뮤니티 플러그인 생태계는 방향성이 마음에 든다. 코�
 
 - 커스텀이 거의 없다면 v5 업그레이드는 어렵지 않다
 - 커스텀이 많다면 **격리된 사본에서 충분히 검증한 뒤** 넘어오는 걸 추천
-- URL이 대문자를 포함한다면 소문자로 변경해야한다.
+- URL이 대문자를 포함한다면 소문자로 변경해야 한다.
 - Claude 짱
 
 # Links

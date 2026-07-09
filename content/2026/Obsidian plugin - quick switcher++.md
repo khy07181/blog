@@ -21,7 +21,7 @@ draft: false
 published: 2026-05-24T20:45:00
 lang: ko
 created: 2026-05-24T20:45
-updated: 2026-05-24T21:24
+updated: 2026-07-09T10:02
 ---
 
 [Quick Switcher++](https://github.com/darlal/obsidian-switcher-plus)는 Obsidian의 기본 [Quick Switcher](https://obsidian.md/help/plugins/quick-switcher)(`cmd + o`)를 확장해주는 커뮤니티 플러그인이다.
@@ -53,7 +53,7 @@ Quick Switcher++는 기본 Quick Switcher의 가벼운 사용감을 유지하면
 ### Recent tabs
 
 ![[quick_switcher_recent_tabs.png]]
-- 기본 standard 모드로 키면 최근 노트가 표시된다.
+- 기본 standard 모드로 켜면 최근 노트가 표시된다.
 
 ### Search Headings
 
@@ -68,7 +68,7 @@ Quick Switcher++는 기본 Quick Switcher의 가벼운 사용감을 유지하면
 - Quick Switcher++는 현재 파일이나 선택한 파일 안의 symbol도 검색할 수 있다.
 	- 기본 trigger는 `@`다.
 - symbol은 헤더뿐 아니라 태그, 링크, 임베드, callout, canvas node 등을 포함한다.
-	- 즉 노트 안의 구조를 작은 아웃라인처럼 보고, 그 중 원하는 위치로 바로 이동할 수 있다.
+	- 즉 노트 안의 구조를 작은 아웃라인처럼 보고, 그중 원하는 위치로 바로 이동할 수 있다.
 
 ### Editor Navigation
 

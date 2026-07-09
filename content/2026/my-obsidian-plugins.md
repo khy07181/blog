@@ -20,7 +20,7 @@ draft: false
 published: 2026-03-29T18:15:00
 lang: ko
 created: 2026-03-29T00:00
-updated: 2026-07-07T15:48
+updated: 2026-07-09T10:02
 ---
 이전 글 [[Obsidian : Sharpen your thinking|Obsidian : Sharpen your thinking]]에서는 Obsidian이 어떤 도구인지 간단히 정리했다.
 
@@ -28,7 +28,7 @@ updated: 2026-07-07T15:48
 
 Obsidian은 기본 기능만으로도 충분히 사용할 수 있지만, 플러그인을 통해 활용성을 크게 확장할 수 있다.
 
-현재 vault에 설치된 플러그인은 30여 개 정도이고, 그중 꾸준히 사용하고 있는 것들을 카테고리별로 나누어 소개한다.
+현재 vault에 설치된 플러그인은 30여 개이고, 그중 꾸준히 사용하고 있는 것들을 카테고리별로 나누어 소개한다.
 
 ---
 
@@ -124,7 +124,7 @@ Obsidian을 열 때 자동으로 지정된 노트를 띄워준다. 나는 Datavi
 
 ### [Notebook Navigator](obsidian://show-plugin?id=notebook-navigator)
 
-파일 탐색기를 스타일의 UI로 변경해준다. 좌측에 폴더 트리, 우측에 파일 목록을 보여주는 방식으로 탐색이 직관적이다.
+파일 탐색기를 노트북 스타일의 UI로 변경해준다. 좌측에 폴더 트리, 우측에 파일 목록을 보여주는 방식으로 탐색이 직관적이다.
 - [Mastering Notebook Navigator for Obsidian - YouTube](https://www.youtube.com/watch?v=BewIlG8wLAM)
 	- 설명보다 영상이 더 이해가 쉽다.
 ![[notebook-navigator.png]]
@@ -219,7 +219,7 @@ AI를 활용해 현재 노트와 의미적으로 연관된 다른 노트들을 �
 ## 마무리
 
 Obsidian을 쓰면서 필요할 때마다 하나씩 추가하다 보니 자연스럽게 이 구성이 되었다.
-원래는 좀 더 많았다가 사용하지 않는 플러그인도 많고 무거워지는 느낌이 들어서 어느 정도 삭제했다.
+원래는 좀 더 많았는데, 사용하지 않는 플러그인도 많고 무거워지는 느낌이 들어서 어느 정도 삭제했다.
 
 플러그인을 많이 설치하는 것보다 중요한 건, 실제로 계속 사용하는 구성을 만드는 것이다.
 

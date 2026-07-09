@@ -19,7 +19,7 @@ draft: false
 published: 2026-04-12T23:30:00
 lang: ko
 created: 2026-04-12T17:45
-updated: 2026-04-20T16:39
+updated: 2026-07-09T10:02
 ---
 [Raycast](https://www.raycast.com/)는 키보드만으로 앱 실행, 파일 검색, 명령 실행, 반복 작업 자동화까지 이어서 처리할 수 있게 해주는 생산성 도구다.
 
@@ -49,7 +49,7 @@ Raycast의 장점은 기능 하나가 아주 독보적이라기보다, 자주 �
 가장 먼저 체감되는 기능은 런처 자체다. 단축키를 통한 앱 실행은 물론이고, 자주 쓰는 명령이나 최근에 열었던 파일까지 같은 루트 검색에서 바로 접근할 수 있다. 검색창을 여는 순간 최근 사용 항목이나 추천 항목이 먼저 보이기 때문에, 이름을 끝까지 입력하지 않아도 되는 경우가 많다.
 
 특히 [Search Files](https://manual.raycast.com/core)는 단순한 파일명 검색에서 끝나지 않는다. 최근 파일을 바로 보여주고, 파일 미리보기와 메타데이터를 함께 확인할 수 있으며, 검색어에 조건을 섞어서 더 빠르게 좁혀 갈 수 있다. Finder를 열고 폴더를 따라가며 찾는 흐름보다 훨씬 짧다.
-![[raycast_serach_file.png]]
+![[raycast_search_file.png]]
 
 익숙해지면 '어떤 앱을 열겠다'보다 '바로 이 작업을 하겠다'에 가깝게 바뀐다. 런처를 거쳐 앱으로 이동하는 것이 아니라, 루트 검색 자체가 작업 시작점이 된다.
 
@@ -67,7 +67,7 @@ Raycast의 핵심 차별점은 Extensions다. 검색창이 단순히 로컬 앱�
 
 ![[raycast_quicklink.gif]]
 
-Quicklinks는 자주 여는 URL이나 검색 패턴을 저장해 두고 루트 검색에서 바로 실행할 수 있게 해준다. 단순히 즐겨찾기 링크를 여는 것도 가능하, 검색어를 인자로 받아 Google 검색이나 번역, 특정 서비스 검색으로 이어지게 만들 수도 있다.
+Quicklinks는 자주 여는 URL이나 검색 패턴을 저장해 두고 루트 검색에서 바로 실행할 수 있게 해준다. 단순히 즐겨찾기 링크를 여는 것도 가능하고, 검색어를 인자로 받아 Google 검색이나 번역, 특정 서비스 검색으로 이어지게 만들 수도 있다.
 
 ### [Snippets](https://manual.raycast.com/snippets)
 
@@ -104,7 +104,7 @@ Raycast는 검색 도구라기보다 Mac에서 자주 반복하는 작업들을 
 처음에는 런처와 파일 검색, Extensions, Clipboard History 정도만 써도 충분히 값어치를 느낄 수 있다. 그 위에 필요에 따라 Quicklinks, Snippets, Window Management를 얹으면 작업 흐름이 더 매끄러워진다.
 
 최근에는 [AI](https://www.raycast.com/ai), [Notes](https://manual.raycast.com/notes), [Focus](https://manual.raycast.com/focus), [Cloud Sync](https://www.raycast.com/pro) 같은 기능까지 더해지면서 점점 더 큰 작업 허브로 확장되고 있다.
-소개한 기능말고도 수많은 기능이 존재한다.
+소개한 기능 말고도 수많은 기능이 존재한다.
 다만 Raycast의 진짜 매력은 화려한 부가 기능보다, 매일 반복되는 작은 작업을 빠르고 일관되게 줄여준다는 데 있다고 생각한다.
 
 ---

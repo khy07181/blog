@@ -13,10 +13,10 @@ permalink:
 draft: false
 published: 2025-11-30
 created: 2025-11-30T21:21:00
-updated: 2026-04-20T16:39
+updated: 2026-07-09T10:02
 ---
 
-PostgreSQL 을 꽤 오래 써왔지만 함수를 만들어서 사용해 본적은 처음인 것 같다.
+PostgreSQL 을 꽤 오래 써왔지만 함수를 만들어서 사용해 본 적은 처음인 것 같다.
 
 PostgreSQL 에서 함수를 생성하여 사용하는 방법
 

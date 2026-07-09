@@ -12,7 +12,7 @@ tags:
 draft: false
 published: 2025-11-16
 created: 2025-11-16T21:30
-updated: 2026-04-20T16:39
+updated: 2026-07-09T10:02
 ---
 
 세상에는 책보다 자극적이고 재미있는 것들이 너무 많아져, 예전처럼 자연스럽게 독서에 몰입하기가 점점 어려워지고 있다.
@@ -66,12 +66,12 @@ cons
 
 ---
 
-## 전차책을 PDF, EPUB로 변환하는 방법
+## 전자책을 PDF, EPUB으로 변환하는 방법
 
 >[!Warning]
 > 개인적인 이용·보관 목적을 제외한 **공유, 무단 배포, 상업적 활용은 저작권 문제가 발생할 수 있습니다.**
 
-### Google Play Book
+### Google Play Books
 
 구글 플레이 북은 타 플랫폼과 달리 아래와 같은 방법으로 DRM 해제가 가능하다.
 
@@ -81,20 +81,20 @@ cons
 	- `brew install --cask calibre`
 3. [DeDRM](https://github.com/noDRM/DeDRM_tools) 설치
 4. Calibre에 DeDRM plugin 등록
-	- appearance - plugin - 파일에서 플러그인 불러오기 - DeDRM_plugin.zip
+	- appearance - plugin - 파일에서 플러그인 불러오기 - DeDRM_plugin.zip
 
-5. Google play Books 라이브러리 책 내보내기
+5. Google Play Books 라이브러리 책 내보내기
 ![[Pasted image 20240204110550.png]]
 
 6. acsm 파일 ADE로 열기
 	- acsm 파일이 자동으로 pdf 또는 epub 파일로 변경된다.
-7. ADE 기본 저장소(`/Users/hayoung/Documents/Digital Editions`)의 epub 파일을 Clibre로 열기
+7. ADE 기본 저장소(`/Users/hayoung/Documents/Digital Editions`)의 epub 파일을 Calibre로 열기
 	- DeDRM 플러그인이 설치되어 있으면 자동으로 DRM이 해제된다.
 8. EPUB 또는 PDF 등 원하는 형식 변환
 
 ### 일반 전자책 플랫폼
 
-DRM 해제가 불가능해 스크린 캡쳐 후 PDF 또는 EPUB로 변환해야 한다.
+DRM 해제가 불가능해 스크린 캡처 후 PDF 또는 EPUB으로 변환해야 한다.
 
 #### GUI
 

@@ -14,12 +14,12 @@ draft: false
 published: 2026-02-08T21:40:00
 lang: ko
 created: 2026-02-08T21:18
-updated: 2026-04-20T16:39
+updated: 2026-07-09T10:02
 ---
 
 - Spring Data JPA의 save 메서드는 엔티티의 신규 여부(`isNew`)에 따라 persist 또는 merge를 선택적으로 실행한다.
 - 이 내부 동작을 정확히 이해하지 못하면 직접 ID를 할당하는 환경에서 merge가 호출되어 불필요한 SELECT 쿼리가 발생하는 성능 저하를 겪을 수 있다.
-- `save()` 메서드의 내부 코드를 보면 `entityInformation.isNew(entity)` 호출 결과에 따라 분기 처리 된다.
+- `save()` 메서드의 내부 코드를 보면 `entityInformation.isNew(entity)` 호출 결과에 따라 분기 처리된다.
 
 ```java
 @Override

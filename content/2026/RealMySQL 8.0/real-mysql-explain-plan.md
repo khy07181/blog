@@ -16,7 +16,7 @@ draft: false
 published: 2026-01-25T22:19:00
 lang: ko
 created: 2026-01-24T22:52
-updated: 2026-04-20T16:39
+updated: 2026-07-09T09:43
 ---
 
 ## 통계 정보
@@ -52,7 +52,7 @@ MySQL 서버의 통계 정보
 		- 디스크 데이터 페이지 읽기 비용.
 	- `row_evaluate_cost`
 		- 레코드 비교 비용.
-		- 이 값이 증가하면 풀 스캔 비용이 높아져 인덱스 레인지 스캔 가능성이 높아진다,.
+		- 이 값이 증가하면 풀 스캔 비용이 높아져 인덱스 레인지 스캔 가능성이 높아진다.
 
 ## 실행 계획 확인
 
@@ -64,7 +64,7 @@ MySQL 서버의 통계 정보
 ### 쿼리의 실행 시간 확인
 
 - EXPLAIN ANALYZE
-	- 실제 쿼리를 실행하고 단계별 소요 시간, 처리한 레코드 건수, 반복 횟수(loops)를 TREE 포맷으로 보여준다,.
+	- 실제 쿼리를 실행하고 단계별 소요 시간, 처리한 레코드 건수, 반복 횟수(loops)를 TREE 포맷으로 보여준다.
 
 ## 실행 계획 분석
 
@@ -72,7 +72,7 @@ MySQL 서버의 통계 정보
 
 단위(SELECT) 쿼리 식별자
 - `SELECT` 키워드 단위로 부여되는 식별자 값이다.
-- 조인 시에는 id가 증가하지 않고 같지만, 서브쿼리나 UNION 사용 시 id가 증가한다,.
+- 조인 시에는 id가 증가하지 않고 같지만, 서브쿼리나 UNION 사용 시 id가 증가한다.
 
 ### select_type 칼럼
 
@@ -99,7 +99,7 @@ MySQL 서버의 통계 정보
 - UNCACHEABLE SUBQUERY
 	- 서브쿼리 결과 캐시가 불가능할 때 표시
 - MATERIALIZED
-	- FROM 절이나 IN(Subquery) 형태의 쿼리에 용된 서브쿼리의 최적화를 위해 사용
+	- FROM 절이나 IN(Subquery) 형태의 쿼리에 사용된 서브쿼리의 최적화를 위해 사용
 
 ### table 컬럼
 
@@ -125,7 +125,7 @@ Partition Pruning
 	- 여러 테이블 조인 시 테이블의 PK나 유니크 키로 검색 조건에 사용할 때 사용됨
 - ref
 	- 인덱스 종류와 관계없이 동등(Equal) 조건 검색
-	- eq_ref와 달리 조인의 순서와 관겡벗고, PK나 유니크 키 등의 제약조건도 없다.
+	- eq_ref와 달리 조인의 순서와 관계없고, PK나 유니크 키 등의 제약조건도 없다.
 - fulltext
 	- 전문 검색(Full-text Search) 인덱스를 사용해 레코드를 읽는 접근 방법
 - ref_or_null
@@ -160,7 +160,7 @@ Partition Pruning
 ### ref 컬럼
 
 - 접근 방법이 `ref`일 때 비교 조건으로 어떤 값(상수, 컬럼 등)이 제공되었는지 보여준다.
-- `func`라고 나오면 값이 변환/가공된 것이다,.
+- `func`라고 나오면 값이 변환/가공된 것이다.
 
 ### rows 컬럼
 
@@ -180,7 +180,7 @@ Partition Pruning
 - Full scan on NULL key
 - impossible HAVING
 - impossible WHERE
-- LosseScan
+- LooseScan
 - No matching min/max rows
 - no matching row in const table
 - No matching rows after partition pruning
@@ -230,20 +230,17 @@ Partition Pruning
 - no matching row in const table
 	- 조인에 사용된 테이블에서 const 방법으로 접근했으나 일치하는 레코드가 없음
 - No matching rows after partition pruning
-  - 파티션 테이블에서 파티션 프루닝을 수행했으나, 대상 파티션에 삭제/수정할 레코드가 없음
+  - 파티션 테이블에서 파티션 프루닝을 수행했으나, 대상 파티션에 삭제/수정할 레코드가 없음
 - No tables used
-    - FROM 절이 없거나 `FROM DUAL` 형태의 쿼리로, 실제 테이블을 사용하지 않음
+    - FROM 절이 없거나 `FROM DUAL` 형태의 쿼리로, 실제 테이블을 사용하지 않음
 - Not exists
 	- 아우터 조인을 이용해 안티-조인(Anti-JOIN)을 수행할 때, 일치하는 레코드가 존재하면 더 이상 검색하지 않고 종료하는 최적화를 수행
 - Plan isn't ready yet
 	- `EXPLAIN FOR CONNECTION` 명령 실행 시, 대상 커넥션에서 아직 쿼리 실행 계획을 수립하지 못한 상태
 - Range checked for each record (index map: N)
-	- 매 레코드마다 인덱스 사용 여부(레인지 스캔 vs 풀 스캔)를 다시 검토하여 처리,
-- Recursive
-	- WITH 구문을 이용한 재귀 CTE(Common Table Expression)가 사용됨,
-- Rematerialize
-	- 래터럴 조인 시 선행 테이블의 레코드별로 서브쿼리를 실행해 결과를 임시 테이블에 새로 저장(구체화)함,
-- Select tables optimized away
+	- 매 레코드마다 인덱스 사용 여부(레인지 스캔 vs 풀 스캔)를 다시 검토하여 처리- Recursive
+	- WITH 구문을 이용한 재귀 CTE(Common Table Expression)가 사용됨- Rematerialize
+	- 래터럴 조인 시 선행 테이블의 레코드별로 서브쿼리를 실행해 결과를 임시 테이블에 새로 저장(구체화)함- Select tables optimized away
 	- MIN() 또는 MAX()만 조회하거나 GROUP BY 없이 COUNT(*)를 조회하는(MyISAM) 쿼리가 인덱스나 메타데이터만으로 최적화되어 처리됨
 - Start temporary, End temporary
 	- 세미 조인의 Duplicate Weed-out 최적화 전략 사용 시 중복 제거를 위해 내부 임시 테이블 사용의 시작과 끝을 의미
@@ -252,22 +249,18 @@ Partition Pruning
 - Using filesort
 	- 인덱스를 이용한 정렬이 불가능하여, 조회된 레코드를 소트 버퍼에 복사해 별도로 정렬 작업을 수행
 - Using index (커버링 인덱스)
-	- 데이터 파일을 읽지 않고 인덱스만 읽어서 쿼리를 모두 처리할 수 있음,
-- Using index condition
+	- 데이터 파일을 읽지 않고 인덱스만 읽어서 쿼리를 모두 처리할 수 있음- Using index condition
 	- MySQL 옵티마이저가 인덱스 컨디션 푸시 다운(ICP) 최적화를 사용
 - Using index for group-by
 	- GROUP BY 처리를 위해 별도의 정렬 없이 인덱스를 순서대로 읽거나 듬성듬성 읽는 루스 인덱스 스캔을 사용
 - Using index for skip scan
 	- 인덱스 스킵 스캔 최적화를 사용하여 인덱스의 선행 칼럼을 건너뛰고 검색
 - Using join buffer (Block Nested Loop / Batched Key Access / hash join)
-	- 드리븐 테이블에 적절한 인덱스가 없어 조인 버퍼를 사용하며, 뒤에 표시된 알고리즘(해시 조인 등)으로 처리됨,
-- Using MRR
+	- 드리븐 테이블에 적절한 인덱스가 없어 조인 버퍼를 사용하며, 뒤에 표시된 알고리즘(해시 조인 등)으로 처리됨- Using MRR
 	- 여러 개의 키 값을 한 번에 스토리지 엔진으로 전달하고 정렬하여 최소한의 디스크 접근으로 읽는 MRR(Multi Range Read) 최적화를 사용
 - Using sort_union, Using union, Using intersect
-	- `index_merge` 접근 방법 사용 시 두 개 이상의 인덱스 결과를 병합(합집합, 교집합 등)하는 상세 방식,
-- Using temporary
+	- `index_merge` 접근 방법 사용 시 두 개 이상의 인덱스 결과를 병합(합집합, 교집합 등)하는 상세 방식- Using temporary
 	- 쿼리 처리 중 중간 결과를 담아 두기 위해 임시 테이블(메모리 또는 디스크)을 사용
 - Using where
-	- 스토리지 엔진에서 읽어온 레코드를 MySQL 엔진 레이어에서 별도로 필터링(체크 조건 처리)함,
-- Zero limit
+	- 스토리지 엔진에서 읽어온 레코드를 MySQL 엔진 레이어에서 별도로 필터링(체크 조건 처리)함- Zero limit
 	- 쿼리 마지막에 `LIMIT 0`이 사용되어, 데이터 값은 읽지 않고 결과값의 메타데이터만 반환

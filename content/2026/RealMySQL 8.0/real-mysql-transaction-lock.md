@@ -15,17 +15,17 @@ permalink:
 draft: false
 published: 2025-12-28T14:37:00
 created: 2025-12-17T13:19
-updated: 2026-04-20T16:39
+updated: 2026-07-09T09:42
 ---
 
 ### MySQL 엔진의 잠금
 
 - 스토리지 엔진 레벨과 MySQL 엔진 레벨로 나뉜다.
 - Global Lock
-	- 영햠 범위 : MySQL 서버 전체
+	- 영향 범위 : MySQL 서버 전체
 - Table Lock
 	- 개별 테이블 단위로 설정되는 잠금
-	- 명시적 테이블 락
+	- 명시적 테이블 락
 		- 특별한 상황이 아니면 어플리케이션에서 사용할 필요가 없다.
 	- 묵시적 테이블 락
 		- MyISAM이나 MEMORY 테이블의 데이터를 변경하는 쿼리를 실행하면 발생한다.
@@ -40,23 +40,22 @@ updated: 2026-04-20T16:39
 ### InnoDB 스토리지 엔진 잠금
 
 - Record Lock
-	- 다른 DBMS는 레코드 자체를 잠금지만 인덱스의 레코드를 잠근다.
+	- 다른 DBMS는 레코드 자체를 잠그지만 인덱스의 레코드를 잠근다.
 		- 인덱스가 없는 테이블이라도 내부적으로 자동 생성된 클러스터 인덱스를 이용해 잠금 설정
 - Gap Lock
 	- 레코드가 아닌 레코드와 인접한 레코드 사이의 간격만을 잠금
 - Next Key Lock
 	- Record Lock 과 Gap Lock 을 합쳐 놓은 형태의 잠금
-	- #question 그래서 Next Key Lock 이 뭐지?
 - Auto Increment Lock
 	- INSERT와 REPLACE 와 같이 새로운 레코드를 저장하는 쿼리에서만 필요
 		- UPDATE, DELETE는 걸리지 않는다.
-	- 트랜잭션과 관계없이`AUTO_INCREMENT` 값을 가져오는 순간만 락이 걸렸다가 즉시 해제된다.
+	- 트랜잭션과 관계없이 `AUTO_INCREMENT` 값을 가져오는 순간만 락이 걸렸다가 즉시 해제된다.
 	- 명시적으로 획득하거나 해제하는 방법은 없으며, 아주 짧은 시간 걸렸다가 해제되기 때문에 대부분은 문제가 되지 않는다.
 
 >[!info]
 >테이블 수준의 잠금의 경우 쉽게 문제의 원인이 발견되고 해결될 수 있다.
 >그러나 레코드 수준의 잠금은 테이블의 레코드 각각에 잠금이 걸리므로 레코드가 자주 사용되지 않는다면 오랜 시간 동안 잠겨진 상태로 남아 있어도 잘 발견되지 않는다.
->`performance_schema의` `data_locks와` `data_lock_waits` 테이블로 쉽게 메타 정보를 조회할 수 있다.
+>`performance_schema`의 `data_locks`와 `data_lock_waits` 테이블로 쉽게 메타 정보를 조회할 수 있다.
 
 ### MySQL의 격리 수준
 
@@ -64,18 +63,18 @@ updated: 2026-04-20T16:39
 
 |                 | Dirty Read | Non-Repeatable Read | Phantom Read       |
 | --------------- | ---------- | ------------------- | ------------------ |
-| READ UNCOMMITED | 발생         | 발생                  | 발생                 |
+| READ UNCOMMITTED | 발생         | 발생                  | 발생                 |
 | READ COMMITTED  | 없음         | 발생                  | 발생                 |
 | REPEATABLE READ | 없음         | 없음                  | 발생<br>(InnoDB는 없음) |
 | SERIALIZABLE    | 없음         | 없음                  | 없음                 |
 
-READ UNCOMMITED
+READ UNCOMMITTED
 - 트랜잭션에서 처리한 작업이 완료되지 않았는데도 다른 트랜잭션에서 읽을 수 있는 현상을 `Dirty Read`라고 한다.
 - RDBMS 표준에서는 트랜잭션의 격리 수준으로 인정하지 않을 정도로 정합성에 문제가 많은 격리 수준이다.
-READ COMMITED
+READ COMMITTED
 - 트랜잭션에서 데이터를 변경했더라도 COMMIT 완료된 데이터만 다른 트랜잭션에서 조회가 가능하다.
 - 오라클의 기본 격리 수준
-- 하나의 트랜잭션 안에서 다른 트랜잭션이 COMMIT 할 경우 처음 조회한 결과값과 두번째 조회한 결과값이 다를 수 있는 문제가 발생할 수 있다.
+- 하나의 트랜잭션 안에서 다른 트랜잭션이 COMMIT 할 경우 처음 조회한 결과값과 두 번째 조회한 결과값이 다를 수 있는 문제가 발생할 수 있다.
 	- `Non-Repeatable Read`
 REPEATABLE READ
 - MySQL의 기본 격리 수준
