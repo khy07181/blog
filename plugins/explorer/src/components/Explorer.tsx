@@ -68,7 +68,11 @@ const defaultOptions = {
     // Mixed: folders before files
     return aIsFolder ? -1 : 1
   },
-  filterFn: (node) => node.name !== "tags",
+  // Hide the "tags" index folder and the generated "404" error page. The 404 page
+  // is a virtual page (see quartz/plugins/pageTypes/404.ts) that the dispatcher keeps
+  // out of ctx.virtualPages, but it still reaches this component via allFiles, so it
+  // would otherwise appear as a "Not Found" entry in the sidebar tree.
+  filterFn: (node) => node.name !== "tags" && node.name !== "404",
   order: ["filter", "map", "sort"],
 } satisfies Options
 
