@@ -1,6 +1,7 @@
 ---
 title: 나만의 독서 환경 만들기
 aliases:
+  - 나만의 독서 환경 만들기
 description:
 permalink:
 classification: blog
@@ -12,7 +13,7 @@ tags:
 draft: false
 published: 2025-11-16
 created: 2025-11-16T21:30
-updated: 2026-07-09T10:02
+updated: 2026-07-20T13:44
 ---
 
 세상에는 책보다 자극적이고 재미있는 것들이 너무 많아져, 예전처럼 자연스럽게 독서에 몰입하기가 점점 어려워지고 있다.
@@ -33,7 +34,7 @@ updated: 2026-07-09T10:02
 
 pros
 - 종이 질감이 주는 감촉과 아날로그 특유의 집중감
-- 구매 후 소유권이 명확하며 대여·양도·판매 가능
+- 구매 후 소유권이 명확하며 대여·양도·선물 가능
 - 페이지를 넘기는 행위가 주는 독서 리듬과 몰입
 - 표지·제본·종이색 등 디자인 요소를 온전히 감상할 수 있음
 - 눈부심이 없어 장시간 읽어도 비교적 눈이 편안함
@@ -102,7 +103,7 @@ DRM 해제가 불가능해 스크린 캡처 후 PDF 또는 EPUB으로 변환해�
 2. [Clop](https://lowtechguys.com/clop/)으로 이미지 용량 최적화
 3. Mac 미리보기로 png 파일들을 pdf 파일로 변환
 4. [OwlOCR](https://www.owlocr.com/) 로 OCR 진행
-5. [Readwise Reader](https://readwise.io/read) 업로드 및 iCloud 백업
+5. [Readwise Reader](https://khy07181.github.io/2026/readwise-reader) 업로드 및 iCloud 백업
 
 #### CLI
 

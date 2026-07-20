@@ -15,7 +15,7 @@ draft: false
 published: 2026-07-19T19:47:00
 lang: ko
 created: 2026-07-19T12:39
-updated: 2026-07-19T19:47
+updated: 2026-07-20T10:58
 ---
 [Readwise Reader](https://readwise.io/read)는 모든 읽을 거리를 한곳에 모아 두고, 나중에 집중해서 읽고 하이라이트하고 정리할 수 있게 해주는 read-it-later 도구다.
 
