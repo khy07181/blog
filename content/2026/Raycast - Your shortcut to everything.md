@@ -19,7 +19,7 @@ draft: false
 published: 2026-04-12T23:30:00
 lang: ko
 created: 2026-04-12T17:45
-updated: 2026-07-09T10:02
+updated: 2026-07-23T13:43
 ---
 [Raycast](https://www.raycast.com/)는 키보드만으로 앱 실행, 파일 검색, 명령 실행, 반복 작업 자동화까지 이어서 처리할 수 있게 해주는 생산성 도구다.
 
@@ -28,7 +28,7 @@ updated: 2026-07-09T10:02
 Spotlight도 빠른 검색 도구이고, Alfred도 강력한 런처로 많이 쓰인다. 다만 Raycast는 Spotlight 자리를 대체할 수 있을 만큼 가볍게 열리면서도, 확장성, 기본 내장 기능, 키보드 중심 UX를 한 제품 안에 더 촘촘하게 묶어 둔 통합형 런처라는 점에서 방향이 조금 다르다.
 
 >[!tip]
->[Spotlight 대신 Raycast 사용하기](https://manual.raycast.com/hotkey)
+>[Spotlight 대신 Raycast 사용하기](https://manual.raycast.com/settings#replace-spotlight)
 
 ---
 
@@ -49,7 +49,7 @@ Raycast의 장점은 기능 하나가 아주 독보적이라기보다, 자주 �
 가장 먼저 체감되는 기능은 런처 자체다. 단축키를 통한 앱 실행은 물론이고, 자주 쓰는 명령이나 최근에 열었던 파일까지 같은 루트 검색에서 바로 접근할 수 있다. 검색창을 여는 순간 최근 사용 항목이나 추천 항목이 먼저 보이기 때문에, 이름을 끝까지 입력하지 않아도 되는 경우가 많다.
 
 특히 [Search Files](https://manual.raycast.com/core)는 단순한 파일명 검색에서 끝나지 않는다. 최근 파일을 바로 보여주고, 파일 미리보기와 메타데이터를 함께 확인할 수 있으며, 검색어에 조건을 섞어서 더 빠르게 좁혀 갈 수 있다. Finder를 열고 폴더를 따라가며 찾는 흐름보다 훨씬 짧다.
-![[raycast_search_file.png]]
+![[raycast_search_file.png|]]
 
 익숙해지면 '어떤 앱을 열겠다'보다 '바로 이 작업을 하겠다'에 가깝게 바뀐다. 런처를 거쳐 앱으로 이동하는 것이 아니라, 루트 검색 자체가 작업 시작점이 된다.
 
